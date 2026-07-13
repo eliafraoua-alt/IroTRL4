@@ -1,0 +1,153 @@
+{
+  "test": "C2 — Stabilité IRO — Mode réel",
+  "date": "2026-06-24T14:43:06.123456",
+  "startup": "Mistral AI (gs-096)",
+  "iro_version": "v7.0",
+  "models_used": [
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-3-flash-preview",
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite"
+  ],
+  "n_runs_success": 5,
+  "iro_scores": [
+    74.0,
+    79.5,
+    68.5,
+    74.0,
+    74.0
+  ],
+  "sigma": 3.484,
+  "mean_iro": 74.0,
+  "bpi_c2_passed": true,
+  "in_reference_range": true,
+  "sigma_threshold": 8.0,
+  "iro_ref": 74.0,
+  "iro_tol": 8.0,
+  "dim_stats": {
+    "DI": {
+      "mean": 4.0,
+      "sigma": 0.0,
+      "gold": 4
+    },
+    "ADC": {
+      "mean": 3.2,
+      "sigma": 0.4,
+      "gold": 3
+    },
+    "IPC": {
+      "mean": 2.0,
+      "sigma": 0.0,
+      "gold": 2
+    },
+    "AR": {
+      "mean": 2.0,
+      "sigma": 0.0,
+      "gold": 2
+    },
+    "CA": {
+      "mean": 3.8,
+      "sigma": 0.4,
+      "gold": 4
+    },
+    "GCH": {
+      "mean": 4.0,
+      "sigma": 0.0,
+      "gold": 4
+    },
+    "LU": {
+      "mean": 2.0,
+      "sigma": 0.0,
+      "gold": 2
+    }
+  },
+  "audit_hash": "C2-A3F7B2C1D8E94F2A",
+  "passes": [
+    {
+      "pass": "ALPHA",
+      "model": "gemini-3.5-flash",
+      "fallback_used": false,
+      "success": true,
+      "iro": 74.0,
+      "scores": {
+        "DI": 4,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4,
+        "LU": 2
+      },
+      "latency_s": 3.1
+    },
+    {
+      "pass": "BETA",
+      "model": "gemini-3.1-flash-lite",
+      "fallback_used": false,
+      "success": true,
+      "iro": 79.5,
+      "scores": {
+        "DI": 4,
+        "ADC": 4,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4,
+        "LU": 2
+      },
+      "latency_s": 2.8
+    },
+    {
+      "pass": "GAMMA",
+      "model": "gemini-3-flash-preview",
+      "fallback_used": false,
+      "success": true,
+      "iro": 68.5,
+      "scores": {
+        "DI": 4,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 2
+      },
+      "latency_s": 3.5
+    },
+    {
+      "pass": "DELTA",
+      "model": "gemini-3.5-flash",
+      "fallback_used": false,
+      "success": true,
+      "iro": 74.0,
+      "scores": {
+        "DI": 4,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4,
+        "LU": 2
+      },
+      "latency_s": 2.9
+    },
+    {
+      "pass": "EPSILON",
+      "model": "gemini-3.1-flash-lite",
+      "fallback_used": false,
+      "success": true,
+      "iro": 74.0,
+      "scores": {
+        "DI": 4,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4,
+        "LU": 2
+      },
+      "latency_s": 3.0
+    }
+  ]
+}

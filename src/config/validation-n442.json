@@ -1,0 +1,137 @@
+{
+  "_avertissement": "Chiffres RECALCULÉS sur les données du dépôt. Ils remplacent les métriques antérieures (98,2 % d'exactitude, F1 0,9497, « cohorte 500 ») qui n'étaient adossées à aucune donnée vérifiable — cf. audit SCI-B.",
+  "genere_le": "2026-07-12T22:57:12.327Z",
+  "reproductibilite": "Déterministe. Rejouer : npx tsx scripts/validate-cohorte-n442.ts (seed=20260712).",
+  "bootstrap_seed": 20260712,
+  "bootstrap_n": 2000,
+  "perimetre": {
+    "n_initial": 484,
+    "n_retirees": 42,
+    "n_cohorte": 442,
+    "n_verifiee": 401,
+    "n_non_auditees": 41,
+    "n_defaillances": 20,
+    "n_acquisitions": 45,
+    "n_actives": 336,
+    "date_audit": "2026-07-11",
+    "evenement_interet": "status === 'failed' — les acquisitions ne sont PAS des défaillances (SCI-A)",
+    "n_evalue": 401
+  },
+  "auc": 0.93,
+  "auc_ci95": [
+    0.87,
+    0.97
+  ],
+  "auc_display": "0.930 [IC 95 % bootstrap : 0.870 – 0.970]",
+  "auc_interpretation": "Discrimination élevée et stable — l'IC ne touche pas 1,00, contrairement au C-index du modèle de survie (EPV insuffisant).",
+  "sci_a_controle": {
+    "auc_evenement_correct": 0.93,
+    "auc_evenement_errone": 0.68,
+    "perte": 0.25,
+    "conclusion": "Confondre acquisition et défaillance fait chuter l'AUC de 0.930 à 0.680. La définition correcte de l'événement n'est pas un détail méthodologique : elle conditionne le signal."
+  },
+  "exactitude_avertissement": {
+    "taux_defaillance": 0.05,
+    "exactitude_classifieur_trivial": 0.95,
+    "note": "Le taux de défaillance est de 5.0 %. Un classifieur qui prédirait « survit » pour tous atteindrait 95.0 % d'exactitude. L'EXACTITUDE NE DOIT PAS ÊTRE CITÉE comme preuve de performance. Utiliser l'AUC."
+  },
+  "seuils": [
+    {
+      "seuil": 38,
+      "tp": 15,
+      "fp": 24,
+      "tn": 357,
+      "fn": 5,
+      "sensibilite": 0.75,
+      "specificite": 0.937,
+      "precision": 0.385,
+      "f1": 0.508
+    },
+    {
+      "seuil": 46,
+      "tp": 17,
+      "fp": 38,
+      "tn": 343,
+      "fn": 3,
+      "sensibilite": 0.85,
+      "specificite": 0.9,
+      "precision": 0.309,
+      "f1": 0.453
+    },
+    {
+      "seuil": 50,
+      "tp": 18,
+      "fp": 62,
+      "tn": 319,
+      "fn": 2,
+      "sensibilite": 0.9,
+      "specificite": 0.837,
+      "precision": 0.225,
+      "f1": 0.36
+    }
+  ],
+  "zones": [
+    {
+      "label": "Risque élevé",
+      "min": 0,
+      "max": 45,
+      "n": 48,
+      "defaillances": 16,
+      "taux_defaillance": 0.333
+    },
+    {
+      "label": "Vigilance",
+      "min": 46,
+      "max": 64,
+      "n": 191,
+      "defaillances": 3,
+      "taux_defaillance": 0.016
+    },
+    {
+      "label": "Solide",
+      "min": 65,
+      "max": 79,
+      "n": 112,
+      "defaillances": 0,
+      "taux_defaillance": 0
+    },
+    {
+      "label": "Excellent",
+      "min": 80,
+      "max": 100,
+      "n": 25,
+      "defaillances": 0,
+      "taux_defaillance": 0
+    }
+  ],
+  "robustesse_geographique": [
+    {
+      "geo": "FR",
+      "n": 224,
+      "defaillances": 15,
+      "auc": 0.938
+    },
+    {
+      "geo": "US",
+      "n": 94,
+      "defaillances": 2,
+      "auc": null,
+      "note": "Effectif d'événements insuffisant — AUC non publiable"
+    },
+    {
+      "geo": "EU",
+      "n": 83,
+      "defaillances": 3,
+      "auc": 0.84
+    }
+  ],
+  "epv": {
+    "n_evenements": 20,
+    "n_dimensions": 7,
+    "valeur": 2.857,
+    "seuil_institutionnel": 10,
+    "statut": "exploratoire",
+    "note": "EPV = 2.9 — en progrès (1,8 auparavant) mais toujours sous le seuil de 10. La validation reste EXPLORATOIRE."
+  },
+  "limite_residuelle": "CIRCULARITÉ (SCI-01) : si les scores IRO de cette cohorte ont été attribués en connaissance de l'issue, l'AUC mesurée surestime la capacité prédictive réelle. Seuil de publication : n >= 30 et >= 10 événements par secteur."
+}

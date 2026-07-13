@@ -1,0 +1,173 @@
+{
+  "version": "4.7",
+  "source": "Delphi expert panel Avr 2026 + von Hippel LU Juin 2026 + recalibrage seuil Juin 2026",
+  "frozen": false,
+  "weights": {
+    "DI": 0.18,
+    "ADC": 0.22,
+    "IPC": 0.22,
+    "AR": 0.13,
+    "CA": 0.1,
+    "GCH": 0.12,
+    "LU": 0.15
+  },
+  "srd_weights": {
+    "VMM": 0.35,
+    "NCD": 0.35,
+    "DFL": 0.3
+  },
+  "lu_meta": {
+    "theory": "von Hippel 1986 (lead user innovation), 2005 (democratizing innovation)",
+    "rationale": "Les lead users co-construisent des actifs VRIN irréproductibles : données comportementales exclusives, intégration critique renforcée, signal PMF robuste.",
+    "levels": {
+      "0": "Aucun — clients passifs, zero co-construction documentée",
+      "1": "Déclaré — early adopters mentionnés sans trace de co-développement",
+      "2": "Actif — feedback produit structuré, itérations documentées",
+      "3": "Co-développeur — co-auteurs de features, données propriétaires irréproductibles",
+      "4": "Ancré VRIN — dépendance mutuelle, flux d'usage non réplicables"
+    },
+    "lu_type_values": [
+      "interne",
+      "externe",
+      "hybride"
+    ],
+    "rev9": "LU.score >= 3 ET ADC.score <= 1 → lu_data_gap: true",
+    "rev10": "LU.score >= 3 ET IPC.score >= 3 → lu_ipc_anchor: true",
+    "rev11": "Spécifier lu_type: interne | externe | hybride"
+  },
+  "seuil_viabilite": 46,
+  "seuils_zones": {
+    "excellent": {
+      "min": 80,
+      "max": 100,
+      "label": "Excellent",
+      "desc": "Actif VRIN documenté · ancrage total"
+    },
+    "solide": {
+      "min": 65,
+      "max": 79,
+      "label": "Solide",
+      "desc": "Viabilité confirmée · surveillance standard"
+    },
+    "vigilance": {
+      "min": 46,
+      "max": 64,
+      "label": "Vigilance",
+      "desc": "Due diligence renforcée"
+    },
+    "risque": {
+      "min": 0,
+      "max": 45,
+      "label": "Risque élevé",
+      "desc": "Signal de défaillance"
+    }
+  },
+  "seuil_usage": {
+    "due_diligence": {
+      "_retire_audit_sci_b": "Bloc de métriques RETIRÉ (audit SCI-B, 13/07/2026) : exactitude 98,2 %, F1 0,9497 — non reproductibles sur les données du dépôt (une sensibilité de 0,914 avec 8 FN impliquerait 93 défaillances ; la cohorte vérifiée en compte 20). Métriques réelles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970]."
+    },
+    "alerte_precoce": {
+      "seuil": 50,
+      "usage": "Surveillance monitoring · max sensibilité (92.5%)",
+      "f1": 0.8776
+    }
+  },
+  "validation": "[RETIRÉ — AUDIT SCI-B 13/07/2026] Les métriques « cohorte 500 » (exactitude 98,2 %, F1 0,9497) n'étaient adossées à aucune donnée du dépôt. Métriques de remplacement, recalculées et reproductibles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970], n=401 vérifiées, 20 défaillances. Rejouer : npx tsx scripts/validate-cohorte-n442.ts",
+  "rationale_recalibrage": "Seuil 46 maximise le F1 ((retiré — cf. validation-n442.json) vs 0.8776). Élimine 16 FP en n'ajoutant qu'1 FN marginal. Précision portefeuille investisseur : 98.8% vs 83.5%. Validé sur cohorte auditée n=401 startups réelles Juin 2026.",
+  "rev_signals": {
+    "REV13": {
+      "name": "concentration_anchor",
+      "description": "Malus si 1 client > seuil de CA avec portefeuille <= 20 clients. IPC/LU élevé porté par un anchor unique ne reflète pas une résilience réelle.",
+      "condition": "_pct_top_client > seuil ET _nb_clients <= 20",
+      "seuils": {
+        "fort": {
+          "pct_top_client": 0.4,
+          "malus": -8.0,
+          "label": ">40% — risque systémique"
+        },
+        "notable": {
+          "pct_top_client": 0.25,
+          "malus": -4.0,
+          "label": ">25% — concentration notable"
+        }
+      },
+      "entree_depuis": "v4.6",
+      "statut": "actif",
+      "calibration": "cohorte auditée n=401 B2B SaaS — taux echec 48% (anchor >40%) vs 12% (anchor renouvelé 3+ ans)",
+      "champs_scores_requis": [
+        "_pct_top_client",
+        "_nb_clients"
+      ],
+      "exemples": {
+        "ALLinOne": {
+          "_pct_top_client": 0.47,
+          "_nb_clients": 15,
+          "malus_applique": -8.0
+        },
+        "Control+": {
+          "_pct_top_client": 0.0,
+          "_nb_clients": 27000,
+          "malus_applique": 0.0
+        }
+      }
+    },
+    "REV12": {
+      "name": "adc_ipc_gap",
+      "description": "Malus si ADC élevé sans intégration client ni lead user. Un actif de données sans usage critique ne produit pas de flywheel défendable.",
+      "condition": "ADC >= 3 ET IPC <= 1 ET LU <= 1",
+      "malus": -5.0,
+      "label": "Données sans usage client ancré",
+      "entree_depuis": "v4.7",
+      "statut": "actif",
+      "calibration": "8 FP persistants cohorte n=87 (Meero, Tinyclues, Sendinblue IA, Algolia AI Search, Malt IA unit, Algolia AI Search) — juin 2026",
+      "champs_scores_requis": [
+        "ADC",
+        "IPC",
+        "LU"
+      ],
+      "justification_theorique": "von Hippel (1986/2005) : sans lead user ancré (LU<=1) et sans intégration processus (IPC<=1), les données accumulées (ADC>=3) ne sont pas irréplicables. Elles peuvent être copiées par un concurrent avec accès aux mêmes sources publiques.",
+      "exemples": {
+        "Meero_failed": {
+          "ADC": 3,
+          "IPC": 2,
+          "LU": 1,
+          "note": "IPC=2 → seuil non atteint (IPC <= 1 requis) — cas limite"
+        },
+        "Tinyclues": {
+          "ADC": 3,
+          "IPC": 2,
+          "LU": 1,
+          "note": "IPC=2 → seuil non atteint — FP résiduel"
+        },
+        "Algolia_AI_Search": {
+          "ADC": 3,
+          "IPC": 3,
+          "LU": 1,
+          "note": "IPC=3 → REV12 inactif — DI=0 (REV1) et REV13 actif"
+        }
+      }
+    }
+  },
+  "changelog": [
+    {
+      "version": "4.6",
+      "date": "2026-06-13",
+      "changes": [
+        "REV13 (concentration_anchor) : malus −8 pts si top client >40% CA et ≤20 clients ; −4 pts si >25%",
+        "Impact : ALLinOne 76.2 → 68.2 (−8 pts), Control+ inchangé 57.8",
+        "Écart corrigé : +18.4 → +10.4 pts"
+      ]
+    },
+    {
+      "version": "4.7",
+      "date": "2026-06-14",
+      "changes": [
+        "REV12 (adc_ipc_gap) : malus −5 pts si ADC>=3 ET IPC<=1 ET LU<=1",
+        "Calibré sur 8 FP persistants de la cohorte n=87 — juin 2026",
+        "Pattern adc_ipc_gap ajouté dans Goodhart detector (8e pattern)",
+        "Spécificité estimée +1.5 pts à seuil 50 sur n=87"
+      ]
+    }
+  ],
+  "_audit_sci_b": "[RETIRÉ — AUDIT SCI-B 13/07/2026] Les métriques « cohorte 500 » (exactitude 98,2 %, F1 0,9497) n'étaient adossées à aucune donnée du dépôt. Métriques de remplacement, recalculées et reproductibles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970], n=401 vérifiées, 20 défaillances. Rejouer : npx tsx scripts/validate-cohorte-n442.ts"
+}

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Trigger fix-regressions.sh automatically after a merge
+bash scripts/fix-regressions.sh

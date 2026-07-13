@@ -1,0 +1,3 @@
+"type","startup_name","id_or_ids","timestamp","source_type","detail"
+"inversion_id_timestamp","BackfillCo","7","2024-03-01T00:00:00.000Z","manual","pour BackfillCo : timestamp antérieur à l'entrée id=6 déjà insérée (cette entrée id=7 a été insérée APRÈS, mais prétend représenter une date ANTÉRIEURE)"
+"entreprise_multi_entrees_suspecte","BackfillCo","5;6;7","","","ordre_incoherent"

@@ -1,0 +1,12 @@
+{
+  "_comment": "Vecteurs de test de non-régression pour la parité inter-implémentations (T6, audit 10/07/2026). Consommé par parity.vitest.test.ts (TS) et test_parity.py (Python). Toute modification de iro-engine.ts, batch_iro.ts ou batch_gemini_iro.py doit conserver ces résultats identiques entre implémentations.",
+  "vectors": [
+    { "scores": {"DI":3,"ADC":4,"IPC":4,"AR":4,"CA":3,"GCH":4,"LU":4}, "expected_iro": 89.7, "label": "profil fort équilibré" },
+    { "scores": {"DI":0,"ADC":1,"IPC":4,"AR":4,"CA":4,"GCH":4,"LU":4}, "expected_iro": 35.4, "label": "REV1-V2 : DI=0,ADC<=1 -> plafond 35" },
+    { "scores": {"DI":0,"ADC":2,"IPC":4,"AR":4,"CA":4,"GCH":4,"LU":4}, "expected_iro": 50.4, "label": "REV1-V2 : DI=0,ADC=2 -> plafond 50" },
+    { "scores": {"DI":0,"ADC":3,"IPC":4,"AR":4,"CA":4,"GCH":4,"LU":4}, "expected_iro": 71.5, "label": "REV1-V2 : DI=0,ADC>=3 -> pas de plafond" },
+    { "scores": {"DI":2,"ADC":2,"IPC":2,"AR":2,"CA":2,"GCH":2,"LU":2}, "expected_iro": 47.5, "label": "profil médian neutre" },
+    { "scores": {"DI":4,"ADC":0,"IPC":1,"AR":1,"CA":1,"GCH":1,"LU":0}, "expected_iro": 25.0, "label": "profil faible, LU=0" }
+  ],
+  "confidence_defaults": { "ipcConf": 0.8, "adcConf": 0.8, "gchConf": 0.8 }
+}

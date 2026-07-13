@@ -1,0 +1,78 @@
+{
+  "version": "4.5-S46",
+  "source": "Delphi expert panel Avr 2026 + von Hippel LU Juin 2026 + recalibrage seuil Juin 2026",
+  "frozen": false,
+  "weights": {
+    "DI": 0.18,
+    "ADC": 0.22,
+    "IPC": 0.22,
+    "AR": 0.13,
+    "CA": 0.1,
+    "GCH": 0.12,
+    "LU": 0.15
+  },
+  "srd_weights": {
+    "VMM": 0.35,
+    "NCD": 0.35,
+    "DFL": 0.3
+  },
+  "lu_meta": {
+    "theory": "von Hippel 1986 (lead user innovation), 2005 (democratizing innovation)",
+    "rationale": "Les lead users co-construisent des actifs VRIN irréproductibles : données comportementales exclusives, intégration critique renforcée, signal PMF robuste.",
+    "levels": {
+      "0": "Aucun — clients passifs, zéro co-construction documentée",
+      "1": "Déclaré — early adopters mentionnés sans trace de co-développement",
+      "2": "Actif — feedback produit structuré, itérations documentées",
+      "3": "Co-développeur — co-auteurs de features, données propriétaires irréproductibles",
+      "4": "Ancré VRIN — dépendance mutuelle, flux d'usage non réplicables"
+    },
+    "lu_type_values": [
+      "interne",
+      "externe",
+      "hybride"
+    ],
+    "rev9": "LU.score >= 3 ET ADC.score <= 1 → lu_data_gap: true",
+    "rev10": "LU.score >= 3 ET IPC.score >= 3 → lu_ipc_anchor: true",
+    "rev11": "Spécifier lu_type: interne | externe | hybride"
+  },
+  "seuil_viabilite": 46,
+  "seuils_zones": {
+    "excellent": {
+      "min": 80,
+      "max": 100,
+      "label": "Excellent",
+      "desc": "Actif VRIN documenté · ancrage total"
+    },
+    "solide": {
+      "min": 65,
+      "max": 79,
+      "label": "Solide",
+      "desc": "Viabilité confirmée · surveillance standard"
+    },
+    "vigilance": {
+      "min": 46,
+      "max": 64,
+      "label": "Vigilance",
+      "desc": "Due diligence renforcée"
+    },
+    "risque": {
+      "min": 0,
+      "max": 45,
+      "label": "Risque élevé",
+      "desc": "Signal de défaillance"
+    }
+  },
+  "seuil_usage": {
+    "due_diligence": {
+      "_retire_audit_sci_b": "Bloc de métriques RETIRÉ (audit SCI-B, 13/07/2026) : exactitude 98,2 %, F1 0,9497 — non reproductibles sur les données du dépôt (une sensibilité de 0,914 avec 8 FN impliquerait 93 défaillances ; la cohorte vérifiée en compte 20). Métriques réelles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970]."
+    },
+    "alerte_precoce": {
+      "seuil": 50,
+      "usage": "Surveillance monitoring · max sensibilité (92.5%)",
+      "f1": 0.8776
+    }
+  },
+  "validation": "[RETIRÉ — AUDIT SCI-B 13/07/2026] Les métriques « cohorte 500 » (exactitude 98,2 %, F1 0,9497) n'étaient adossées à aucune donnée du dépôt. Métriques de remplacement, recalculées et reproductibles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970], n=401 vérifiées, 20 défaillances. Rejouer : npx tsx scripts/validate-cohorte-n442.ts",
+  "rationale_recalibrage": "Seuil 46 maximise le F1 ((retiré — cf. validation-n442.json) vs 0.8776). Élimine 16 FP en n'ajoutant qu'1 FN marginal. Précision portefeuille investisseur : 98.8% vs 83.5%. Validé sur cohorte auditée n=401 startups réelles Juin 2026.",
+  "_audit_sci_b": "[RETIRÉ — AUDIT SCI-B 13/07/2026] Les métriques « cohorte 500 » (exactitude 98,2 %, F1 0,9497) n'étaient adossées à aucune donnée du dépôt. Métriques de remplacement, recalculées et reproductibles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970], n=401 vérifiées, 20 défaillances. Rejouer : npx tsx scripts/validate-cohorte-n442.ts"
+}

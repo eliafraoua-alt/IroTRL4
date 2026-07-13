@@ -1,0 +1,44 @@
+========================================================================
+                      IRO STRENGTH VELOCITY — LICENSE
+========================================================================
+
+Copyright (c) 2024-2026 IRO Strength SAS. Tous droits réservés.
+
+------------------------------------------------------------------------
+SECTION 1 : LICENCE DE PHASE PILOTE (PROPRIÉTAIRE) — Actuellement active
+------------------------------------------------------------------------
+
+Ce logiciel, ses algorithmes, ses modèles d'estimation de survie (Cox/RSF)
+et sa documentation technique sont la propriété exclusive de IRO Strength SAS.
+
+Pendant toute la durée de la phase d'expérimentation pilote menée en
+collaboration avec la BPI (Banque Publique d'Investissement) :
+
+1. Concession de Licence : Il est accordé aux partenaires et évaluateurs
+   autorisés un droit d'utilisation mondial, non exclusif, non transférable
+   et limité pour exécuter le logiciel uniquement à des fins d'évaluation,
+   d'audit, et de tests de validation formelle de la méthodologie IRO.
+
+2. Restrictions : Toute reproduction globale ou sectorielle, distribution,
+   publication publique, ou exploitation commerciale non expressément
+   autorisée par écrit par IRO Strength SAS est strictement interdite.
+
+Pour toute demande réglementaire ou concession commerciale :
+contact@irostrength.ai
+
+------------------------------------------------------------------------
+SECTION 2 : FEUILLE DE ROUTE DUAL-LICENSING (Futur TRL 5+)
+------------------------------------------------------------------------
+
+À compter de la validation formelle de niveau TRL 5 et ultérieures,
+le projet prévoit de transiter vers un modèle distribué sous double licence :
+
+A. LICENCE OPEN-SOURCE (AGPL-3.0) :
+   Pour les startups, les chercheurs académiques et les administrations publiques,
+   garantissant la transparence méthodologique et la reproductibilité des calculs.
+
+B. LICENCE COMMERCIALE (PROPRIÉTAIRE) :
+   Pour les fonds d'investissement privés, les cabinets de Due Diligence,
+   et toute intégration logicielle SaaS tierce sans obligation de redistribution.
+
+Pour plus d'informations opérationnelles sur l'intégration BPI, voir README.md.

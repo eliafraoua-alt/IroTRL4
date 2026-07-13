@@ -1,0 +1,342 @@
+[
+  {
+    "id": "CONTEST-20260610--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-10T22:11:49.394Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-10T22:11:49.394Z"
+  },
+  {
+    "id": "CONTEST-20260610--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-10T22:11:49.404Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-10T22:11:49.405Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-10T22:11:49.404Z"
+  },
+  {
+    "id": "CONTEST-20260612--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-12T14:52:47.116Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-12T14:52:47.116Z"
+  },
+  {
+    "id": "CONTEST-20260612--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-12T14:52:47.126Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-12T14:52:47.126Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-12T14:52:47.126Z"
+  },
+  {
+    "id": "CONTEST-20260613--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-13T12:32:30.874Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-13T12:32:30.874Z"
+  },
+  {
+    "id": "CONTEST-20260613--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-13T12:32:30.887Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-13T12:32:30.887Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-13T12:32:30.887Z"
+  },
+  {
+    "id": "CONTEST-20260616--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-16T21:40:39.092Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-16T21:40:39.092Z"
+  },
+  {
+    "id": "CONTEST-20260616--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-16T21:40:39.105Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-16T21:40:39.106Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-16T21:40:39.105Z"
+  },
+  {
+    "id": "CONTEST-20260617--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-17T19:32:14.843Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-17T19:32:14.843Z"
+  },
+  {
+    "id": "CONTEST-20260617--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-17T19:32:14.855Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-17T19:32:14.855Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-17T19:32:14.855Z"
+  },
+  {
+    "id": "CONTEST-20260618--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-18T16:22:49.972Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-18T16:22:49.972Z"
+  },
+  {
+    "id": "CONTEST-20260618--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-18T16:22:49.983Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-18T16:22:49.983Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-18T16:22:49.983Z"
+  },
+  {
+    "id": "CONTEST-20260622--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-06-22T18:52:53.655Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-07-22T18:52:53.655Z"
+  },
+  {
+    "id": "CONTEST-20260622--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-06-22T18:52:53.669Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-06-22T18:52:53.670Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-07-22T18:52:53.669Z"
+  },
+  {
+    "id": "CONTEST-20260710--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-07-10T15:29:45.291Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-08-09T15:29:45.291Z"
+  },
+  {
+    "id": "CONTEST-20260710--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-07-10T15:29:45.305Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-07-10T15:29:45.306Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-08-09T15:29:45.305Z"
+  },
+  {
+    "id": "CONTEST-20260712--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-07-12T22:35:38.835Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-08-11T22:35:38.835Z"
+  },
+  {
+    "id": "CONTEST-20260712--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-07-12T22:35:38.848Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-07-12T22:35:38.849Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-08-11T22:35:38.848Z"
+  },
+  {
+    "id": "CONTEST-20260713--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-07-13T14:19:16.465Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-08-12T14:19:16.465Z"
+  },
+  {
+    "id": "CONTEST-20260713--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-07-13T14:19:16.480Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-07-13T14:19:16.481Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-08-12T14:19:16.480Z"
+  }
+]

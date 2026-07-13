@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+# Données runtime — base SQLite, annotations, calibration
+# Ne jamais versionner : recréés automatiquement au démarrage
+data/*.db
+data/pipeline.db
+data/annotations/
+data/calibration.json

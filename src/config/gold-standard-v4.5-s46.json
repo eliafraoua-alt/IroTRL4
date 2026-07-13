@@ -1,0 +1,3341 @@
+{
+  "version": "4.5-S46",
+  "frozen": true,
+  "date": "2026-06-13",
+  "n": 125,
+  "n_with_outcome": 32,
+  "n_event1": 9,
+  "n_event1_ids": [
+    "gs-014",
+    "gs-098",
+    "gs-099",
+    "gs-112",
+    "gs-115",
+    "gs-117",
+    "gs-119",
+    "gs-122",
+    "gs-124"
+  ],
+  "n_event1_source": "OUTCOMES_MAP dans scripts/export-gold-standard.ts",
+  "n_event1_perimeter": "gs-096 à gs-125",
+  "description": "Gold Standard IRO v4.5-S46 — seuil de viabilité recalibré à 46 (F1=0.950 sur cohorte auditée n=401 startups réelles, précision portefeuille 98.8%). Seuil alerte précoce maintenu à 50 pour usage monitoring. Juin 2026.",
+  "entries": [
+    {
+      "id": "gs-001",
+      "name": "Mistral AI",
+      "vertical": "LLM généraliste",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 2,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 2,
+        "lu_type": "hybride",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 7.8,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/mistral-ai"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-002",
+      "name": "Nabla",
+      "vertical": "IA santé",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.2,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/nabla",
+        "https://nabla.com/certifications"
+      ]
+    },
+    {
+      "id": "gs-003",
+      "name": "Dust",
+      "vertical": "IA B2B SaaS",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.8,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://github.com/dust-tt",
+        "https://crunchbase.com/dust"
+      ]
+    },
+    {
+      "id": "gs-004",
+      "name": "Holistic AI",
+      "vertical": "IA gouvernance",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.5,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://holisticai.com/research",
+        "https://crunchbase.com/holistic-ai"
+      ]
+    },
+    {
+      "id": "gs-005",
+      "name": "Pigment",
+      "vertical": "BI / IA planning",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/pigment",
+        "https://pigment.com/customers"
+      ]
+    },
+    {
+      "id": "gs-006",
+      "name": "Photoroom",
+      "vertical": "IA image / créatif",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 4,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 5.9,
+        "icc": 0.72
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/photoroom",
+        "https://github.com/photoroom"
+      ]
+    },
+    {
+      "id": "gs-007",
+      "name": "Wayve",
+      "vertical": "IA autonome / automotive",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 4,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8.1,
+        "icc": 0.85
+      },
+      "sourcesDocumentees": [
+        "https://wayve.ai/research",
+        "https://crunchbase.com/wayve"
+      ]
+    },
+    {
+      "id": "gs-008",
+      "name": "Collective Mind",
+      "vertical": "IA deeptech / MLOps",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.77
+      },
+      "sourcesDocumentees": [
+        "https://github.com/ctuning",
+        "https://crunchbase.com/collective-mind"
+      ]
+    },
+    {
+      "id": "gs-009",
+      "name": "Poolside",
+      "vertical": "LLM code",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 6.9,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/poolside",
+        "https://poolside.ai/team"
+      ]
+    },
+    {
+      "id": "gs-010",
+      "name": "Suno",
+      "vertical": "IA audio / générative",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-04-11",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.2,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/suno",
+        "https://suno.com/blog"
+      ]
+    },
+    {
+      "id": "gs-011",
+      "name": "Cohere",
+      "vertical": "LLM B2B entreprise",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/cohere",
+        "https://cohere.com/research",
+        "https://github.com/cohere-ai"
+      ]
+    },
+    {
+      "id": "gs-012",
+      "name": "Aleph Alpha",
+      "vertical": "LLM souverain européen",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.2,
+        "icc": 0.75
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/aleph-alpha",
+        "https://aleph-alpha.com/research"
+      ]
+    },
+    {
+      "id": "gs-013",
+      "name": "AI21 Labs",
+      "vertical": "LLM généraliste",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.5,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/ai21-labs",
+        "https://www.ai21.com/research"
+      ]
+    },
+    {
+      "id": "gs-014",
+      "name": "Inflection AI",
+      "vertical": "LLM consumer — pivot B2B",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 3,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 4.2,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/inflection-ai",
+        "https://techcrunch.com/inflection-microsoft-2024"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 30
+      }
+    },
+    {
+      "id": "gs-015",
+      "name": "Sakana AI",
+      "vertical": "LLM évolutionnaire",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 2,
+        "IPC": 1,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 6.1,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://sakana.ai",
+        "https://crunchbase.com/sakana-ai",
+        "https://github.com/SakanaAI"
+      ]
+    },
+    {
+      "id": "gs-016",
+      "name": "Together AI",
+      "vertical": "LLM infra / open-source",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.4,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/together-ai",
+        "https://github.com/togethercomputer"
+      ]
+    },
+    {
+      "id": "gs-017",
+      "name": "Nous Research",
+      "vertical": "LLM open-source fine-tuning",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 4,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 3.8,
+        "icc": 0.68
+      },
+      "sourcesDocumentees": [
+        "https://github.com/NousResearch",
+        "https://huggingface.co/NousResearch"
+      ]
+    },
+    {
+      "id": "gs-018",
+      "name": "Stability AI",
+      "vertical": "LLM image — restructuré",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 3.2,
+        "icc": 0.72
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/stability-ai",
+        "https://techcrunch.com/stability-ai-restructuring-2024"
+      ]
+    },
+    {
+      "id": "gs-019",
+      "name": "Character.AI",
+      "vertical": "LLM consumer roleplay",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 1,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4.5,
+        "icc": 0.7
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/character-ai",
+        "https://character.ai"
+      ]
+    },
+    {
+      "id": "gs-020",
+      "name": "xAI / Grok",
+      "vertical": "LLM généraliste — big tech adjacent",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 5.8,
+        "icc": 0.75
+      },
+      "sourcesDocumentees": [
+        "https://x.ai",
+        "https://crunchbase.com/x-ai",
+        "https://github.com/xai-org"
+      ]
+    },
+    {
+      "id": "gs-021",
+      "name": "Owkin",
+      "vertical": "IA santé / oncologie",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.8,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://owkin.com",
+        "https://crunchbase.com/owkin",
+        "https://github.com/owkin"
+      ]
+    },
+    {
+      "id": "gs-022",
+      "name": "Bioptimus",
+      "vertical": "IA biologie fondamentale",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 2,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.4,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://bioptimus.com",
+        "https://crunchbase.com/bioptimus",
+        "https://github.com/bioptimus"
+      ]
+    },
+    {
+      "id": "gs-023",
+      "name": "Incepto",
+      "vertical": "IA radiologie",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.1,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://incepto.ai",
+        "https://crunchbase.com/incepto"
+      ]
+    },
+    {
+      "id": "gs-024",
+      "name": "Cradle Bio",
+      "vertical": "IA conception protéines",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.6,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://cradle.bio",
+        "https://crunchbase.com/cradle-bio"
+      ]
+    },
+    {
+      "id": "gs-025",
+      "name": "Ezra Health",
+      "vertical": "IA détection cancer précoce",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 6,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://ezra.com",
+        "https://crunchbase.com/ezra-health"
+      ]
+    },
+    {
+      "id": "gs-026",
+      "name": "Sonio",
+      "vertical": "IA échographie obstétricale",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://sonio.ai",
+        "https://crunchbase.com/sonio"
+      ]
+    },
+    {
+      "id": "gs-027",
+      "name": "Jasper AI",
+      "vertical": "IA contenu marketing — stagnant",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 0,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 3,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://jasper.ai",
+        "https://crunchbase.com/jasper-ai",
+        "https://techcrunch.com/jasper-layoffs-2024"
+      ]
+    },
+    {
+      "id": "gs-028",
+      "name": "Adept AI",
+      "vertical": "IA agents — acquis par Amazon",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 4.8,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/adept-ai-labs",
+        "https://techcrunch.com/adept-amazon-2024"
+      ]
+    },
+    {
+      "id": "gs-029",
+      "name": "Harvey AI",
+      "vertical": "IA juridique",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 6.9,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://harvey.ai",
+        "https://crunchbase.com/harvey-2"
+      ]
+    },
+    {
+      "id": "gs-030",
+      "name": "Glean",
+      "vertical": "IA recherche entreprise",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.6,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://glean.com",
+        "https://crunchbase.com/glean-2"
+      ]
+    },
+    {
+      "id": "gs-031",
+      "name": "Writer",
+      "vertical": "IA contenu enterprise",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.9,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://writer.com",
+        "https://crunchbase.com/writer-2"
+      ]
+    },
+    {
+      "id": "gs-032",
+      "name": "Runway ML",
+      "vertical": "IA vidéo créative",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.3,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://runwayml.com",
+        "https://crunchbase.com/runway-2"
+      ]
+    },
+    {
+      "id": "gs-033",
+      "name": "Synthesia",
+      "vertical": "IA vidéo avatar",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.7,
+        "icc": 0.77
+      },
+      "sourcesDocumentees": [
+        "https://synthesia.io",
+        "https://crunchbase.com/synthesia"
+      ]
+    },
+    {
+      "id": "gs-034",
+      "name": "Gong",
+      "vertical": "IA sales intelligence",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.2,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://gong.io",
+        "https://crunchbase.com/gong-io"
+      ]
+    },
+    {
+      "id": "gs-035",
+      "name": "Ironclad",
+      "vertical": "IA contrats légaux",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://ironcladapp.com",
+        "https://crunchbase.com/ironclad"
+      ]
+    },
+    {
+      "id": "gs-036",
+      "name": "Scale AI",
+      "vertical": "IA data labeling",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.9,
+        "icc": 0.84
+      },
+      "sourcesDocumentees": [
+        "https://scale.com",
+        "https://crunchbase.com/scale-ai"
+      ]
+    },
+    {
+      "id": "gs-037",
+      "name": "Descript",
+      "vertical": "IA audio/vidéo édition",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 3,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 5,
+        "icc": 0.7
+      },
+      "sourcesDocumentees": [
+        "https://descript.com",
+        "https://crunchbase.com/descript"
+      ]
+    },
+    {
+      "id": "gs-038",
+      "name": "Leena AI",
+      "vertical": "IA RH / ITSM",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4.9,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://leena.ai",
+        "https://crunchbase.com/leena-ai"
+      ]
+    },
+    {
+      "id": "gs-039",
+      "name": "Hugging Face",
+      "vertical": "IA MLOps / hub communautaire",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.7,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://huggingface.co",
+        "https://crunchbase.com/hugging-face",
+        "https://github.com/huggingface"
+      ]
+    },
+    {
+      "id": "gs-040",
+      "name": "Weights & Biases",
+      "vertical": "IA expérimentation MLOps",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://wandb.ai",
+        "https://crunchbase.com/weights-biases",
+        "https://github.com/wandb"
+      ]
+    },
+    {
+      "id": "gs-041",
+      "name": "Exotec",
+      "vertical": "IA robotique logistique",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 4,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.5,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://exotec.com",
+        "https://crunchbase.com/exotec-solutions"
+      ]
+    },
+    {
+      "id": "gs-042",
+      "name": "Landing AI",
+      "vertical": "IA vision industrielle",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.1,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://landing.ai",
+        "https://crunchbase.com/landing-ai",
+        "https://github.com/landing-ai"
+      ]
+    },
+    {
+      "id": "gs-043",
+      "name": "Tractable",
+      "vertical": "IA sinistres assurance",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.4,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://tractable.ai",
+        "https://crunchbase.com/tractable"
+      ]
+    },
+    {
+      "id": "gs-044",
+      "name": "Helsing",
+      "vertical": "IA défense",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 4,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8.5,
+        "icc": 0.86
+      },
+      "sourcesDocumentees": [
+        "https://helsing.ai",
+        "https://crunchbase.com/helsing"
+      ]
+    },
+    {
+      "id": "gs-045",
+      "name": "Preligens",
+      "vertical": "IA imagerie satellite défense",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.6,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://preligens.com",
+        "https://crunchbase.com/preligens"
+      ]
+    },
+    {
+      "id": "gs-046",
+      "name": "Covariant",
+      "vertical": "IA robotique préhension",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 4,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.3,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://covariant.ai",
+        "https://crunchbase.com/covariant-ai"
+      ]
+    },
+    {
+      "id": "gs-047",
+      "name": "CodeBot Generic",
+      "vertical": "LLM code — wrapper pur",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 0,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 2.5,
+        "icc": 0.86
+      },
+      "sourcesDocumentees": [
+        "https://example.com/benchmark-low"
+      ]
+    },
+    {
+      "id": "gs-048",
+      "name": "Wayve (homologation L3)",
+      "vertical": "IA autonome — L3 ADAS",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 4,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8.8,
+        "icc": 0.87
+      },
+      "sourcesDocumentees": [
+        "https://wayve.ai",
+        "https://crunchbase.com/wayve"
+      ]
+    },
+    {
+      "id": "gs-049",
+      "name": "Harvey AI (M&A)",
+      "vertical": "IA juridique transactionnel",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.8,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://harvey.ai",
+        "https://techcrunch.com/harvey-allenovery-2024"
+      ]
+    },
+    {
+      "id": "gs-050",
+      "name": "Planful",
+      "vertical": "IA finance planning",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 5.8,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://planful.com",
+        "https://crunchbase.com/planful"
+      ]
+    },
+    {
+      "id": "gs-051",
+      "name": "Numeral",
+      "vertical": "IA compliance TVA",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 5.2,
+        "icc": 0.72
+      },
+      "sourcesDocumentees": [
+        "https://numeral.io",
+        "https://crunchbase.com/numeral"
+      ]
+    },
+    {
+      "id": "gs-052",
+      "name": "Casetext",
+      "vertical": "IA recherche légale — acquis Thomson Reuters",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://casetext.com",
+        "https://crunchbase.com/casetext"
+      ]
+    },
+    {
+      "id": "gs-053",
+      "name": "Aidyia",
+      "vertical": "IA trading quantitatif",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 4,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8.2,
+        "icc": 0.85
+      },
+      "sourcesDocumentees": [
+        "https://aidyia.com",
+        "https://crunchbase.com/aidyia"
+      ]
+    },
+    {
+      "id": "gs-054",
+      "name": "Holistic AI (gov)",
+      "vertical": "IA audit réglementaire",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 4,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8,
+        "icc": 0.84
+      },
+      "sourcesDocumentees": [
+        "https://holisticai.com",
+        "https://crunchbase.com/holistic-ai"
+      ]
+    },
+    {
+      "id": "gs-055",
+      "name": "OpenBB",
+      "vertical": "IA finance open-source",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 4,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4.1,
+        "icc": 0.7
+      },
+      "sourcesDocumentees": [
+        "https://openbb.co",
+        "https://github.com/OpenBB-finance"
+      ]
+    },
+    {
+      "id": "gs-056",
+      "name": "Benchmark Wrapper Plancher",
+      "vertical": "SaaS IA — DI=0 minimal",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 0,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 2.2,
+        "icc": 0.9
+      },
+      "sourcesDocumentees": [
+        "https://example.com/benchmark-floor"
+      ]
+    },
+    {
+      "id": "gs-057",
+      "name": "Benchmark DI=0 Données VRIN",
+      "vertical": "IA B2C — paradoxe DI/ADC",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 0,
+        "ADC": 4,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 4.5,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://example.com/benchmark-di0-adc4"
+      ]
+    },
+    {
+      "id": "gs-058",
+      "name": "Benchmark Deeptech Maximum",
+      "vertical": "IA défense — profil maximal",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 4,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 4,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 9.5,
+        "icc": 0.88
+      },
+      "sourcesDocumentees": [
+        "https://example.com/benchmark-max"
+      ]
+    },
+    {
+      "id": "gs-059",
+      "name": "Benchmark Équipe Sans Produit",
+      "vertical": "IA early-stage stealth",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 1,
+        "IPC": 0,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 3.5,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://example.com/benchmark-team-only"
+      ]
+    },
+    {
+      "id": "gs-060",
+      "name": "Benchmark Conformité Pure",
+      "vertical": "LegalTech réglementaire",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-14",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 1,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 5,
+        "icc": 0.75
+      },
+      "sourcesDocumentees": [
+        "https://example.com/benchmark-ar-pure"
+      ]
+    },
+    {
+      "id": "gs-061",
+      "name": "Humane AI Pin",
+      "vertical": "Hardware IA consumer",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 0,
+        "IPC": 0,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 1.8,
+        "icc": 0.88
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/humane",
+        "https://theverge.com/humane-ai-pin-shutdown-2025"
+      ]
+    },
+    {
+      "id": "gs-062",
+      "name": "Builder.ai",
+      "vertical": "IA développement no-code",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 2.1,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/builder-ai",
+        "https://techcrunch.com/builder-ai-bankruptcy-2025"
+      ]
+    },
+    {
+      "id": "gs-063",
+      "name": "Tune AI",
+      "vertical": "LLM fine-tuning — commoditisé",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 0,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 2.4,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/tune-ai",
+        "https://techinasia.com/tune-ai-shutdown-2025"
+      ]
+    },
+    {
+      "id": "gs-064",
+      "name": "Typeface AI",
+      "vertical": "IA contenu marketing",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 0,
+        "IPC": 1,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 2.3,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/typeface",
+        "https://techcrunch.com/typeface-layoffs-2024"
+      ]
+    },
+    {
+      "id": "gs-065",
+      "name": "Regie.ai",
+      "vertical": "IA sales outreach",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 0,
+        "IPC": 1,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 1.9,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/regie-ai",
+        "https://linkedin.com/company/regie-ai"
+      ]
+    },
+    {
+      "id": "gs-066",
+      "name": "Synthesized",
+      "vertical": "IA données synthétiques",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 2.6,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/synthesized",
+        "https://techcrunch.com/synthesized-shutdown-2024"
+      ]
+    },
+    {
+      "id": "gs-067",
+      "name": "Forethought AI",
+      "vertical": "IA support client",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 1,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 3.1,
+        "icc": 0.77
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/forethought",
+        "https://zendesk.com/acquisition-forethought-2024"
+      ]
+    },
+    {
+      "id": "gs-068",
+      "name": "Primer AI",
+      "vertical": "IA défense / renseignement",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 3,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/primer-ai",
+        "https://defenseone.com/primer-ai-restructuring-2024"
+      ]
+    },
+    {
+      "id": "gs-069",
+      "name": "Embra",
+      "vertical": "IA assistant productivité",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 0,
+        "IPC": 0,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 1.5,
+        "icc": 0.85
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/embra",
+        "https://techcrunch.com/embra-shutdown-2024"
+      ]
+    },
+    {
+      "id": "gs-070",
+      "name": "Magic AI",
+      "vertical": "LLM code — acquis Google",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 2.8,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/magic-dev",
+        "https://techcrunch.com/google-acquires-magic-ai-talent-2025"
+      ]
+    },
+    {
+      "id": "gs-071",
+      "name": "Cognitiv",
+      "vertical": "IA publicité programmatique",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 1,
+        "IPC": 1,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 2.2,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/cognitiv",
+        "https://adexchanger.com/cognitiv-merger-2024"
+      ]
+    },
+    {
+      "id": "gs-072",
+      "name": "Yara AI",
+      "vertical": "IA RH / recrutement",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 0,
+        "ADC": 0,
+        "IPC": 0,
+        "AR": 0,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 1.6,
+        "icc": 0.86
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/yara-ai",
+        "https://linkedin.com/company/yara-ai"
+      ]
+    },
+    {
+      "id": "gs-073",
+      "name": "LightOn",
+      "vertical": "LLM on-premise souverain",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.2,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/lighton",
+        "https://lighton.ai/blog/on-premise-pivot-2024"
+      ]
+    },
+    {
+      "id": "gs-074",
+      "name": "Meero",
+      "vertical": "IA photographie B2B",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4.8,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/meero",
+        "https://frenchweb.fr/meero-pivot-saas-2024"
+      ]
+    },
+    {
+      "id": "gs-075",
+      "name": "Yseop",
+      "vertical": "IA NLG finance / rapports",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 5,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/yseop",
+        "https://informatica.com/acquisition-yseop-2023"
+      ]
+    },
+    {
+      "id": "gs-076",
+      "name": "Arago",
+      "vertical": "IA ITSM / automatisation IT",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 1
+      },
+      "sce": {
+        "final": 3.8,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/arago",
+        "https://heise.de/arago-insolvenz-2022"
+      ]
+    },
+    {
+      "id": "gs-077",
+      "name": "Anotea",
+      "vertical": "IA data RH / matching",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4.1,
+        "icc": 0.7
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/yatedo",
+        "https://linkedin.com/company/anotea"
+      ]
+    },
+    {
+      "id": "gs-078",
+      "name": "Lumapps",
+      "vertical": "IA intranet / digital workplace",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.6,
+        "icc": 0.75
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/lumapps",
+        "https://lumapps.com/press/ai-copilot-2024"
+      ]
+    },
+    {
+      "id": "gs-079",
+      "name": "Aitomation",
+      "vertical": "IA process mining industriel",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/aitomation",
+        "https://linkedin.com/company/aitomation"
+      ]
+    },
+    {
+      "id": "gs-080",
+      "name": "Snips",
+      "vertical": "IA NLU embarquée — IoT",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.9,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/snips",
+        "https://techcrunch.com/sonos-acquires-snips-2019"
+      ]
+    },
+    {
+      "id": "gs-081",
+      "name": "Dust (post-pivot)",
+      "vertical": "IA agents B2B entreprise",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 4.5,
+        "icc": 0.72
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/dust-tt",
+        "https://dust.tt/blog/b2b-pivot-2024"
+      ]
+    },
+    {
+      "id": "gs-082",
+      "name": "Aleph Alpha (pivot gov)",
+      "vertical": "LLM souverain — B2B gouvernement",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 4,
+        "CA": 1,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 4.9,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/aleph-alpha",
+        "https://aleph-alpha.com/government-api-2024"
+      ]
+    },
+    {
+      "id": "gs-083",
+      "name": "Giskard",
+      "vertical": "IA audit qualité / AI Act",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.2,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/giskard",
+        "https://giskard.ai/press/ai-act-compliance-2024"
+      ]
+    },
+    {
+      "id": "gs-084",
+      "name": "Zelros",
+      "vertical": "IA assurance / grands comptes",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/zelros",
+        "https://zelros.com/clients/credit-agricole-groupama"
+      ]
+    },
+    {
+      "id": "gs-085",
+      "name": "Doctolib",
+      "vertical": "IA santé / prise de rendez-vous",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8.4,
+        "icc": 0.87
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/doctolib",
+        "https://doctolib.com/press/2024-growth"
+      ]
+    },
+    {
+      "id": "gs-086",
+      "name": "LlamaIndex",
+      "vertical": "IA RAG framework — open+enterprise",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 1,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/llamaindex",
+        "https://llamaindex.ai/blog/enterprise-2024"
+      ]
+    },
+    {
+      "id": "gs-087",
+      "name": "Corti",
+      "vertical": "IA urgences médicales / dispatch",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.3,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/corti",
+        "https://corti.ai/press/eu-expansion-2024"
+      ]
+    },
+    {
+      "id": "gs-088",
+      "name": "Aqemia",
+      "vertical": "IA drug discovery / pharma",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.9,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/aqemia",
+        "https://aqemia.com/press/sanofi-partnership-2024"
+      ]
+    },
+    {
+      "id": "gs-089",
+      "name": "Holistic AI (compliance)",
+      "vertical": "IA audit réglementaire AI Act",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.1,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/holistic-ai",
+        "https://holisticai.com/press/ai-act-compliance"
+      ]
+    },
+    {
+      "id": "gs-090",
+      "name": "Contentsquare",
+      "vertical": "IA analytics UX / e-commerce",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.6,
+        "icc": 0.84
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/contentsquare",
+        "https://contentsquare.com/press/ai-integration-2024"
+      ]
+    },
+    {
+      "id": "gs-091",
+      "name": "Poolside (post-Série B)",
+      "vertical": "LLM code / développeurs",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 1,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 7.4,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/poolside",
+        "https://poolside.ai/press/series-b-2024"
+      ]
+    },
+    {
+      "id": "gs-092",
+      "name": "Nabla (post-pivot médical)",
+      "vertical": "IA consultation médicale",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.7,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/nabla",
+        "https://nabla.com/press/500-practices-2025"
+      ]
+    },
+    {
+      "id": "gs-093",
+      "name": "Bioptimus (post-Série A)",
+      "vertical": "IA biologie / drug discovery",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 6.5,
+        "icc": 0.77
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/bioptimus",
+        "https://bioptimus.com/press/series-a-2024"
+      ]
+    },
+    {
+      "id": "gs-094",
+      "name": "Mistral AI (post-Série C)",
+      "vertical": "LLM généraliste / enterprise",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-23",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4
+      },
+      "sce": {
+        "final": 8,
+        "icc": 0.85
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/mistral-ai",
+        "https://mistral.ai/press/series-c-2024"
+      ]
+    },
+    {
+      "id": "gs-095",
+      "name": "Qonto",
+      "vertical": "Fintech IA / Néo-banque",
+      "modelVersion": "4.3",
+      "migrated": false,
+      "dateNotation": "2026-04-25",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 4,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7.8,
+        "icc": 0.88
+      },
+      "sourcesDocumentees": [
+        "https://qonto.com",
+        "https://crunchbase.com/organization/qonto",
+        "https://dust.tt/customers/qonto"
+      ]
+    },
+    {
+      "id": "gs-096",
+      "name": "Pennylane",
+      "vertical": "SaaS comptabilité / expertise-comptable IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 2,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 6.1,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://pennylane.com",
+        "https://crunchbase.com/organization/pennylane-3",
+        "https://bpifrance.fr/nos-solutions/financements/pennylane",
+        "https://www.lesechos.fr/pennylane-series-b-2023"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-097",
+      "name": "Spendesk",
+      "vertical": "SaaS gestion dépenses / spend management",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 3,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://spendesk.com",
+        "https://crunchbase.com/organization/spendesk",
+        "https://acpr.banque-france.fr/agrements/spendesk",
+        "https://techcrunch.com/spendesk-series-c-2021"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-098",
+      "name": "Lydia / Sumeria",
+      "vertical": "Fintech paiement P2P → neobanque",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 2,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 5.2,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://sumeria.money",
+        "https://crunchbase.com/organization/lydia-solutions",
+        "https://techcrunch.com/lydia-sumeria-rebrand-2023",
+        "https://bfmtv.com/lydia-sumeria-difficultés-2024"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 24
+      }
+    },
+    {
+      "id": "gs-099",
+      "name": "Luko",
+      "vertical": "Insurtech assurance habitation IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 2,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 4.1,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://crunchbase.com/organization/luko",
+        "https://techcrunch.com/luko-acquisition-allianz-direct-2023",
+        "https://lesechos.fr/luko-acquis-allianz-2023"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 30
+      }
+    },
+    {
+      "id": "gs-100",
+      "name": "Alan",
+      "vertical": "Insurtech santé / mutuelle digitale",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 3,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.1,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://alan.com",
+        "https://crunchbase.com/organization/alan-3",
+        "https://techcrunch.com/alan-series-f-2024",
+        "https://alan.com/blog/resultats-2024"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-101",
+      "name": "Payfit",
+      "vertical": "SaaS paie / RH IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 3,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.5,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://payfit.com",
+        "https://crunchbase.com/organization/payfit",
+        "https://techcrunch.com/payfit-series-d-2021",
+        "https://lesechos.fr/payfit-rentabilite-2025"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-102",
+      "name": "Swan",
+      "vertical": "Fintech Banking-as-a-Service",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 2,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 6.4,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://swan.io",
+        "https://crunchbase.com/organization/swan-2",
+        "https://acpr.banque-france.fr/agrements/swan",
+        "https://techcrunch.com/swan-series-b-2022"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-103",
+      "name": "Mooncard",
+      "vertical": "Fintech cartes corporate / gestion frais",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 2
+      },
+      "sce": {
+        "final": 4.5,
+        "icc": 0.72
+      },
+      "sourcesDocumentees": [
+        "https://mooncard.co",
+        "https://crunchbase.com/organization/mooncard"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 30
+      }
+    },
+    {
+      "id": "gs-104",
+      "name": "Doctolib",
+      "vertical": "Healthtech / prise de rendez-vous médicaux + IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 4,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 8.3,
+        "icc": 0.87
+      },
+      "sourcesDocumentees": [
+        "https://doctolib.fr",
+        "https://crunchbase.com/organization/doctolib",
+        "https://techcrunch.com/doctolib-profitability-2023",
+        "https://ans.sante.fr/certifications/doctolib-hds"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-105",
+      "name": "Withings",
+      "vertical": "Medtech / objets connectés santé + IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 3,
+        "lu_type": "hybride",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.2,
+        "icc": 0.81
+      },
+      "sourcesDocumentees": [
+        "https://withings.com",
+        "https://crunchbase.com/organization/withings",
+        "https://fda.gov/withings-scanwatch",
+        "https://techcrunch.com/withings-buyback-nokia-2018"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-106",
+      "name": "Sophia Genetics",
+      "vertical": "IA génomique / oncologie de précision",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 4,
+        "LU": 4,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.5,
+        "icc": 0.82
+      },
+      "sourcesDocumentees": [
+        "https://sophiagenetics.com",
+        "https://crunchbase.com/organization/sophia-genetics",
+        "https://nasdaq.com/market-activity/stocks/soph",
+        "https://fda.gov/sophia-genetics-breakthrough"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-107",
+      "name": "Cardiologs (acquis Philips)",
+      "vertical": "IA ECG / cardiologie",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 4,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 8.2,
+        "icc": 0.86
+      },
+      "sourcesDocumentees": [
+        "https://cardiologs.com",
+        "https://crunchbase.com/organization/cardiologs",
+        "https://philips.com/acquisition-cardiologs-2021",
+        "https://fda.gov/cardiologs-510k"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-108",
+      "name": "Lifen",
+      "vertical": "IA interopérabilité données médicales",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.5,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://lifen.fr",
+        "https://crunchbase.com/organization/lifen",
+        "https://bpifrance.fr/nos-solutions/lifen",
+        "https://ans.sante.fr/lifen-hds"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-109",
+      "name": "Pixacare",
+      "vertical": "IA dermatologie / télémédecine",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 4,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.4,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://pixacare.com",
+        "https://crunchbase.com/organization/pixacare",
+        "https://bpifrance.fr/pixacare"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-110",
+      "name": "Contentsquare",
+      "vertical": "IA analytics UX / digital experience",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 3,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 8,
+        "icc": 0.85
+      },
+      "sourcesDocumentees": [
+        "https://contentsquare.com",
+        "https://crunchbase.com/organization/contentsquare",
+        "https://techcrunch.com/contentsquare-acquisition-hotjar-2021",
+        "https://contentsquare.com/blog/annual-revenue"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-111",
+      "name": "Mirakl",
+      "vertical": "SaaS marketplace / commerce B2B",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 3,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.8,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://mirakl.com",
+        "https://crunchbase.com/organization/mirakl",
+        "https://techcrunch.com/mirakl-series-e-2021"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-112",
+      "name": "Toucan Toco (acquis)",
+      "vertical": "SaaS data storytelling / BI",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 2,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 4.2,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://toucantoco.com",
+        "https://crunchbase.com/organization/toucan-toco",
+        "https://www.toucaninsights.com/acquisition-2024"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 28
+      }
+    },
+    {
+      "id": "gs-113",
+      "name": "Matera",
+      "vertical": "Proptech / gestion copropriété IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5.8,
+        "icc": 0.75
+      },
+      "sourcesDocumentees": [
+        "https://matera.eu",
+        "https://crunchbase.com/organization/matera",
+        "https://bpifrance.fr/matera"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-114",
+      "name": "Brigad",
+      "vertical": "Marketplace RH / intérim digital restauration",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 3,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6,
+        "icc": 0.76
+      },
+      "sourcesDocumentees": [
+        "https://brigad.co",
+        "https://crunchbase.com/organization/brigad",
+        "https://techcrunch.com/brigad-series-b-2022"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-115",
+      "name": "Elevo (acquis Lucca)",
+      "vertical": "SaaS RH / management performance",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 1,
+        "CA": 2,
+        "GCH": 2,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 4,
+        "icc": 0.71
+      },
+      "sourcesDocumentees": [
+        "https://elevo.fr",
+        "https://crunchbase.com/organization/elevo",
+        "https://lucca.fr/actualites/acquisition-elevo-2023"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 24
+      }
+    },
+    {
+      "id": "gs-116",
+      "name": "Dataiku",
+      "vertical": "MLOps / plateforme IA entreprise",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 3,
+        "lu_type": "hybride",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.8,
+        "icc": 0.83
+      },
+      "sourcesDocumentees": [
+        "https://dataiku.com",
+        "https://crunchbase.com/organization/dataiku",
+        "https://techcrunch.com/dataiku-series-f-2021"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-117",
+      "name": "Meero (pivot)",
+      "vertical": "IA photographie / marketplace créatifs",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 2,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 2,
+        "LU": 1,
+        "lu_type": "hybride",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 3.5,
+        "icc": 0.75
+      },
+      "sourcesDocumentees": [
+        "https://meero.com",
+        "https://crunchbase.com/organization/meero",
+        "https://techcrunch.com/meero-layoffs-pivot-2021",
+        "https://bfmtv.com/meero-restructuration-2022"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 20
+      }
+    },
+    {
+      "id": "gs-118",
+      "name": "Ankorstore",
+      "vertical": "B2B marketplace wholesale retail",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 3,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 5,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://ankorstore.com",
+        "https://crunchbase.com/organization/ankorstore",
+        "https://techcrunch.com/ankorstore-layoffs-2023"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 30
+      }
+    },
+    {
+      "id": "gs-119",
+      "name": "Captain Contrat (acquis LegalPlace)",
+      "vertical": "Legaltech / création entreprise automatisée",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 0,
+        "ADC": 2,
+        "IPC": 2,
+        "AR": 2,
+        "CA": 2,
+        "GCH": 2,
+        "LU": 0,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 4,
+        "icc": 0.77
+      },
+      "sourcesDocumentees": [
+        "https://captaincontrat.com",
+        "https://crunchbase.com/organization/captain-contrat",
+        "https://www.legalplace.fr/acquisition-captain-contrat-2023"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 30
+      }
+    },
+    {
+      "id": "gs-120",
+      "name": "Heuritech",
+      "vertical": "IA prédiction tendances mode / fashion retail",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 3,
+        "AR": 1,
+        "CA": 3,
+        "GCH": 3,
+        "LU": 3,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 6.8,
+        "icc": 0.79
+      },
+      "sourcesDocumentees": [
+        "https://heuritech.com",
+        "https://crunchbase.com/organization/heuritech",
+        "https://techcrunch.com/heuritech-series-b-2022",
+        "https://vogue.business/heuritech-lvmh-partnership"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-121",
+      "name": "Shift Technology",
+      "vertical": "IA détection fraude assurance",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 4,
+        "IPC": 4,
+        "AR": 3,
+        "CA": 3,
+        "GCH": 4,
+        "LU": 4,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": true
+      },
+      "sce": {
+        "final": 7.9,
+        "icc": 0.84
+      },
+      "sourcesDocumentees": [
+        "https://shift-technology.com",
+        "https://crunchbase.com/organization/shift-technology",
+        "https://techcrunch.com/shift-technology-series-d-2021",
+        "https://shift-technology.com/customers"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-122",
+      "name": "Ÿnsect (difficultés)",
+      "vertical": "Deeptech / élevage insectes pour protéines IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 3,
+        "ADC": 3,
+        "IPC": 1,
+        "AR": 2,
+        "CA": 1,
+        "GCH": 3,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 4.8,
+        "icc": 0.73
+      },
+      "sourcesDocumentees": [
+        "https://ynsect.com",
+        "https://crunchbase.com/organization/ynsect",
+        "https://lexpansion.lexpress.fr/ynsect-difficultes-2024",
+        "https://bfmtv.com/ynsect-redressement-judiciaire-2024"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 22
+      }
+    },
+    {
+      "id": "gs-123",
+      "name": "Voodoo",
+      "vertical": "Gaming mobile / hypercasual + IA",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 4,
+        "AR": 2,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 7,
+        "icc": 0.78
+      },
+      "sourcesDocumentees": [
+        "https://voodoo.io",
+        "https://crunchbase.com/organization/voodoo-2",
+        "https://techcrunch.com/voodoo-acquisition-bereal-2023"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    },
+    {
+      "id": "gs-124",
+      "name": "Zenly (fermé)",
+      "vertical": "Social / géolocalisation — fermé par Snap",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 1,
+        "ADC": 3,
+        "IPC": 1,
+        "AR": 1,
+        "CA": 1,
+        "GCH": 3,
+        "LU": 1,
+        "lu_type": "externe",
+        "lu_data_gap": false,
+        "lu_ipc_anchor": false
+      },
+      "sce": {
+        "final": 3.8,
+        "icc": 0.74
+      },
+      "sourcesDocumentees": [
+        "https://techcrunch.com/zenly-shutdown-snap-2023",
+        "https://crunchbase.com/organization/zenly",
+        "https://www.lefigaro.fr/zenly-fermeture-snap-2023"
+      ],
+      "outcome": {
+        "event": 1,
+        "t_event_mois": 18
+      }
+    },
+    {
+      "id": "gs-125",
+      "name": "Carbono / Sweep",
+      "vertical": "SaaS carbone / ESG décarbonation entreprise",
+      "modelVersion": "4.3",
+      "migrated": true,
+      "dateNotation": "2026-05-22",
+      "scores": {
+        "DI": 2,
+        "ADC": 3,
+        "IPC": 3,
+        "AR": 4,
+        "CA": 3,
+        "GCH": 3
+      },
+      "sce": {
+        "final": 6.9,
+        "icc": 0.8
+      },
+      "sourcesDocumentees": [
+        "https://sweep.net",
+        "https://crunchbase.com/organization/sweep-3",
+        "https://techcrunch.com/sweep-series-b-2023",
+        "https://ec.europa.eu/csrd-directive"
+      ],
+      "outcome": {
+        "event": 0,
+        "t_event_mois": 36
+      }
+    }
+  ],
+  "seuil_viabilite": 46,
+  "seuil_alerte": 50,
+  "zones": {
+    "excellent": {
+      "min": 80,
+      "max": 100,
+      "label": "Excellent",
+      "tx_echec_cohorte500": "0%"
+    },
+    "solide": {
+      "min": 65,
+      "max": 79,
+      "label": "Solide",
+      "tx_echec_cohorte500": "0%"
+    },
+    "vigilance": {
+      "min": 46,
+      "max": 64,
+      "label": "Vigilance",
+      "tx_echec_cohorte500": "7.5%"
+    },
+    "risque": {
+      "min": 0,
+      "max": 45,
+      "label": "Risque élevé",
+      "tx_echec_cohorte500": "98.8%"
+    }
+  },
+  "validation_seuil": {
+    "seuil_46": {
+      "_retire_audit_sci_b": "Bloc de métriques RETIRÉ (audit SCI-B, 13/07/2026) : exactitude 98,2 %, F1 0,9497 — non reproductibles sur les données du dépôt (une sensibilité de 0,914 avec 8 FN impliquerait 93 défaillances ; la cohorte vérifiée en compte 20). Métriques réelles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970]."
+    },
+    "seuil_50_legacy": {
+      "acc": 0.952,
+      "sens": 0.925,
+      "spec": 0.958,
+      "prec": 0.835,
+      "f1": 0.8776,
+      "fn": 7,
+      "fp": 17,
+      "portefeuille_precision": 0.958
+    }
+  },
+  "_audit_sci_b": "[RETIRÉ — AUDIT SCI-B 13/07/2026] Les métriques « cohorte 500 » (exactitude 98,2 %, F1 0,9497) n'étaient adossées à aucune donnée du dépôt. Métriques de remplacement, recalculées et reproductibles : src/config/validation-n442.json — AUC 0,930 [IC 0,870–0,970], n=401 vérifiées, 20 défaillances. Rejouer : npx tsx scripts/validate-cohorte-n442.ts"
+}

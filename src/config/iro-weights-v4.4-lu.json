@@ -1,0 +1,22 @@
+{
+  "version": "4.4-LU",
+  "source": "Delphi expert panel — Avril 2026 + intégration von Hippel (Lead User) — Juin 2026",
+  "frozen": false,
+  "weights": { "DI": 0.18, "ADC": 0.22, "IPC": 0.22, "AR": 0.13, "CA": 0.10, "GCH": 0.12, "LU": 0.15 },
+  "srd_weights": { "VMM": 0.35, "NCD": 0.35, "DFL": 0.30 },
+  "lu_meta": {
+    "theory": "von Hippel 1986 (lead user innovation), 2005 (democratizing innovation)",
+    "rationale": "Les lead users co-construisent des actifs VRIN irréproductibles : données comportementales exclusives, intégration critique renforcée, signal PMF robuste.",
+    "levels": {
+      "0": "Aucun — clients passifs, zéro co-construction documentée",
+      "1": "Déclaré — early adopters mentionnés sans trace de co-développement",
+      "2": "Actif — feedback produit structuré, itérations documentées",
+      "3": "Co-développeur — co-auteurs de features, données propriétaires irréproductibles",
+      "4": "Ancré VRIN — dépendance mutuelle, flux d'usage non réplicables"
+    },
+    "lu_type_values": ["interne", "externe", "hybride"],
+    "rev9": "LU.score >= 3 ET ADC.score <= 1 → lu_data_gap: true",
+    "rev10": "LU.score >= 3 ET IPC.score >= 3 → lu_ipc_anchor: true",
+    "rev11": "Spécifier lu_type: interne | externe | hybride"
+  }
+}

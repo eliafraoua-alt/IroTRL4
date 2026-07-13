@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "frozen_at": "2026-06-24",
+  "frozen_reason": "Stabilisation pre-audit BPI/France 2030 — sigma <= 8 pts validé sur stability-5runs",
+  "iro_version": "v7.0",
+  "comment": "NE PAS MODIFIER sans re-run complet stability-5runs.vitest.test.ts (STABILITY_REAL=true)",
+  "unlock_procedure": [
+    "1. Créer une branche git 'model-rotation/YYYY-MM-DD'",
+    "2. Modifier GEMINI_PASS_MODELS dans multi-llm-consensus.ts",
+    "3. Exécuter: STABILITY_REAL=true GEMINI_API_KEY=<key> npx vitest run tests/stability-5runs.vitest.test.ts",
+    "4. Vérifier sigma <= 8 pts dans les logs [C2-REAL]",
+    "5. Mettre à jour ce fichier + ajouter entrée dans MODEL_CHANGELOG",
+    "6. PR avec approbation d'un second reviewer avant merge main"
+  ],
+  "passes": {
+    "ALPHA": {
+      "model_id": "gemini-3.5-flash",
+      "status": "GA_STABLE",
+      "frozen_sigma_contribution": "faible (modèle de référence)"
+    },
+    "BETA": {
+      "model_id": "gemini-3.1-flash-lite",
+      "status": "GA_STABLE",
+      "frozen_sigma_contribution": "faible"
+    },
+    "GAMMA": {
+      "model_id": "gemini-3-flash-preview",
+      "status": "PREVIEW_SURVEILLE",
+      "frozen_sigma_contribution": "modérée — surveiller retrait preview",
+      "alert": "Si 404 API → fallback automatique vers gemini-3.5-flash (llm-router.ts L297)"
+    }
+  },
+  "stability_baseline": {
+    "startup_reference": "Mistral AI (gs-096)",
+    "iro_ref": 74.0,
+    "iro_tolerance": 8.0,
+    "sigma_measured": 3.479,
+    "sigma_date": "2026-06-24",
+    "status": "PASSED",
+    "command": "python stability_c2_real.py --key AIza...",
+    "audit_hash": "C2-A3F7B2C1D8E94F2A",
+    "iro_scores": [
+      74.0,
+      79.5,
+      68.5,
+      74.0,
+      74.0
+    ],
+    "iro_mean": 74.0,
+    "n_runs_success": 5,
+    "bpi_c2_passed": true,
+    "validated_at": "2026-06-24T00:00:00Z",
+    "analysis": {
+      "gemini_35_flash_bias": "+0.0 pts (très stable — modèle de référence)",
+      "gemini_31_flash_lite_bias": "+2.75 pts moy (BETA sur-score +5.5 vs EPSILON stable)",
+      "gemini_3_flash_preview_bias": "-5.5 pts (probable IPC=1 au lieu de 2)",
+      "most_volatile_dim": "IPC (poids 22% — info clients non publique)",
+      "recommendation": "Surveiller GAMMA (3-flash-preview) — retrait preview possible"
+    }
+  },
+  "lock_hash": "gemini-35f+31fl+3fp@2026-06-24-σ3.479-PASSED"
+}

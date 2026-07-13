@@ -1,0 +1,11 @@
+{
+  "_archived": true,
+  "_reason": "Version legacy pré-LU. CA=0.13 (redistribué en v4.4), LU absent. Non utilisé par l'app depuis weights-registry v4.5-S46.",
+  "_superseded_by": "iro-weights-v4.5-s46.json",
+  "_archived_date": "2026-06-13",
+  "version": "4.3-ARCHIVED",
+  "source": "Delphi expert panel — Avril 2026",
+  "frozen": true,
+  "weights": { "DI": 0.18, "ADC": 0.22, "IPC": 0.22, "AR": 0.13, "CA": 0.13, "GCH": 0.12 },
+  "srd_weights": { "VMM": 0.35, "NCD": 0.35, "DFL": 0.30 }
+}

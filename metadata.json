@@ -1,0 +1,8 @@
+{
+  "name": "IROSTRENGTH VELOCITY TRL4+",
+  "description": "Système expert d'analyse stratégique des startups IA (v7.0). TRL 4 — validé en environnement contrôlé. Cohorte auditée n=442 (401 vérifiées, 20 défaillances, 45 acquisitions distinguées). AUC = 0.930 [IC 95% bootstrap 0.870-0.970], reproductible (seed publié). EPV 2.9 — statut exploratoire. L'exactitude n'est pas citée : taux de défaillance 5%, un classifieur trivial atteint 95%. 7 dimensions (DI/ADC/IPC/AR/CA/GCH/LU). Validation prospective en aveugle requise pour TRL 5.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
