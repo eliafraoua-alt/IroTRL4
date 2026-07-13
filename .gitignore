@@ -12,3 +12,9 @@ data/*.db
 data/pipeline.db
 data/annotations/
 data/calibration.json
+
+__pycache__/
+*.pyc
+
+__pycache__/
+*.pyc

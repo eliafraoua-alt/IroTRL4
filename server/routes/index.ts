@@ -19,9 +19,35 @@ const router = Router();
 // définie) couvre désormais TOUTES les routes sensibles — journal d'audit, base
 // startups, pipelines de collecte, contestations — et non plus seulement /llm.
 // /health et /metrics restent publics (sondes de supervision).
+/**
+ * MODE DÉMO PUBLIQUE (PUBLIC_DEMO=true) — protection de la clé LLM.
+ *
+ * Sur un déploiement exposé à Internet (Hugging Face Space, démo publique), le
+ * front appelle /api/llm sans clé d'API. Sans garde-fou, n'importe quel visiteur
+ * peut consommer le quota Gemini — aux frais du propriétaire.
+ *
+ * PUBLIC_DEMO=true neutralise les routes qui consomment le LLM ou des API
+ * payantes, tout en laissant l'application consultable : cohorte de validation,
+ * métriques, journal d'audit, scores déjà calculés restent accessibles.
+ * C'est ce qu'un évaluateur (Bpifrance, investisseur) a besoin de voir.
+ */
+const COSTLY_PREFIXES = ['/llm', '/pappers'];
+
 router.use((req, res, next) => {
   const publicPaths = ['/health', '/metrics', '/metrics/llm'];
   if (publicPaths.includes(req.path)) return next();
+
+  if (process.env.PUBLIC_DEMO === 'true' && COSTLY_PREFIXES.some(p => req.path.startsWith(p))) {
+    return res.status(503).json({
+      error: 'Mode démonstration publique',
+      message: "Le scoring assisté par LLM est désactivé sur cette instance publique afin de " +
+               "protéger les quotas du fournisseur. Les résultats déjà calculés, la cohorte de " +
+               "validation (n=442) et le journal d'audit restent consultables.",
+      reproduire: 'npx tsx scripts/validate-cohorte-n442.ts → AUC 0.930 [IC 0.870–0.970]',
+      contact: "Pour une démonstration complète avec scoring en direct, demander un accès dédié.",
+    });
+  }
+
   return apiKeyAuth(req, res, next);
 });
 
@@ -47,7 +73,22 @@ router.get('/health', (_req: Request, res: Response) => {
       prompts:  listPrompts(),
     },
   };
-  return res.status(providers.gemini ? 200 : 503).json(health);
+  // CORRECTIF AUDIT PROD-02 — Sonde de vitalité et mode démo.
+  // /api/health renvoyait 503 dès que la clé Gemini était absente. Or les
+  // plateformes d'hébergement (Hugging Face, Cloud Run, Fly…) utilisent cette
+  // route pour décider si le conteneur est vivant : un 503 permanent le fait
+  // redémarrer en boucle, puis marquer en échec.
+  //
+  // En mode démonstration publique (PUBLIC_DEMO=true), l'absence de clé LLM est
+  // le comportement ATTENDU, pas une panne : le service répond 200 et signale
+  // simplement que le scoring en direct est désactivé.
+  const demoMode = process.env.PUBLIC_DEMO === 'true';
+  const healthy = demoMode || providers.gemini;
+  return res.status(healthy ? 200 : 503).json({
+    ...health,
+    mode: demoMode ? 'demo_public' : 'full',
+    llm_scoring: demoMode ? 'désactivé (démo publique)' : (providers.gemini ? 'actif' : 'clé manquante'),
+  });
 });
 
 // ── API Metrics ─────────────────────────────────────────────────────────

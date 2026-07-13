@@ -1,3 +1,20 @@
+---
+title: IRO Strength Velocity
+emoji: 📊
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+license: other
+short_description: Scoring de résilience des startups IA — TRL 4, AUC 0.930
+---
+
+> ⚠️ **Instance de démonstration publique.** Le scoring assisté par LLM est désactivé
+> (`PUBLIC_DEMO=true`) afin de protéger les quotas du fournisseur. La cohorte de
+> validation (n = 442), les métriques et le journal d'audit restent consultables.
+> Les chiffres publiés sont reproductibles : `npx tsx scripts/validate-cohorte-n442.ts`
+
 # IRO Strength Velocity
 
 **Outil d'évaluation de la résilience opérationnelle des startups**

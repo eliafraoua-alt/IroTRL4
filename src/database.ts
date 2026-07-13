@@ -3,10 +3,28 @@ import { logger } from './utils/logger';
 import path from 'path';
 import fs from 'fs';
 
-// @ts-ignore
-const customRequire = typeof require !== 'undefined'
-  ? require
-  : (typeof import.meta !== 'undefined' && import.meta.url ? createRequire(import.meta.url) : () => { throw new Error('No require function available'); });
+/**
+ * CORRECTIF AUDIT PROD-01 — Le serveur de production ne démarrait pas.
+ *
+ * `createRequire(import.meta.url)` fonctionne en ESM (mode dev via tsx), mais le
+ * build de production est bundlé en CJS par esbuild (`--format=cjs`). Dans ce
+ * contexte, esbuild remplace `import.meta` par `{}` : `import.meta.url` vaut donc
+ * `undefined`, et createRequire lève une ERR_INVALID_ARG_VALUE au chargement du
+ * module — le processus meurt avant même d'écouter sur son port.
+ *
+ * Symptôme : `npm run build` réussit, puis `npm start` (ou `node dist/server.cjs`)
+ * plante instantanément. Le bug touchait tout déploiement réel (Docker, Hugging
+ * Face, VPS), pas seulement le développement local.
+ *
+ * Correctif : on ne dépend plus d'`import.meta.url`. En CJS, `require` existe déjà
+ * nativement ; en ESM, on le reconstruit à partir d'un chemin de fichier absolu.
+ */
+const nodeRequire: NodeRequire = (() => {
+  // Contexte CJS (build de production) : `require` est déjà disponible.
+  if (typeof require === 'function') return require as unknown as NodeRequire;
+  // Contexte ESM (dev via tsx) : reconstruction depuis le répertoire courant.
+  return createRequire(path.join(process.cwd(), 'index.js'));
+})();
 
 export interface IroDatabase {
   exec(sql: string): void;
@@ -205,7 +223,7 @@ export async function initDB(dbPath: string): Promise<IroDatabase> {
 
   // 1. Essai better-sqlite3
   try {
-    let Database = customRequire('better-sqlite3');
+    let Database = nodeRequire('better-sqlite3');
     if (Database.default) Database = Database.default;
     const nativeDb = new Database(dbPath);
     db = new BetterSqlite3Wrapper(nativeDb);
@@ -213,7 +231,7 @@ export async function initDB(dbPath: string): Promise<IroDatabase> {
   } catch (err) {
     // 2. Essai sql.js WASM
     try {
-      const initSqlJs = customRequire('sql.js');
+      const initSqlJs = nodeRequire('sql.js');
       const SQL = await initSqlJs();
       const fileBuffer = fs.existsSync(dbPath) ? fs.readFileSync(dbPath) : null;
       const wasmDb = fileBuffer ? new SQL.Database(fileBuffer) : new SQL.Database();
