@@ -338,5 +338,39 @@
     "review_date": "2026-07-13T14:19:16.481Z",
     "outcome_note": "Recours légitime, score réévalué.",
     "sla_due_date": "2026-08-12T14:19:16.480Z"
+  },
+  {
+    "id": "CONTEST-20260731--096",
+    "startup_id": "gs-096",
+    "submission_date": "2026-07-31T21:03:58.208Z",
+    "score_contested": {
+      "iro": 52,
+      "iro_cr": 44,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Justification de test de persistance.",
+    "evidence_urls": [],
+    "status": "pending",
+    "reviewer": null,
+    "review_date": null,
+    "outcome_note": null,
+    "sla_due_date": "2026-08-30T21:03:58.208Z"
+  },
+  {
+    "id": "CONTEST-20260731--001",
+    "startup_id": "gs-001",
+    "submission_date": "2026-07-31T21:03:58.221Z",
+    "score_contested": {
+      "iro": 62,
+      "iro_cr": 54,
+      "quadrant": "Forteresse"
+    },
+    "reason": "Review de test",
+    "evidence_urls": [],
+    "status": "resolved_modified",
+    "reviewer": "Reviewer-1",
+    "review_date": "2026-07-31T21:03:58.223Z",
+    "outcome_note": "Recours légitime, score réévalué.",
+    "sla_due_date": "2026-08-30T21:03:58.221Z"
   }
 ]

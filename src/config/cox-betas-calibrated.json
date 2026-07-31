@@ -7,7 +7,7 @@
   "regulated_sector": 0.0965,
   "velocity": -0.028,
   "brier_score": 0.071,
-  "calibrated_at": "2026-07-13T14:19:09.652Z",
+  "calibrated_at": "2026-07-31T21:13:21.989Z",
   "n_cases": 32,
   "n_event1": 9,
   "n_event1_source": "calibrate-cox.ts — withOutcomes filtrés depuis gold-standard-v4.3.json",
