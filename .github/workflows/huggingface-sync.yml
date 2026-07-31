@@ -16,4 +16,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git push --force https://eliafraoua-alt:$HF_TOKEN@huggingface.co/spaces/eliafraoua-alt/IroTRL4 main
+          git push --force https://EliaFraoua:$HF_TOKEN@huggingface.co/spaces/EliaFraoua/IroTRL4 main
