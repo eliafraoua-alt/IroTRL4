@@ -218,7 +218,7 @@ const ConfidenceSelector: React.FC<{
   onChange: (v: string) => void;
 }> = ({ dimension, value, onChange }) => (
   <div style={{ marginTop: 8, padding: 8, background: 'rgba(99,102,241,0.05)', borderRadius: 6, border: '1px solid rgba(99,102,241,0.15)' }}>
-    <div style={{ fontSize: 9, fontWeight: 'bold', color: '#818cf8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 4 }}>
+    <div style={{ fontSize: 11, fontWeight: 'bold', color: '#818cf8', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 4 }}>
       <Shield size={10} />
       Niveau de confiance — {dimension.toUpperCase()}
     </div>
@@ -233,7 +233,7 @@ const ConfidenceSelector: React.FC<{
             onChange={() => onChange(level)}
             style={{ marginTop: 2 }}
           />
-          <span style={{ fontSize: 9, color: value === level ? '#c7d2fe' : 'rgba(255,255,255,0.4)', lineHeight: 1.3 }}>
+          <span style={{ fontSize: 11, color: value === level ? '#c7d2fe' : 'rgba(255,255,255,0.4)', lineHeight: 1.3 }}>
             <span style={{ fontFamily: 'monospace', marginRight: 4 }}>[{level}]</span> {label}
           </span>
         </label>
@@ -353,7 +353,7 @@ function VRINGrid({
       border: '1px solid rgba(255,255,255,0.06)', padding: '8px 10px',
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-        <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', fontWeight: 700 }}>
+        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', fontWeight: 700 }}>
           VRIN {label}
         </span>
         <span style={{
@@ -388,11 +388,11 @@ function VRINGrid({
               background: val ? color : 'rgba(255,255,255,0.08)',
               border: `1px solid ${val ? color : 'rgba(255,255,255,0.15)'}`,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 8, color: '#fff',
+              fontSize: 11, color: '#fff',
             }}>
               {val ? '✓' : ''}
           </span>
-            <span style={{ fontSize: 9, color: val ? color : 'rgba(255,255,255,0.35)', lineHeight: 1.3 }}>
+            <span style={{ fontSize: 11, color: val ? color : 'rgba(255,255,255,0.35)', lineHeight: 1.3 }}>
               {lbl}
             </span>
           </label>
@@ -564,7 +564,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
               <div style={{ fontSize: 12, fontWeight: 800, color: '#818cf8', letterSpacing: '0.1em' }}>
                 MODÈLE DE FONCTIONNEMENT
               </div>
-              <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', marginTop: 2, letterSpacing: '0.06em' }}>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', marginTop: 2, letterSpacing: '0.06em' }}>
                 Source de vérité prioritaire sur Google Search
               </div>
             </div>
@@ -576,7 +576,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
           {/* [F5] Disclaimer normatif */}
           <div style={{ padding: '5px 8px', borderRadius: 5, background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', marginBottom: 8, display: 'flex', alignItems: 'flex-start', gap: 6 }}>
             <Info size={10} color="#818cf8" style={{ flexShrink: 0, marginTop: 1 }} />
-            <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.38)', lineHeight: 1.5 }}>
+            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.38)', lineHeight: 1.5 }}>
               {iroMeta.ui_labels.mode_disclaimer}
             </span>
           </div>
@@ -584,8 +584,8 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
           {/* Barre de progression */}
           <div style={{ marginBottom: 8 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)' }}>Remplissage</span>
-              <span style={{ fontSize: 9, fontWeight: 700, color: pct > 60 ? '#00c896' : pct > 30 ? '#f59e0b' : 'rgba(255,255,255,0.3)' }}>
+              <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>Remplissage</span>
+              <span style={{ fontSize: 11, fontWeight: 700, color: pct > 60 ? '#00c896' : pct > 30 ? '#f59e0b' : 'rgba(255,255,255,0.3)' }}>
                 {filled}/{TOTAL_FIELDS} · {pct}%
               </span>
             </div>
@@ -598,7 +598,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
           <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' as const, marginBottom: 4 }}>
             {Object.entries(TEMPLATES).map(([key, t]) => (
               <button key={key} onClick={() => applyTemplate(key)} style={{
-                flex: '1 0 45%', padding: '5px 8px', borderRadius: 6, fontSize: 9, fontWeight: 700, cursor: 'pointer',
+                flex: '1 0 45%', padding: '5px 8px', borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: 'pointer',
                 background: templateApplied && m.vertical === key ? 'rgba(0,200,150,0.15)' : 'rgba(99,102,241,0.12)',
                 border: `1px solid ${templateApplied && m.vertical === key ? 'rgba(0,200,150,0.3)' : 'rgba(99,102,241,0.25)'}`,
                 color: templateApplied && m.vertical === key ? '#00c896' : '#818cf8',
@@ -608,7 +608,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
               </button>
             ))}
           </div>
-          <button onClick={reset} style={{ width: '100%', padding: '5px 10px', borderRadius: 6, cursor: 'pointer', background: 'transparent', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.3)', display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center', fontSize: 9, fontWeight: 700 }}>
+          <button onClick={reset} style={{ width: '100%', padding: '5px 10px', borderRadius: 6, cursor: 'pointer', background: 'transparent', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.3)', display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center', fontSize: 11, fontWeight: 700 }}>
             <RotateCcw size={9} /> Réinitialiser
           </button>
         </div>
@@ -669,12 +669,12 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
                   Object.entries(TRL_DESCRIPTIONS).map(([k, d]) => ({ value: k, label: `TRL ${k} — ${d}` }))
                 } />
                 {trlCapsIPC && (
-                  <div style={{ fontSize: 9, color: '#f59e0b', padding: '4px 8px', background: 'rgba(245,158,11,0.1)', borderRadius: 4, border: '1px solid rgba(245,158,11,0.2)' }}>
+                  <div style={{ fontSize: 11, color: '#f59e0b', padding: '4px 8px', background: 'rgba(245,158,11,0.1)', borderRadius: 4, border: '1px solid rgba(245,158,11,0.2)' }}>
                     ⚠ TRL ≤ 4 → IPC sera plafonné à 2 lors de l'analyse (maturité insuffisante)
                   </div>
                 )}
                 {trlBonus && (
-                  <div style={{ fontSize: 9, color: '#00c896', padding: '4px 8px', background: 'rgba(0,200,150,0.1)', borderRadius: 4, border: '1px solid rgba(0,200,150,0.2)' }}>
+                  <div style={{ fontSize: 11, color: '#00c896', padding: '4px 8px', background: 'rgba(0,200,150,0.1)', borderRadius: 4, border: '1px solid rgba(0,200,150,0.2)' }}>
                     ✓ TRL ≥ 7 + infra propre → bonus +0.1 sur DI
                   </div>
                 )}
@@ -689,7 +689,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
                   color="#818cf8"
                 />
                 {diVRINScore > 0 && (
-                  <div style={{ fontSize: 9, color: '#818cf8', textAlign: 'center' as const }}>
+                  <div style={{ fontSize: 11, color: '#818cf8', textAlign: 'center' as const }}>
                     Grille VRIN DI : {diVRINScore}/4 IQ → score DI recommandé = {diVRINScore}
                   </div>
                 )}
@@ -720,7 +720,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
                   color="#34d399"
                 />
                 {adcVRINScore > 0 && (
-                  <div style={{ fontSize: 9, color: '#34d399', textAlign: 'center' as const }}>
+                  <div style={{ fontSize: 11, color: '#34d399', textAlign: 'center' as const }}>
                     Grille VRIN ADC : {adcVRINScore}/4 IQ → score ADC recommandé = {adcVRINScore}
                   </div>
                 )}
@@ -755,7 +755,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
                       { value: '4', label: '4 — Critique (risque vital, compliance, sécurité)' },
                     ]} />
                     {m.ipc_job_type === 'emotionnel' && parseInt(m.ipc_job_criticite || '0') >= 3 && (
-                      <div style={{ fontSize: 9, color: '#00c896', padding: '4px 8px', background: 'rgba(0,200,150,0.08)', borderRadius: 4 }}>
+                      <div style={{ fontSize: 11, color: '#00c896', padding: '4px 8px', background: 'rgba(0,200,150,0.08)', borderRadius: 4 }}>
                         ✓ Job émotionnel critique → robustesse IPC maximale (substitution difficile)
                       </div>
                     )}
@@ -807,7 +807,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
 
               {/* FSF Financial Metrics */}
               <Section title="FSF · MÉTRIQUES FINANCIÈRES (OPTIONNEL)" color="#a855f7" accent="#a855f7">
-                <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', marginBottom: 8, lineHeight: 1.4 }}>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', marginBottom: 8, lineHeight: 1.4 }}>
                   Ces données financières optionnelles servent au calcul du Financial Sustainability Factor (FSF) sur l'horizon opérationnel de 18 mois.
                 </div>
                 <Label>ARR (€)</Label>
@@ -851,7 +851,7 @@ export default function StartupModelSidePanel({ open, onClose, value: m, onChang
                 onFocus={e => (e.currentTarget.style.borderColor = 'rgba(99,102,241,0.5)')}
                 onBlur={e => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)')}
               />
-              <div style={{ textAlign: 'right' as const, fontSize: 9, color: 'rgba(255,255,255,0.2)', marginTop: 5 }}>
+              <div style={{ textAlign: 'right' as const, fontSize: 11, color: 'rgba(255,255,255,0.2)', marginTop: 5 }}>
                 {m.texte_libre.length} caractères
               </div>
             </div>

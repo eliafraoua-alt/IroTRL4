@@ -69,7 +69,7 @@ const CompetingRisksPanel: React.FC<CompetingRisksPanelProps> = ({ result }) => 
                 {(item.prob * 100).toFixed(1)}%
               </div>
             </div>
-            <div className={`text-[9px] font-bold tracking-tighter ${result.most_likely === item.id ? 'text-slate-200' : 'text-slate-500'}`}>
+            <div className={`text-[11px] font-bold tracking-tighter ${result.most_likely === item.id ? 'text-slate-200' : 'text-slate-500'}`}>
               {getLabel(item.id)}
             </div>
             {result.most_likely === item.id && (
@@ -100,7 +100,7 @@ const CompetingRisksPanel: React.FC<CompetingRisksPanelProps> = ({ result }) => 
         </div>
       </div>
 
-      <div className="text-[9px] text-slate-500 leading-relaxed">
+      <div className="text-[11px] text-slate-500 leading-relaxed">
         <span className="font-bold">Note TRL & Confiance :</span> {result.trl_note}
         <br />
         Le modèle Fine & Gray traite les types de sortie comme des événements mutuellement exclusifs (Risques Concurrents).

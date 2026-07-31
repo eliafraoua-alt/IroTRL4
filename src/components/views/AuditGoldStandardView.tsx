@@ -202,13 +202,13 @@ export const AuditGoldStandardView: React.FC = () => {
                       <div className="text-sm font-black text-slate-300 font-mono">
                         {iroCertified.rmse.toFixed(2)} pts
                       </div>
-                      <div className="text-[9px] text-slate-500 uppercase font-bold mt-1">RMSE</div>
+                      <div className="text-[11px] text-slate-500 uppercase font-bold mt-1">RMSE</div>
                     </div>
                     <div className="bg-slate-950 rounded-lg p-2.5 border border-slate-850 text-center">
                       <div className="text-sm font-black text-slate-300 font-mono">
                         {iroCertified.mae.toFixed(2)} pts
                       </div>
-                      <div className="text-[9px] text-slate-500 uppercase font-bold mt-1">MAE</div>
+                      <div className="text-[11px] text-slate-500 uppercase font-bold mt-1">MAE</div>
                     </div>
                   </div>
 
@@ -231,7 +231,7 @@ export const AuditGoldStandardView: React.FC = () => {
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
                 <h3 className="text-xs font-black text-slate-300 tracking-wider uppercase mb-3 flex items-center justify-between">
                   <span>Rapport de Non-Régression</span>
-                  <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase ${
+                  <span className={`px-2 py-0.5 rounded text-[11px] font-black uppercase ${
                     regressionReport.failed === 0 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-rose-500/20 text-rose-400'
                   }`}>
                     {regressionReport.failed === 0 ? 'Passé ✓' : `${regressionReport.failed} échecs`}
@@ -251,10 +251,10 @@ export const AuditGoldStandardView: React.FC = () => {
                   <div className="text-[10px] font-bold text-amber-400 tracking-widest mb-1.5 uppercase">
                     GOLD STANDARD OBSERVATION LIMITS
                   </div>
-                  <p className="text-[10px] text-slate-400 leading-relaxed">
+                  <p className="text-[12px] text-slate-400 leading-relaxed">
                     IRO V7 est calibré sur {GOLD_STANDARD_N} startups Delphi. Pour un modèle statistiquement solide, il faut au moins 60 observations (10 par variable x 6 variables). 
                   </p>
-                  <p className="text-[10px] text-slate-500 mt-2 leading-relaxed">
+                  <p className="text-[12px] text-slate-500 mt-2 leading-relaxed">
                     Le R² d'IRO_Certified évalue la capacité de mémorisation du jeu d'entraînement, pas la généralisation. Les scores s'appliquent comme audit normatif.
                   </p>
                 </div>

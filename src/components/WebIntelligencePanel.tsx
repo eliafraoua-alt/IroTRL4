@@ -126,9 +126,9 @@ export const WebIntelligencePanel: React.FC<WebIntelligencePanelProps> = ({ wi, 
             {wi.github_activity && (
               <div className="bg-slate-950/40 p-2.5 rounded">
                 <span className="text-[10px] text-slate-500 uppercase font-bold block mb-1">GitHub & Open Source</span>
-                <p className="text-slate-300 font-mono text-[10px] truncate">{wi.github_activity}</p>
+                <p className="text-slate-300 font-mono text-[12px] truncate">{wi.github_activity}</p>
                 {wi.open_source && (
-                  <p className="text-[10px] text-slate-500 italic mt-1">{wi.open_source}</p>
+                  <p className="text-[12px] text-slate-500 italic mt-1">{wi.open_source}</p>
                 )}
               </div>
             )}
@@ -153,7 +153,7 @@ export const WebIntelligencePanel: React.FC<WebIntelligencePanelProps> = ({ wi, 
             {wi.certifications && (
               <div className="bg-slate-950/40 p-2.5 rounded">
                 <span className="text-[10px] text-slate-500 uppercase font-bold block mb-1">Certifications / Agréments</span>
-                <p className="text-emerald-400 font-bold text-[10px]">
+                <p className="text-emerald-400 font-bold text-[12px]">
                   {wi.certifications}
                 </p>
               </div>
@@ -161,7 +161,7 @@ export const WebIntelligencePanel: React.FC<WebIntelligencePanelProps> = ({ wi, 
             {wi.regulatory_news && (
               <div className="bg-slate-950/40 p-2 rounded">
                 <span className="text-[10px] text-slate-500 uppercase font-bold block mb-0.5">Veille Réglementaire</span>
-                <p className="text-[10px] text-slate-400 leading-tight italic line-clamp-2">
+                <p className="text-[12px] text-slate-400 leading-tight italic line-clamp-2">
                   {wi.regulatory_news}
                 </p>
               </div>
@@ -181,7 +181,7 @@ export const WebIntelligencePanel: React.FC<WebIntelligencePanelProps> = ({ wi, 
                  Signaux Presse & Rumeur
                </span>
                {wi.press_sentiment && (
-                 <span className={`px-2 py-0.5 rounded text-[9px] font-black border uppercase ${sentimentColors[wi.press_sentiment]}`}>
+                 <span className={`px-2 py-0.5 rounded text-[11px] font-black border uppercase ${sentimentColors[wi.press_sentiment]}`}>
                    Presse : {wi.press_sentiment}
                  </span>
                )}
@@ -203,7 +203,7 @@ export const WebIntelligencePanel: React.FC<WebIntelligencePanelProps> = ({ wi, 
              </div>
              {wi.founders && (
                <div className="bg-slate-950/20 p-2 rounded">
-                 <span className="text-[9px] text-slate-500 uppercase font-bold block mb-1">Fondateurs identifiés</span>
+                 <span className="text-[11px] text-slate-500 uppercase font-bold block mb-1">Fondateurs identifiés</span>
                  <p className="text-slate-300 leading-relaxed font-sans">{wi.founders}</p>
                </div>
              )}
@@ -222,7 +222,7 @@ export const WebIntelligencePanel: React.FC<WebIntelligencePanelProps> = ({ wi, 
          <div className="flex items-center gap-2">
            <span>Index de recherche :</span>
            {wi.sources_queried.map((src, i) => (
-             <span key={i} className="bg-slate-950 border border-slate-800/50 px-2 py-0.5 rounded uppercase font-bold text-[9px]">
+             <span key={i} className="bg-slate-950 border border-slate-800/50 px-2 py-0.5 rounded uppercase font-bold text-[11px]">
                {src}
              </span>
            ))}

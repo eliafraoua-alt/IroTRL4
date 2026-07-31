@@ -344,10 +344,10 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
         <div className="w-full h-[180px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={distributionData} layout="vertical" margin={{ left: 0, right: 40 }}>
-              <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 9, fill: '#94a3b8' }} />
+              <XAxis type="number" domain={[0, 100]} tick={{ fontSize: 11, fill: '#94a3b8' }} />
               <YAxis type="category" dataKey="name" width={105} tick={{ fontSize: 10, fill: '#64748b' }} />
               {currentIRO !== null && (
-                <ReferenceLine x={currentIRO} stroke="#2563eb" strokeDasharray="4 2" strokeWidth={1.5} label={{ value: currentName?.substring(0,8), fontSize: 9, fill: '#2563eb', position: 'top' }} />
+                <ReferenceLine x={currentIRO} stroke="#2563eb" strokeDasharray="4 2" strokeWidth={1.5} label={{ value: currentName?.substring(0,8), fontSize: 11, fill: '#2563eb', position: 'top' }} />
               )}
               <ReferenceLine x={61.5} stroke="#94a3b8" strokeDasharray="2 2" strokeWidth={1} />
               <Tooltip
@@ -362,7 +362,7 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div className="flex gap-4 mt-2 text-[9px] text-slate-400">
+        <div className="flex gap-4 mt-2 text-[11px] text-slate-400">
           <span>Ligne pointillée bleue = {currentName ?? 'startup'}</span>
           <span>Ligne grise = médiane cohorte (61.5)</span>
         </div>
@@ -457,8 +457,8 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
                   <div className="flex items-start justify-between gap-2 mb-2 font-sans">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1.5">
-                        {isCurrent && <span className="text-[9px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-bold font-sans">VOUS</span>}
-                        {startup.status === 'failed' && <span className="text-[9px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded font-bold font-sans">ÉCHEC</span>}
+                        {isCurrent && <span className="text-[11px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-bold font-sans">VOUS</span>}
+                        {startup.status === 'failed' && <span className="text-[11px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded font-bold font-sans">ÉCHEC</span>}
                         <span className="text-xs font-semibold text-slate-800 truncate">{startup.name}</span>
                       </div>
                       <div className="text-[10px] text-slate-400 mt-0.5 truncate">{startup.sector}</div>
@@ -467,7 +467,7 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
                       <div className="text-lg font-bold font-sans" style={{ color: getIROColor(startup.iro_total) }}>
                         {startup.iro_total}
                       </div>
-                      <div className="text-[9px]" style={{ color: getInterpColor(startup.interpretation) }}>
+                      <div className="text-[11px]" style={{ color: getInterpColor(startup.interpretation) }}>
                         {startup.interpretation}
                       </div>
                     </div>
@@ -477,14 +477,14 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
                   <div className="space-y-1">
                     {(['DI','ADC','IPC','AR','CA'] as const).map(dim => (
                       <div key={dim} className="flex items-center gap-1.5">
-                        <span className="text-[9px] text-slate-400 w-6 font-mono">{dim}</span>
+                        <span className="text-[11px] text-slate-400 w-6 font-mono">{dim}</span>
                         <div className="flex-1 h-1 bg-blue-50 rounded-full overflow-hidden">
                           <div
                             className="h-full rounded-full"
                             style={{ width: `${(startup[dim] / 4) * 100}%`, background: getIROColor(startup.iro_total), opacity: 0.7 }}
                           />
                         </div>
-                        <span className="text-[9px] font-mono text-slate-500">{startup[dim]}</span>
+                        <span className="text-[11px] font-mono text-slate-500">{startup[dim]}</span>
                       </div>
                     ))}
                   </div>
@@ -492,13 +492,13 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
                   {/* Expanded detail */}
                   {isExpanded && (
                     <div className="mt-3 pt-3 border-t border-blue-50 space-y-1.5" onClick={e => e.stopPropagation()}>
-                      <div className="grid grid-cols-3 gap-1 text-[9px] font-mono">
+                      <div className="grid grid-cols-3 gap-1 text-[11px] font-mono">
                         <div><span className="text-slate-400">Ville</span><br/><span className="font-medium text-slate-700">{startup.city}</span></div>
                         <div><span className="text-slate-400">Créée</span><br/><span className="font-medium text-slate-700">{startup.founded}</span></div>
                         <div><span className="text-slate-400">Pivot</span><br/><span className="font-medium text-slate-700">{startup.pivot_type}</span></div>
                       </div>
                       {startup.note_defaillance && (
-                        <div className="text-[9px] text-red-600 bg-red-50 rounded p-1.5 italic font-mono">
+                        <div className="text-[11px] text-red-600 bg-red-50 rounded p-1.5 italic font-mono">
                           ✕ {startup.note_defaillance}
                         </div>
                       )}
@@ -518,7 +518,7 @@ export default function SectorBenchmark({ currentResult, currentName }: Props) {
         </div>
 
         {/* Légende */}
-        <div className="mt-4 pt-3 border-t border-blue-50 flex flex-wrap gap-3 text-[9px] text-slate-400 font-mono">
+        <div className="mt-4 pt-3 border-t border-blue-50 flex flex-wrap gap-3 text-[11px] text-slate-400 font-mono">
           <span><span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"/>≥75 Leader</span>
           <span><span className="inline-block w-2 h-2 rounded-full bg-blue-500 mr-1"/>61-75 Robuste</span>
           <span><span className="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1"/>50-61 Fragile</span>

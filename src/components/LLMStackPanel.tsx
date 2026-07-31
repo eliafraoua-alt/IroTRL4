@@ -69,7 +69,7 @@ export default function LLMStackPanel({ stack }: LLMStackPanelProps) {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         {stack.models.length > 0 && (
           <div>
-            <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', marginBottom: 6, letterSpacing: '0.08em' }}>
+            <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', marginBottom: 6, letterSpacing: '0.08em' }}>
               MODÈLES LLM
             </div>
             <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>
@@ -87,7 +87,7 @@ export default function LLMStackPanel({ stack }: LLMStackPanelProps) {
 
         {stack.frameworks.length > 0 && (
           <div>
-            <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', marginBottom: 6, letterSpacing: '0.08em' }}>
+            <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', marginBottom: 6, letterSpacing: '0.08em' }}>
               FRAMEWORKS IA
             </div>
             <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>

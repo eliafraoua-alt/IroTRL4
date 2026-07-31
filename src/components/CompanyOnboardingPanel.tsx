@@ -252,7 +252,7 @@ export const CompanyOnboardingPanel: React.FC = () => {
                   />
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" />
                   {isSearching && (
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 text-indigo-400 text-[9px] font-bold bg-slate-900 px-2 py-1 rounded border border-slate-800">
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 text-indigo-400 text-[11px] font-bold bg-slate-900 px-2 py-1 rounded border border-slate-800">
                       <span className="w-2 h-2 rounded-full border-2 border-indigo-400 border-t-transparent animate-spin" />
                       Recherche…
                     </div>
@@ -271,7 +271,7 @@ export const CompanyOnboardingPanel: React.FC = () => {
               {/* Suggestions */}
               {suggestions.length > 0 && !selected && (
                 <div className="bg-slate-950 border border-slate-800 rounded-xl max-h-52 overflow-y-auto divide-y divide-slate-900 shadow-xl">
-                  <div className="px-3.5 py-1.5 text-[9px] text-slate-500 font-bold uppercase tracking-wider bg-slate-900/40">
+                  <div className="px-3.5 py-1.5 text-[11px] text-slate-500 font-bold uppercase tracking-wider bg-slate-900/40">
                     Suggestions ({suggestions.length})
                   </div>
                   {suggestions.map(s => (
@@ -463,7 +463,7 @@ export const CompanyOnboardingPanel: React.FC = () => {
             </button>
 
             {/* Indicateur mode actif */}
-            <p className="text-[9px] text-slate-600 text-center mt-2">
+            <p className="text-[11px] text-slate-600 text-center mt-2">
               {isLibreMode
                 ? '⚡ Mode libre — sans enrichissement Pappers/INPI'
                 : '🔍 Mode France — enrichissement Pappers/INPI actif'}

@@ -168,13 +168,13 @@ function AppInner() {
               <div className="bg-slate-900 rounded-xl p-6 border border-slate-800 space-y-6">
                 <div className="flex items-start justify-between">
                   <div>
-                    <div className="text-[9px] text-amber-400 font-black uppercase tracking-[0.2em] mb-1 flex items-center gap-2">
+                    <div className="text-[11px] text-amber-400 font-black uppercase tracking-[0.2em] mb-1 flex items-center gap-2">
                       <span>🏷</span> Phase · Maturité · Financement
                     </div>
                     <h2 className="text-xl font-black text-slate-100 leading-tight">
                       {result?.startup_name}
                     </h2>
-                    <p className="text-[10px] text-slate-500 mt-0.5">
+                    <p className="text-[12px] text-slate-500 mt-0.5">
                       {result?.secteur} · {result?.age_mois}m · {result?.stade_financement} · Cohorte FR n=130
                     </p>
                   </div>

@@ -118,7 +118,7 @@ export default function VerdictPanel({ verdict, forces, risques, recommandation,
               borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.06)' : 'none',
               padding: '0 12px',
             }}>
-              <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.1em', marginBottom: 4 }}>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.1em', marginBottom: 4 }}>
                 {m.label}
               </div>
               <div style={{ fontSize: 13, fontWeight: 700, color: m.color }}>{m.value}</div>
@@ -138,7 +138,7 @@ export default function VerdictPanel({ verdict, forces, risques, recommandation,
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           }}>
             <div>
-              <div style={{ fontSize: 9, color: z.color, fontWeight: 700, letterSpacing: '0.1em', marginBottom: 2 }}>
+              <div style={{ fontSize: 11, color: z.color, fontWeight: 700, letterSpacing: '0.1em', marginBottom: 2 }}>
                 ZONE IRO v4.5-S46 · seuil {SEUIL_VIABILITE}
               </div>
               <div style={{ fontSize: 14, fontWeight: 700, color: z.color }}>{z.label}</div>
@@ -146,7 +146,7 @@ export default function VerdictPanel({ verdict, forces, risques, recommandation,
             </div>
             <div style={{ textAlign: 'right' as const }}>
               <div style={{ fontSize: 22, fontWeight: 700, color: z.color }}>{verdict.iro_100}</div>
-              <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)' }}>/100</div>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>/100</div>
             </div>
           </div>
         );
@@ -163,7 +163,7 @@ export default function VerdictPanel({ verdict, forces, risques, recommandation,
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
-              <div style={{ fontSize: 9, color: '#00c896', fontWeight: 700, letterSpacing: '0.1em', marginBottom: 2 }}>
+              <div style={{ fontSize: 11, color: '#00c896', fontWeight: 700, letterSpacing: '0.1em', marginBottom: 2 }}>
                 MODULE RETRO-AJUSTÉ IRO-ES v1.0 (EARLY STAGE)
               </div>
               <div style={{ fontSize: 13, fontWeight: 700, color: '#e2e8f0' }}>
@@ -186,7 +186,7 @@ export default function VerdictPanel({ verdict, forces, risques, recommandation,
 
           {iro_es.revs_applied && iro_es.revs_applied.length > 0 && (
             <div style={{ marginTop: 4, paddingTop: 6, borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
-              <div style={{ fontSize: 8, color: 'rgba(255, 255, 255, 0.3)', fontWeight: 700, letterSpacing: '0.05em', marginBottom: 4 }}>
+              <div style={{ fontSize: 11, color: 'rgba(255, 255, 255, 0.3)', fontWeight: 700, letterSpacing: '0.05em', marginBottom: 4 }}>
                 RÈGLES D'AJUSTEMENT APPLIQUÉES (REVs) :
               </div>
               {iro_es.revs_applied.map((rev, idx) => (

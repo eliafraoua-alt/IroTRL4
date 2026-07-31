@@ -52,7 +52,7 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: { payl
         Score : <span style={{ fontWeight: 700, color: col }}>{d.score}/4</span>
       </div>
       {d.justification && (
-        <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.4)', lineHeight: 1.4, fontStyle: 'italic' }}>
+        <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', lineHeight: 1.4, fontStyle: 'italic' }}>
           {d.justification}
         </div>
       )}
@@ -94,7 +94,7 @@ export default function DimensionChart({ scores, justifications, confiance }: Di
           PROFIL RADAR — 7 DIMENSIONS IRO v4.5-S46
         </div>
         {confiance !== undefined && (
-          <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', background: 'rgba(255,255,255,0.05)', padding: '2px 6px', borderRadius: 4 }}>
+          <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', background: 'rgba(255,255,255,0.05)', padding: '2px 6px', borderRadius: 4 }}>
             CONFIANCE IPC : {Math.round(confiance * 100)}%
           </div>
         )}
@@ -140,7 +140,7 @@ export default function DimensionChart({ scores, justifications, confiance }: Di
                 width: 6, height: 6, borderRadius: '50%',
                 background: col, flexShrink: 0,
               }} />
-              <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.4)' }}>
+              <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>
                 {k} <span style={{ color: col, fontWeight: 700 }}>{val}/4</span>
                 <span style={{ color: 'rgba(255,255,255,0.2)' }}> · {DIM_WEIGHTS[k]}%</span>
               </span>

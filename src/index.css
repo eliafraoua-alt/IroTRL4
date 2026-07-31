@@ -1,7 +1,18 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   IROSTRENGTH v7 — Design System Blue/White
-   Palette : Bleu roi #1E40AF / Bleu clair #3B82F6 / Blanc #FFFFFF
+   IROSTRENGTH v7 — Design System Sombre / Indigo
+   Palette : fond Slate 950/900, accent Indigo 500/600, texte Slate 100/400
+   Statuts : Rose (critique) / Amber (attention) / Emerald (ok) / Indigo (info)
    Typographie : DM Sans (texte) + Sora (titres/scores)
+
+   NOTE DE MIGRATION (audit UI) : ce fichier déclarait auparavant un thème
+   clair « Bleu/White » qui n'était en réalité utilisé nulle part dans les
+   composants (0 référence à .card, .btn-primary, etc.). ~90% de l'app est
+   construite en thème sombre avec un accent indigo via classes Tailwind
+   directes. Ce fichier est réécrit pour refléter la réalité du code plutôt
+   que documenter un système jamais implémenté — et pour que les éléments
+   HTML natifs (table, th, td, header, nav) qui héritaient des styles clairs
+   par défaut (ex: en-têtes de tableau bleu clair posés sur fond sombre)
+   arrêtent de produire des taches visuellement incohérentes.
    ═══════════════════════════════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Sora:wght@400;600;700;800&display=swap');
@@ -14,20 +25,44 @@
 
 /* ── Variables ─────────────────────────────────────────────────────────── */
 :root {
-  --blue-900: #1e3a8a;
-  --blue-700: #1d4ed8;
-  --blue-600: #2563eb;
-  --blue-500: #3b82f6;
-  --blue-400: #60a5fa;
-  --blue-100: #dbeafe;
-  --blue-50:  #eff6ff;
-  --white:    #ffffff;
-  --slate-50: #f8fafc;
-  --slate-900:#0f172a;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  /* Surfaces */
+  --surface-950: #020617;
+  --surface-900: #0f172a;
+  --surface-800: #1e293b;
+  --surface-700: #334155;
+
+  /* Texte */
+  --text-100: #f1f5f9;
+  --text-300: #cbd5e1;
+  --text-400: #94a3b8;
+  --text-500: #64748b;
+
+  /* Accent */
+  --indigo-600: #4f46e5;
+  --indigo-500: #6366f1;
+  --indigo-400: #818cf8;
+
+  /* Statuts — une seule source de vérité pour tout le code */
+  --status-critical:      #f87171; /* rose/rouge  — bloquant, défaillance, erreur */
+  --status-critical-bg:   rgba(248,113,113,0.10);
+  --status-critical-bd:   rgba(248,113,113,0.30);
+
+  --status-warning:       #fbbf24; /* amber — à surveiller, incertain */
+  --status-warning-bg:    rgba(251,191,36,0.10);
+  --status-warning-bd:    rgba(251,191,36,0.30);
+
+  --status-ok:            #34d399; /* emerald — validé, sain */
+  --status-ok-bg:         rgba(52,211,153,0.10);
+  --status-ok-bd:         rgba(52,211,153,0.30);
+
+  --status-info:          #818cf8; /* indigo — neutre, informatif */
+  --status-info-bg:       rgba(129,140,248,0.10);
+  --status-info-bd:       rgba(129,140,248,0.30);
+
+  --font-body:    'DM Sans', system-ui, sans-serif;
   --font-display: 'Sora', system-ui, sans-serif;
-  --shadow-card: 0 1px 3px rgba(30,64,175,0.08), 0 4px 12px rgba(30,64,175,0.06);
-  --shadow-hover: 0 4px 16px rgba(30,64,175,0.15);
+  --shadow-card:  0 1px 3px rgba(0,0,0,0.20), 0 4px 14px rgba(0,0,0,0.25);
+  --shadow-hover: 0 6px 20px rgba(0,0,0,0.35);
 }
 
 /* ── Reset & base ──────────────────────────────────────────────────────── */
@@ -37,8 +72,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  background-color: var(--slate-50);
-  color: #1e293b;
+  background-color: var(--surface-950);
+  color: var(--text-100);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,11 +87,19 @@ h1, h2, h3, h4,
   font-family: var(--font-display);
 }
 
+/* ── Échelle typographique minimale ─────────────────────────────────────
+   Repère pour tout nouveau composant : ne pas descendre sous 11px, et
+   réserver 10-11px aux étiquettes courtes (badges, eyebrows), jamais à une
+   phrase explicative — celles-ci doivent rester en 12-13px minimum. ── */
+.text-eyebrow   { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.text-caption   { font-size: 12px; line-height: 1.5; }
+.text-body-sm   { font-size: 13px; line-height: 1.55; }
+
 /* ── Header principal ──────────────────────────────────────────────────── */
 header {
-  background: var(--white);
-  border-bottom: 1px solid var(--blue-100);
-  box-shadow: 0 1px 0 var(--blue-100), 0 2px 8px rgba(30,64,175,0.04);
+  background: var(--surface-900);
+  border-bottom: 1px solid var(--surface-800);
+  box-shadow: 0 1px 0 var(--surface-800), 0 2px 10px rgba(0,0,0,0.25);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -64,15 +107,15 @@ header {
 
 /* ── Nav tabs ──────────────────────────────────────────────────────────── */
 nav.iro-tabs {
-  background: var(--white);
-  border-bottom: 1px solid var(--blue-100);
-  box-shadow: 0 1px 4px rgba(30,64,175,0.04);
+  background: var(--surface-900);
+  border-bottom: 1px solid var(--surface-800);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 /* ── Cards ─────────────────────────────────────────────────────────────── */
 .card {
-  background: var(--white);
-  border: 1px solid var(--blue-100);
+  background: var(--surface-900);
+  border: 1px solid var(--surface-800);
   border-radius: 12px;
   box-shadow: var(--shadow-card);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -82,21 +125,22 @@ nav.iro-tabs {
 /* ── Input & Select ────────────────────────────────────────────────────── */
 input, select, textarea {
   font-family: var(--font-body);
-  background: var(--white);
-  border: 1.5px solid var(--blue-200, #bfdbfe);
+  background: var(--surface-900);
+  border: 1.5px solid var(--surface-700);
   border-radius: 8px;
-  color: #1e293b;
+  color: var(--text-100);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
+input::placeholder, textarea::placeholder { color: var(--text-500); }
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: var(--blue-500);
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+  border-color: var(--indigo-500);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.20);
 }
 
 /* ── Bouton principal ───────────────────────────────────────────────────── */
 .btn-primary {
-  background: linear-gradient(135deg, var(--blue-600), var(--blue-700));
+  background: linear-gradient(135deg, var(--indigo-500), var(--indigo-600));
   color: white;
   font-family: var(--font-display);
   font-weight: 600;
@@ -107,14 +151,14 @@ input:focus, select:focus, textarea:focus {
   letter-spacing: 0.01em;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--blue-700), var(--blue-900));
-  box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+  background: linear-gradient(135deg, var(--indigo-600), #4338ca);
+  box-shadow: 0 4px 14px rgba(79,70,229,0.35);
   transform: translateY(-1px);
 }
 .btn-primary:active { transform: translateY(0); }
 .btn-primary:disabled {
-  background: var(--blue-100);
-  color: var(--blue-400);
+  background: var(--surface-800);
+  color: var(--text-500);
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -129,27 +173,27 @@ input:focus, select:focus, textarea:focus {
 
 /* ── Progress bar ───────────────────────────────────────────────────────── */
 .progress-track {
-  background: var(--blue-100);
+  background: var(--surface-800);
   border-radius: 100px;
   overflow: hidden;
 }
 .progress-fill {
-  background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
+  background: linear-gradient(90deg, var(--indigo-600), var(--indigo-400));
   transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
 }
 
 /* ── Sidebar panneaux ───────────────────────────────────────────────────── */
 .side-panel {
-  background: var(--white);
-  border-left: 1px solid var(--blue-100);
-  box-shadow: -4px 0 24px rgba(30,64,175,0.08);
+  background: var(--surface-900);
+  border-left: 1px solid var(--surface-800);
+  box-shadow: -4px 0 24px rgba(0,0,0,0.35);
 }
 
 /* ── Scrollbar ──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: var(--blue-50); }
-::-webkit-scrollbar-thumb { background: var(--blue-200); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--blue-400); }
+::-webkit-scrollbar-track { background: var(--surface-900); }
+::-webkit-scrollbar-thumb { background: var(--surface-700); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-500); }
 
 /* ── Animations ─────────────────────────────────────────────────────────── */
 @keyframes fadeInUp {
@@ -163,89 +207,92 @@ input:focus, select:focus, textarea:focus {
   100% { background-position: 200% 0; }
 }
 .loading-shimmer {
-  background: linear-gradient(90deg, var(--blue-50) 25%, var(--blue-100) 50%, var(--blue-50) 75%);
+  background: linear-gradient(90deg, var(--surface-900) 25%, var(--surface-800) 50%, var(--surface-900) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s ease infinite;
 }
 
 /* ── Tableau ────────────────────────────────────────────────────────────── */
+/* CORRECTIF AUDIT UI : th/td portaient un fond bleu clair et des bordures
+   quasi-blanches par défaut (design « Blue/White » jamais adopté par les
+   composants), qui apparaissaient comme des taches claires incohérentes
+   sur les cartes sombres (ex: GoldStandardTable, CohortValidationPanel).
+   Les 7 fichiers utilisant un <table> natif héritent maintenant d'un
+   habillage sombre cohérent sans avoir à surcharger chaque cellule. */
 table { border-collapse: collapse; width: 100%; }
 th {
-  background: var(--blue-50);
-  color: var(--blue-700);
+  background: rgba(2,6,23,0.5);
+  color: var(--text-400);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 10px 14px;
-  border-bottom: 2px solid var(--blue-100);
+  border-bottom: 1px solid var(--surface-800);
 }
 td {
   padding: 10px 14px;
-  border-bottom: 1px solid var(--blue-50);
+  border-bottom: 1px solid rgba(30,41,59,0.5);
   font-size: 13px;
-  color: #334155;
+  color: var(--text-300);
 }
-tr:hover td { background: var(--blue-50); }
+tr:hover td { background: rgba(30,41,59,0.3); }
 
 /* ── IRO Score colors (conservés) ───────────────────────────────────────── */
-.score-high    { color: #059669; }
-.score-medium  { color: #d97706; }
-.score-low     { color: #dc2626; }
+.score-high    { color: var(--status-ok); }
+.score-medium  { color: var(--status-warning); }
+.score-low     { color: var(--status-critical); }
 
-/* ── Goodhart alert (adapté bleu/blanc) ─────────────────────────────────── */
-.goodhart-panel {
-  background: #fefce8;
-  border: 1px solid #fde68a;
-  border-left: 4px solid #f59e0b;
-  border-radius: 10px;
+/* ── Badges de statut réutilisables ──────────────────────────────────────
+   Convention unique pour tout le code : rose = bloquant, amber = attention,
+   emerald = validé/sain, indigo = neutre/informatif. À utiliser plutôt que
+   de redéfinir des couleurs d'alerte au cas par cas dans chaque composant. */
+.badge-critical, .goodhart-panel, .tension-critical {
+  background: var(--status-critical-bg);
+  border: 1px solid var(--status-critical-bd);
+  color: var(--status-critical);
+  border-radius: 8px;
 }
-
-/* ── Graph tensions badge ───────────────────────────────────────────────── */
-.tension-critical {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  color: #b91c1c;
-  border-radius: 6px;
+.badge-warning, .tension-warning {
+  background: var(--status-warning-bg);
+  border: 1px solid var(--status-warning-bd);
+  color: var(--status-warning);
+  border-radius: 8px;
+}
+.badge-ok, .ic-conformal-badge {
+  background: var(--status-ok-bg);
+  border: 1px solid var(--status-ok-bd);
+  color: var(--status-ok);
+  border-radius: 8px;
+}
+.badge-info {
+  background: var(--status-info-bg);
+  border: 1px solid var(--status-info-bd);
+  color: var(--status-info);
+  border-radius: 8px;
+}
+.tension-critical, .tension-warning, .ic-conformal-badge {
   font-size: 11px;
   padding: 2px 8px;
-}
-.tension-warning {
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-  color: #92400e;
-  border-radius: 6px;
-  font-size: 11px;
-  padding: 2px 8px;
-}
-
-/* ── IC conformal badge ─────────────────────────────────────────────────── */
-.ic-conformal-badge {
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  color: #065f46;
-  border-radius: 4px;
-  font-size: 10px;
-  padding: 2px 6px;
 }
 
 /* ── Section separator ──────────────────────────────────────────────────── */
 .section-label {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--blue-600);
-  border-bottom: 1px solid var(--blue-100);
+  color: var(--indigo-400);
+  border-bottom: 1px solid var(--surface-800);
   padding-bottom: 6px;
   margin-bottom: 12px;
 }
 
 /* ── Print ──────────────────────────────────────────────────────────────── */
 @media print {
-  body { background: white; }
+  body { background: white; color: #1e293b; }
   header, nav { box-shadow: none; }
-  .card { box-shadow: none; border: 1px solid #e2e8f0; }
+  .card { box-shadow: none; border: 1px solid #e2e8f0; background: white; }
 }

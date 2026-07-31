@@ -61,7 +61,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                 </div>
               </div>
               <div className="space-y-1">
-                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-indigo-950/50 border border-indigo-500/20 text-indigo-400 text-[9px] font-bold tracking-widest uppercase">
+                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-indigo-950/50 border border-indigo-500/20 text-indigo-400 text-[11px] font-bold tracking-widest uppercase">
                   Calculateur Actif
                 </div>
                 <h3 className="text-sm font-black text-slate-200">
@@ -73,8 +73,8 @@ export const SurvivalAnalysisView: React.FC = () => {
             <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/40 text-[10px] text-slate-400 max-w-sm mx-auto flex items-center justify-center gap-3">
               <span className="w-2 h-2 rounded-full bg-indigo-400 animate-ping shrink-0" />
               <div className="text-left font-mono">
-                <div className="font-extrabold text-slate-200 uppercase text-[9px]">Étape : {loadingStep}</div>
-                <div className="text-slate-500 text-[8px] mt-0.5">
+                <div className="font-extrabold text-slate-200 uppercase text-[11px]">Étape : {loadingStep}</div>
+                <div className="text-slate-500 text-[11px] mt-0.5">
                   {loadingStep === 'collecting' && 'Extraction API Pappers / INPI / GitHub...'}
                   {loadingStep === 'analyzing' && 'Concertation multi-LLM (3 passes REV20)...'}
                   {loadingStep === 'calculating' && 'Evaluation des trajectoires de survie Cox...'}
@@ -99,7 +99,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     <p className="leading-relaxed font-mono">
                       {error}
                     </p>
-                    <p className="text-slate-500 text-[10px] mt-2 italic">
+                    <p className="text-slate-500 text-[12px] mt-2 italic">
                      Veuillez vous assurer que votre clé GEMINI_API_KEY est bien renseignée dans l'onglet des Secrets du projet.
                     </p>
                   </div>
@@ -217,25 +217,25 @@ export const SurvivalAnalysisView: React.FC = () => {
                 <>
                   <div className="grid grid-cols-3 gap-2">
                     <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-center">
-                      <div className="text-[9px] text-slate-500 mb-1">PROBA 12M</div>
+                      <div className="text-[11px] text-slate-500 mb-1">PROBA 12M</div>
                       <div className="text-base font-black text-slate-200">{(r.cox_survival.survival_12m * 100).toFixed(1)}%</div>
                       {r.cox_survival.survival_12m_lo != null && r.cox_survival.survival_12m_hi != null && (
-                        <div className="text-[8px] text-slate-600 font-mono">
+                        <div className="text-[11px] text-slate-600 font-mono">
                           [{(r.cox_survival.survival_12m_lo * 100).toFixed(1)}-{(r.cox_survival.survival_12m_hi * 100).toFixed(1)}]
                         </div>
                       )}
                     </div>
                     
                     <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-center">
-                      <div className="text-[9px] text-slate-500 mb-1">PROBA 24M</div>
+                      <div className="text-[11px] text-slate-500 mb-1">PROBA 24M</div>
                       <div className="text-base font-black text-slate-200">{(r.cox_survival.survival_24m * 100).toFixed(1)}%</div>
                     </div>
 
                     <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 text-center">
-                      <div className="text-[9px] text-slate-500 mb-1">PROBA 36M</div>
+                      <div className="text-[11px] text-slate-500 mb-1">PROBA 36M</div>
                       <div className="text-base font-black text-slate-200">{(r.cox_survival.survival_36m * 100).toFixed(1)}%</div>
                       {r.cox_survival.survival_36m_lo != null && r.cox_survival.survival_36m_hi != null && (
-                        <div className="text-[8px] text-slate-600 font-mono">
+                        <div className="text-[11px] text-slate-600 font-mono">
                           [{(r.cox_survival.survival_36m_lo * 100).toFixed(1)}-{(r.cox_survival.survival_36m_hi * 100).toFixed(1)}]
                         </div>
                       )}
@@ -271,7 +271,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     </div>
                   </div>
 
-                  <p className="text-[9px] text-slate-500 leading-relaxed italic">
+                  <p className="text-[11px] text-slate-500 leading-relaxed italic">
                     <b>Note méthodologique :</b> {r.cox_survival.confidence_note}
                     {r.cox_survival.ci_note && <><br/>{r.cox_survival.ci_note}</>}
                     {r.cox_survival.c_index_display && (
@@ -316,7 +316,7 @@ export const SurvivalAnalysisView: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] text-indigo-400 font-black uppercase tracking-widest">Diagnostic Combiné Double Horizon</span>
-                <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase ${
+                <span className={`px-2 py-0.5 rounded text-[11px] font-black uppercase ${
                   r.dual_horizon.dominant_risk === 'aucun' ? 'bg-emerald-950/50 text-emerald-400 border border-emerald-500/15' :
                   r.dual_horizon.dominant_risk === 'structurel' ? 'bg-indigo-950/50 text-indigo-400 border border-indigo-500/15' :
                   r.dual_horizon.dominant_risk === 'opérationnel' ? 'bg-amber-950/50 text-amber-500 border border-amber-500/15' :
@@ -346,7 +346,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     Horizon Opérationnel (0-18m)
                   </h4>
                   {r.dual_horizon.operational.available && (
-                    <span className={`px-1.5 py-0.5 rounded text-[8px] font-bold uppercase ${
+                    <span className={`px-1.5 py-0.5 rounded text-[11px] font-bold uppercase ${
                       r.fsf?.fsf_label === 'exceptionnel' ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-500/10' :
                       r.fsf?.fsf_label === 'solide' ? 'bg-indigo-900/30 text-indigo-400 border border-indigo-500/10' :
                       r.fsf?.fsf_label === 'sain' ? 'bg-cyan-900/30 text-cyan-400 border border-cyan-500/10' :
@@ -374,7 +374,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                           {r.fsf?.survival_18m_operational ? `${Math.round(r.fsf.survival_18m_operational * 100)}%` : '—'}
                         </span>
                       </div>
-                      <p className="text-[10px] text-slate-400 leading-relaxed italic border-t border-slate-800/40 pt-1.5">
+                      <p className="text-[12px] text-slate-400 leading-relaxed italic border-t border-slate-800/40 pt-1.5">
                         {r.fsf?.survival_18m_label}
                       </p>
                     </div>
@@ -382,19 +382,19 @@ export const SurvivalAnalysisView: React.FC = () => {
                     {/* Sub-Metrics details */}
                     <div className="grid grid-cols-3 gap-2">
                       <div className="bg-slate-900/30 p-2 rounded border border-slate-850 text-center">
-                        <div className="text-[8px] text-slate-500 uppercase">LTV / CAC</div>
+                        <div className="text-[11px] text-slate-500 uppercase">LTV / CAC</div>
                         <div className="text-xs font-bold text-slate-300 font-mono">
                           {r.fsf?.ltv_cac_ratio != null ? `${r.fsf.ltv_cac_ratio}x` : 'N/A'}
                         </div>
                       </div>
                       <div className="bg-slate-900/30 p-2 rounded border border-slate-850 text-center text-ellipsis overflow-hidden">
-                        <div className="text-[8px] text-slate-500 uppercase">Score ROAS</div>
+                        <div className="text-[11px] text-slate-500 uppercase">Score ROAS</div>
                         <div className="text-xs font-bold text-slate-300 font-mono">
                           {r.fsf?.roas_score != null ? `${r.fsf.roas_score}/4` : 'N/A'}
                         </div>
                       </div>
                       <div className="bg-slate-900/30 p-2 rounded border border-slate-850 text-center">
-                        <div className="text-[8px] text-slate-500 uppercase">Score Growth</div>
+                        <div className="text-[11px] text-slate-500 uppercase">Score Growth</div>
                         <div className="text-xs font-bold text-slate-300 font-mono">
                           {r.fsf?.growth_score != null ? `${r.fsf.growth_score}/4` : 'N/A'}
                         </div>
@@ -402,13 +402,13 @@ export const SurvivalAnalysisView: React.FC = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="p-3 bg-slate-950 text-[10px] text-slate-500 leading-relaxed italic border border-slate-850 rounded">
+                  <div className="p-3 bg-slate-950 text-[12px] text-slate-500 leading-relaxed italic border border-slate-850 rounded">
                     Données financières absentes pour cet horizon. FSF non calculable. La survie à court terme n'est pas modélisable. Aucun champ manquant ne pénalise la survie structurelle.
                   </div>
                 )}
               </div>
 
-              <div className="text-[8px] text-slate-600 italic">
+              <div className="text-[11px] text-slate-600 italic">
                 {r.dual_horizon.operational.note}
               </div>
             </div>
@@ -421,7 +421,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     <Shield size={12} className="text-indigo-400" />
                     Horizon Structurel (0-36m)
                   </h4>
-                  <span className={`px-1.5 py-0.5 rounded text-[8px] font-bold uppercase ${
+                  <span className={`px-1.5 py-0.5 rounded text-[11px] font-bold uppercase ${
                     r.dual_horizon.structural.risk_profile === 'faible' ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-500/10' :
                     r.dual_horizon.structural.risk_profile === 'modéré' ? 'bg-amber-900/30 text-amber-500 border border-amber-500/10' :
                     r.dual_horizon.structural.risk_profile === 'élevé' ? 'bg-orange-900/30 text-orange-500 border border-orange-500/10' :
@@ -437,7 +437,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     <span className="text-lg font-black font-mono text-slate-200">
                       {Math.round(r.dual_horizon.structural.survival_36m * 100)}%
                       {r.dual_horizon.structural.survival_36m_lo != null && r.dual_horizon.structural.survival_36m_hi != null && (
-                        <span className="text-[9px] text-slate-550 font-normal ml-1.5">
+                        <span className="text-[11px] text-slate-550 font-normal ml-1.5">
                           [{Math.round(r.dual_horizon.structural.survival_36m_lo * 100)}-{Math.round(r.dual_horizon.structural.survival_36m_hi * 100)}%]
                         </span>
                       )}
@@ -445,11 +445,11 @@ export const SurvivalAnalysisView: React.FC = () => {
                   </div>
 
                   <div className="bg-slate-900/40 p-3 rounded-lg border border-slate-850 space-y-2">
-                    <p className="text-[10px] text-slate-400 leading-relaxed font-sans font-medium">
+                    <p className="text-[12px] text-slate-400 leading-relaxed font-sans font-medium">
                       {r.dual_horizon.structural.label}
                     </p>
                     <div className="flex flex-wrap gap-1 border-t border-slate-800/40 pt-1.5">
-                      <span className="text-[8px] text-slate-500 self-center mr-1">COVARIABLES ACTIVES :</span>
+                      <span className="text-[11px] text-slate-500 self-center mr-1">COVARIABLES ACTIVES :</span>
                       {r.dual_horizon.structural.covariables_used.map((cov, i) => (
                         <span key={`cov-${i}`} className="bg-slate-900 px-1 text-[7.5px] font-mono text-indigo-450 border border-slate-800 rounded">
                           {cov}
@@ -460,7 +460,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                 </div>
               </div>
 
-              <div className="text-[8px] text-slate-600 italic">
+              <div className="text-[11px] text-slate-600 italic">
                 {r.dual_horizon.structural.note}
               </div>
             </div>
@@ -473,7 +473,7 @@ export const SurvivalAnalysisView: React.FC = () => {
         <div className="text-xs text-slate-500 font-bold tracking-widest mb-4 uppercase flex justify-between items-center">
           <span>{buildIROMetadata(GOLD_STANDARD_N).ui_labels.horizon_label} & Indicateurs Dynamiques (v6.6)</span>
           {velocity && (
-            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded shadow-sm" style={{ background: `${velocity.velocity_color}20`, color: velocity.velocity_color, border: `1px solid ${velocity.velocity_color}40` }}>
+            <span className="text-[11px] font-black uppercase px-2 py-0.5 rounded shadow-sm" style={{ background: `${velocity.velocity_color}20`, color: velocity.velocity_color, border: `1px solid ${velocity.velocity_color}40` }}>
               {velocity.velocity_label}
             </span>
           )}
@@ -497,7 +497,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                   }} 
                 />
               </div>
-              <div className="mt-3 text-[10px] text-slate-400 italic leading-relaxed">
+              <div className="mt-3 text-[12px] text-slate-400 italic leading-relaxed">
                 {velocity?.interpretation ?? 'Analysez cette startup une seconde fois pour activer la vélocité historique.'}
               </div>
             </div>
@@ -508,7 +508,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                 <div className="text-[10px] text-slate-500 font-bold mb-3 uppercase tracking-tighter italic">Trajectoire & Confiance</div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <div className="text-[9px] text-slate-600 uppercase mb-1">Trajectoire</div>
+                    <div className="text-[11px] text-slate-600 uppercase mb-1">Trajectoire</div>
                     <div className={`text-xs font-black uppercase flex items-center gap-1 ${
                       velocity?.trend === 'ascending' ? 'text-emerald-400' :
                       velocity?.trend === 'descending' ? 'text-red-400' : 
@@ -522,7 +522,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <div className="text-[9px] text-slate-600 uppercase mb-1">Confiance</div>
+                    <div className="text-[11px] text-slate-600 uppercase mb-1">Confiance</div>
                     <div className={`text-xs font-black uppercase ${
                       velocity?.confidence === 'high' ? 'text-emerald-400' :
                       velocity?.confidence === 'medium' ? 'text-amber-400' : 'text-red-400'
@@ -547,14 +547,14 @@ export const SurvivalAnalysisView: React.FC = () => {
                 <div className="text-2xl font-black text-indigo-400 font-mono">
                   {velocity ? (velocity.snapshots[velocity.snapshots.length-1].iro_total + (velocity.velocity_global * 18)).toFixed(1) : dynamics?.iro_proj_18m ?? '—'}
                 </div>
-                <div className="px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20 text-[9px] text-indigo-400 font-bold">
+                <div className="px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20 text-[11px] text-indigo-400 font-bold">
                   PREDICTIVE
                 </div>
               </div>
-              <p className="text-[10px] text-slate-400 italic leading-relaxed">
+              <p className="text-[12px] text-slate-400 italic leading-relaxed">
                 Basé sur l'hypothèse H5 : "La trajectoire IRO prédit mieux la survie à t₀+36 que le niveau absolu."
               </p>
-              <div className="mt-3 flex items-center gap-2 text-[9px] text-indigo-500 font-bold uppercase tracking-widest">
+              <div className="mt-3 flex items-center gap-2 text-[11px] text-indigo-500 font-bold uppercase tracking-widest">
                 <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
                 Validité Normative : 88%
               </div>
@@ -593,18 +593,18 @@ export const SurvivalAnalysisView: React.FC = () => {
                     {honeymoon.mortality_peak ? 'CRÊTE DE MORTALITÉ DE FICHMAN-LEVINTHAL (12-24M)' : 'Zone de risque standard'}
                   </span>
                 </div>
-                <p className="text-[10px] text-slate-500 mt-2 leading-relaxed italic">
+                <p className="text-[12px] text-slate-500 mt-2 leading-relaxed italic">
                   {honeymoon.interpretation}
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-slate-950/50 p-3 rounded-lg border border-slate-800/50">
-                  <div className="text-[9px] text-slate-500 uppercase mb-1">Coût de Pivot</div>
+                  <div className="text-[11px] text-slate-500 uppercase mb-1">Coût de Pivot</div>
                   <div className="text-xs font-black text-slate-300 uppercase">{honeymoon.pivot_cost}</div>
                 </div>
                 <div className="bg-slate-950/50 p-3 rounded-lg border border-slate-800/50">
-                  <div className="text-[9px] text-slate-500 uppercase mb-1">Poids Cox</div>
+                  <div className="text-[11px] text-slate-500 uppercase mb-1">Poids Cox</div>
                   <div className="text-xs font-black text-indigo-400 font-mono">{honeymoon.weight.toFixed(2)}x</div>
                 </div>
               </div>
@@ -658,7 +658,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                 </div>
                 
                 <div className="bg-slate-950 p-4 rounded-lg border border-slate-800">
-                  <p className="text-[10px] text-slate-400 leading-relaxed">
+                  <p className="text-[12px] text-slate-400 leading-relaxed">
                     <b>Interprétation :</b> {diVelocity.interpretation}
                   </p>
                 </div>
@@ -668,7 +668,7 @@ export const SurvivalAnalysisView: React.FC = () => {
                     <AlertTriangle size={12} className="text-amber-400" />
                     <span className="text-[10px] font-bold text-amber-400 uppercase">Avertissement de Commoditisation</span>
                   </div>
-                  <p className="text-[9px] text-slate-550 italic leading-relaxed">
+                  <p className="text-[11px] text-slate-550 italic leading-relaxed">
                     Le Moat technique (DI) s'érode à une vitesse de {diVelocity.vmm * 0.25}x par an par rapport au benchmark d'exposition produit.
                   </p>
                 </div>

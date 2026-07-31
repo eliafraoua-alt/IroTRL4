@@ -364,7 +364,7 @@ export const FounderProfilePanel: React.FC<Props> = ({ startupName, onUpdate, in
               {showContext ? <ChevronUp className="w-4 h-4 text-slate-500" /> : <ChevronDown className="w-4 h-4 text-slate-500" />}
             </button>
             {showContext && (
-              <pre className="px-4 pb-4 text-[10px] text-slate-400 whitespace-pre-wrap leading-relaxed bg-slate-950/50 border-t border-slate-800">
+              <pre className="px-4 pb-4 text-[12px] text-slate-400 whitespace-pre-wrap leading-relaxed bg-slate-950/50 border-t border-slate-800">
                 {gchAnalysis.gch_fondateurs_context}
               </pre>
             )}

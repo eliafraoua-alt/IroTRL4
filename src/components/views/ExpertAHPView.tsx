@@ -161,15 +161,15 @@ export const ExpertAHPView: React.FC = () => {
         {/* Status Metrics Bar */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6 pt-5 border-t border-slate-800">
           <div className="bg-slate-950 rounded-lg p-3 text-center border border-slate-800/60">
-            <span className="text-[9px] text-slate-500 uppercase font-bold tracking-wide">Ratio de Cohérence (R.C.)</span>
+            <span className="text-[11px] text-slate-500 uppercase font-bold tracking-wide">Ratio de Cohérence (R.C.)</span>
             <div className={`text-xl font-black font-mono mt-1 ${ahpResult.isConsistent ? 'text-emerald-400' : 'text-amber-500'}`}>
               {ahpResult.consistencyRatio.toFixed(4)}
             </div>
-            <span className="text-[9px] text-slate-500">Seuil acceptable : CR &lt; 0.10</span>
+            <span className="text-[11px] text-slate-500">Seuil acceptable : CR &lt; 0.10</span>
           </div>
           
           <div className="bg-slate-950 rounded-lg p-3 text-center border border-slate-800/60">
-            <span className="text-[9px] text-slate-500 uppercase font-bold tracking-wide">État de Cohérence</span>
+            <span className="text-[11px] text-slate-500 uppercase font-bold tracking-wide">État de Cohérence</span>
             <div className={`text-sm font-black uppercase mt-1.5 flex items-center justify-center gap-1.5 ${ahpResult.isConsistent ? 'text-emerald-400' : 'text-amber-400'}`}>
               {ahpResult.isConsistent ? (
                 <>
@@ -181,15 +181,15 @@ export const ExpertAHPView: React.FC = () => {
                 </>
               )}
             </div>
-            <span className="text-[9px] text-slate-500">Ajustements requis si inconsistant</span>
+            <span className="text-[11px] text-slate-500">Ajustements requis si inconsistant</span>
           </div>
 
           <div className="bg-slate-950 rounded-lg p-3 text-center border border-slate-800/60">
-            <span className="text-[9px] text-slate-500 uppercase font-bold tracking-wide">Qualité Instrument</span>
+            <span className="text-[11px] text-slate-500 uppercase font-bold tracking-wide">Qualité Instrument</span>
             <div className="text-xl font-black font-mono text-indigo-400 mt-1 uppercase">
               Consensus v7.0
             </div>
-            <span className="text-[9px] text-slate-500">Calibration validée par panel expert</span>
+            <span className="text-[11px] text-slate-500">Calibration validée par panel expert</span>
           </div>
         </div>
       </div>
@@ -255,7 +255,7 @@ export const ExpertAHPView: React.FC = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         {diff !== 0 && (
-                          <span className={`text-[9px] font-mono leading-none ${diff > 0 ? 'text-emerald-400' : 'text-rose-500'}`}>
+                          <span className={`text-[11px] font-mono leading-none ${diff > 0 ? 'text-emerald-400' : 'text-rose-500'}`}>
                             {diff > 0 ? `+${(diff*100).toFixed(1)}%` : `${(diff*100).toFixed(1)}%`}
                           </span>
                         )}
@@ -275,7 +275,7 @@ export const ExpertAHPView: React.FC = () => {
           </div>
 
           {/* Mathematical provenance */}
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-2 text-[10px] text-slate-500 leading-relaxed">
+          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-2 text-[12px] text-slate-500 leading-relaxed">
             <h4 className="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Note Méthodologique</h4>
             <p>
               Le vecteur de priorité est calculé via la recherche du vecteur propre principal de la matrice de jugement Saaty.

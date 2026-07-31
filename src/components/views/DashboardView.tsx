@@ -44,7 +44,7 @@ const ConsensusQualityBanner: React.FC<{ consensusReport: any }> = ({ consensusR
         <AlertTriangle size={13} className="text-red-400 mt-0.5 shrink-0" />
         <div>
           <p className="text-[10px] font-bold text-red-400 uppercase tracking-wider">Score non fiable</p>
-          <p className="text-[9px] text-red-300/80 mt-0.5">
+          <p className="text-[11px] text-red-300/80 mt-0.5">
             Aucun provider LLM n'a pu générer un résultat valide. Les scores affichés sont des valeurs de secours neutres — <strong>ne pas utiliser pour une décision.</strong>
           </p>
         </div>
@@ -59,7 +59,7 @@ const ConsensusQualityBanner: React.FC<{ consensusReport: any }> = ({ consensusR
         <AlertTriangle size={13} className="text-amber-400 mt-0.5 shrink-0" />
         <div>
           <p className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Source unique</p>
-          <p className="text-[9px] text-amber-300/80 mt-0.5">
+          <p className="text-[11px] text-amber-300/80 mt-0.5">
             Score basé sur <strong>1 seule passe LLM</strong> (2 passes ont échoué). La fiabilité est réduite — vérifiez la connexion API et relancez l'analyse.
           </p>
         </div>
@@ -74,7 +74,7 @@ const ConsensusQualityBanner: React.FC<{ consensusReport: any }> = ({ consensusR
         <AlertTriangle size={13} className="text-amber-400 mt-0.5 shrink-0" />
         <div>
           <p className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Désaccord inter-passes</p>
-          <p className="text-[9px] text-amber-300/80 mt-0.5">
+          <p className="text-[11px] text-amber-300/80 mt-0.5">
             Variance élevée sur : <strong>{divergent_dims.join(', ')}</strong>. Convergence : {Math.round((convergence ?? 0) * 100)}%. Enrichissez la description pour stabiliser le scoring.
           </p>
         </div>
@@ -90,7 +90,7 @@ const ConsensusQualityBanner: React.FC<{ consensusReport: any }> = ({ consensusR
   return (
     <div className="flex items-center gap-1.5 mt-1.5">
       <Check size={10} className="text-emerald-400" />
-      <span className="text-[9px] text-slate-500">{methodLabel}</span>
+      <span className="text-[11px] text-slate-500">{methodLabel}</span>
     </div>
   );
 };
@@ -257,7 +257,7 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
           {/* Section Gauche : Modèle de Cox */}
           <div className="md:col-span-4 bg-slate-950/60 p-4 rounded-xl border border-slate-800/50 flex flex-col justify-between">
             <div>
-              <div className="text-[9px] text-slate-500 uppercase font-bold tracking-wider mb-2 font-mono">
+              <div className="text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-2 font-mono">
                 1. Modèle de Cox (7 Variables)
               </div>
               <div className="flex items-center justify-between mb-3">
@@ -293,10 +293,10 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
             </div>
             
             <div className="mt-4 pt-3 border-t border-slate-900/50 flex flex-col gap-1">
-              <span className="text-[8px] text-slate-500 uppercase font-bold font-mono">
+              <span className="text-[11px] text-slate-500 uppercase font-bold font-mono">
                 Marge d'erreur statistique
               </span>
-              <p className="text-[9px] text-slate-400 leading-normal">
+              <p className="text-[11px] text-slate-400 leading-normal">
                 Faible EPV ({r.cox_survival?.epv?.toFixed(2) || '1.29-1.86'}). Risque élevé d'instabilité des coefficients individuels (jusqu'à 38% de flip de signe).
               </p>
             </div>
@@ -311,7 +311,7 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
             }`} />
 
             <div className="z-10">
-              <div className="text-[9px] text-slate-500 uppercase font-bold tracking-wider mb-3 font-mono">
+              <div className="text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-3 font-mono">
                 Statut de Concordance
               </div>
 
@@ -331,16 +331,16 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
                 </div>
               )}
 
-              <p className="text-[10px] text-slate-300 leading-relaxed font-sans mt-2 italic px-1">
+              <p className="text-[12px] text-slate-300 leading-relaxed font-sans mt-2 italic px-1">
                 "{recommandation}"
               </p>
             </div>
 
             <div className="mt-4 pt-3 border-t border-slate-800/50 text-left z-10">
-              <span className="text-[8px] text-slate-500 uppercase font-bold font-mono block mb-1">
+              <span className="text-[11px] text-slate-500 uppercase font-bold font-mono block mb-1">
                 Protocole de révision humaine
               </span>
-              <p className="text-[9px] text-slate-400 leading-tight">
+              <p className="text-[11px] text-slate-400 leading-tight">
                 {agreement 
                   ? "Les signaux d'orientation concordent. La validité décisionnelle est optimale." 
                   : "Désaccord détecté : le modèle simple à EPV élevé contredit le modèle de Cox complexe. Vérifier impérativement les évidences qualitatives."}
@@ -351,7 +351,7 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
           {/* Section Droite : Modèle LU>=2 */}
           <div className="md:col-span-4 bg-slate-950/60 p-4 rounded-xl border border-slate-800/50 flex flex-col justify-between">
             <div>
-              <div className="text-[9px] text-slate-500 uppercase font-bold tracking-wider mb-2 font-mono">
+              <div className="text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-2 font-mono">
                 2. Modèle Simple (LU ≥ 2)
               </div>
               <div className="flex items-center justify-between mb-3">
@@ -367,7 +367,7 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
 
               {/* Graphic Slider comparing LU to actual threshold */}
               <div className="my-4 px-1">
-                <div className="flex justify-between text-[8px] text-slate-500 font-mono mb-1">
+                <div className="flex justify-between text-[11px] text-slate-500 font-mono mb-1">
                   <span>LU = 0</span>
                   <span className="text-red-400 font-bold">Seuil (2.0)</span>
                   <span>LU = 4</span>
@@ -402,7 +402,7 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
                   )}
                 </div>
 
-                <div className="flex justify-between items-center text-[9px] text-slate-400 mt-2">
+                <div className="flex justify-between items-center text-[11px] text-slate-400 mt-2">
                   <span>Statut : {luResult.seuil_franchi ? "✓ Seuil Franchi (LU≥2)" : "✗ Sous le Seuil"}</span>
                   <span className="font-mono">LP : {Number.isNaN(luResult.linear_predictor) ? '—' : luResult.linear_predictor.toFixed(4)}</span>
                 </div>
@@ -410,10 +410,10 @@ const DualModelComparisonPanel: React.FC<{ r: any }> = ({ r }) => {
             </div>
 
             <div className="mt-4 pt-3 border-t border-slate-900/50 flex flex-col gap-1">
-              <span className="text-[8px] text-slate-500 uppercase font-bold font-mono">
+              <span className="text-[11px] text-slate-500 uppercase font-bold font-mono">
                 Stabilité statistique validée
               </span>
-              <p className="text-[9px] text-slate-400 leading-normal">
+              <p className="text-[11px] text-slate-400 leading-normal">
                 Haut EPV ({luResult.epv_du_modele}). Bootstrap (2000 passes) : 0.0% de changement de signe. Robustesse garantie par design minimaliste.
               </p>
             </div>
@@ -476,7 +476,7 @@ export const DashboardView: React.FC = () => {
                   <p className="leading-relaxed font-mono">
                     {error}
                   </p>
-                  <p className="text-slate-500 text-[10px] mt-2 italic">
+                  <p className="text-slate-500 text-[12px] mt-2 italic">
                     Veuillez vérifier que la variable d'environnement GEMINI_API_KEY est bien configurée dans les Réglages/Secrets du projet.
                   </p>
                 </div>
@@ -678,11 +678,11 @@ export const DashboardView: React.FC = () => {
                     title="Voir le détail Phase & Levée"
                   >
                     <span className="text-sm">{phaseAnalysis.type.emoji}</span>
-                    <span className="text-[9px] font-black uppercase tracking-widest" style={{ color: badgeColor }}>
+                    <span className="text-[11px] font-black uppercase tracking-widest" style={{ color: badgeColor }}>
                       {phaseAnalysis.type.label}
                     </span>
-                    <span className="text-[8px] text-slate-600 mx-1">·</span>
-                    <span className="text-[9px] font-bold" style={{ color: roundColor }}>
+                    <span className="text-[11px] text-slate-600 mx-1">·</span>
+                    <span className="text-[11px] font-bold" style={{ color: roundColor }}>
                       {roundIcon} {roundLabel}
                     </span>
                   </button>
@@ -719,14 +719,14 @@ export const DashboardView: React.FC = () => {
                         <div className="text-[10px] font-black tracking-wider uppercase mb-0.5" style={{ color: ax.color }}>
                           {details.label} <span className="text-slate-500 font-normal">· Poids {details.weight}</span>
                         </div>
-                        <p className="text-[10px] text-slate-400 leading-normal">
+                        <p className="text-[12px] text-slate-400 leading-normal">
                           {details.description}
                         </p>
                       </div>
 
                       {/* Échelle de score */}
                       <div className="border-t border-slate-900 pt-2.5 space-y-1.5">
-                        <div className="text-[8px] text-slate-500 uppercase font-black tracking-wider mb-1">Échelle de score IRO v4.5-S46</div>
+                        <div className="text-[11px] text-slate-500 uppercase font-black tracking-wider mb-1">Échelle de score IRO v4.5-S46</div>
                         {details.scale.map((desc, idx) => {
                           const isCurrent = idx === Math.round(val);
                           return (
@@ -735,7 +735,7 @@ export const DashboardView: React.FC = () => {
                                 ? 'bg-indigo-950/20 border border-indigo-500/20' 
                                 : 'opacity-40 hover:opacity-80'
                             }`}>
-                              <div className={`w-4 h-4 rounded text-[9px] font-black flex items-center justify-center shrink-0 ${
+                              <div className={`w-4 h-4 rounded text-[11px] font-black flex items-center justify-center shrink-0 ${
                                 isCurrent 
                                   ? 'text-white' 
                                   : 'text-slate-500 bg-slate-900/40'
@@ -759,7 +759,7 @@ export const DashboardView: React.FC = () => {
 
                       {/* Justification de l'analyse */}
                       <div className="border-t border-slate-900 pt-2.5">
-                        <div className="text-[8px] text-slate-500 uppercase font-black tracking-wider mb-1">Preuves & Justification de l'Audit</div>
+                        <div className="text-[11px] text-slate-500 uppercase font-black tracking-wider mb-1">Preuves & Justification de l'Audit</div>
                         <p className="text-[9.5px] text-slate-300 leading-relaxed italic bg-slate-900/30 p-2 rounded border border-slate-900/40">
                           "{justificationText}"
                         </p>
@@ -829,7 +829,7 @@ export const DashboardView: React.FC = () => {
                   </div>
                   {open && scoreObj.justification && (
                     <div className="mt-1 px-1">
-                      <p className="text-[10px] text-slate-400 leading-tight italic">{scoreObj.justification}</p>
+                      <p className="text-[12px] text-slate-400 leading-tight italic">{scoreObj.justification}</p>
                     </div>
                   )}
                 </div>
@@ -865,7 +865,7 @@ export const DashboardView: React.FC = () => {
             <div className="text-xs text-slate-500 font-bold tracking-widest mb-3 uppercase flex items-center justify-between">
               <span>Probabilité de Survie</span>
               {r.cox_survival && (
-                <span className={`px-1.5 py-0.5 rounded text-[9px] font-black uppercase ${
+                <span className={`px-1.5 py-0.5 rounded text-[11px] font-black uppercase ${
                   r.cox_survival.risk_profile === 'critique' ? 'bg-red-900/45 text-red-400' :
                   r.cox_survival.risk_profile === 'élevé' ? 'bg-orange-900/45 text-orange-400' :
                   r.cox_survival.risk_profile === 'modéré' ? 'bg-amber-900/45 text-amber-400' : 'bg-emerald-900/45 text-emerald-400'
@@ -919,7 +919,7 @@ export const DashboardView: React.FC = () => {
                   <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2">Maturité Technologique</div>
                   <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
                      <div className="text-xs font-bold text-slate-300 mb-1">{TRL_DESCRIPTIONS[r.trl.niveau]}</div>
-                     <p className="text-[10px] text-slate-500 leading-relaxed italic">
+                     <p className="text-[12px] text-slate-500 leading-relaxed italic">
                        Niveau de maturité déclaré par l'utilisateur comme base de l'audit.
                      </p>
                   </div>
@@ -944,21 +944,21 @@ export const DashboardView: React.FC = () => {
             <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
               <div className="flex gap-4">
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold">Vertical</span>
+                  <span className="text-[11px] text-slate-500 uppercase font-bold">Vertical</span>
                   <span className="text-[11px] font-mono font-bold text-slate-300">{r.vertical}</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold">Infra Propre</span>
+                  <span className="text-[11px] text-slate-500 uppercase font-bold">Infra Propre</span>
                   <span className={`${r.di_infra_propre ? 'text-emerald-400' : 'text-slate-500'} text-[11px] font-mono font-bold`}>
                     {r.di_infra_propre ? 'OUI' : 'NON'}
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[9px] text-slate-500 uppercase font-bold">Conf. IPC</span>
+                  <span className="text-[11px] text-slate-500 uppercase font-bold">Conf. IPC</span>
                   <span className="text-[11px] font-mono font-bold text-amber-500">{((r.iro?.ipc_confiance ?? 0.7) * 100)}%</span>
                 </div>
               </div>
-              <div className="text-[9px] text-slate-600 italic">
+              <div className="text-[11px] text-slate-600 italic">
                 Validation REV29-33 active
               </div>
             </div>
@@ -975,7 +975,7 @@ export const DashboardView: React.FC = () => {
               <span className="text-xs font-black text-indigo-400 tracking-widest uppercase">
                 DI Evidence — Recherche Web Structurée v7.0
               </span>
-              <span className={`px-2 py-0.5 rounded text-[9px] font-black uppercase ml-2 ${
+              <span className={`px-2 py-0.5 rounded text-[11px] font-black uppercase ml-2 ${
                 diEvidence.di_confiance === 'haute' ? 'bg-emerald-500/15 text-emerald-400' :
                 diEvidence.di_confiance === 'moyenne' ? 'bg-amber-500/15 text-amber-400' :
                 'bg-red-500/15 text-red-400'
@@ -997,10 +997,10 @@ export const DashboardView: React.FC = () => {
           </div>
 
           <div className="bg-slate-950/60 rounded-lg p-3 border border-slate-800 mb-4">
-            <div className="text-[9px] text-slate-500 uppercase font-bold tracking-widest mb-1.5">
+            <div className="text-[11px] text-slate-500 uppercase font-bold tracking-widest mb-1.5">
               Justification DI enrichie (5 points)
             </div>
-            <p className="text-[10px] text-slate-300 leading-relaxed">
+            <p className="text-[12px] text-slate-300 leading-relaxed">
               {diEvidence.di_justification_enrichie}
             </p>
           </div>
@@ -1020,14 +1020,14 @@ export const DashboardView: React.FC = () => {
                   : 'bg-slate-800/40 border-slate-700/50'
               }`}>
                 <div className={`text-[10px] font-bold ${f.active ? 'text-emerald-400' : 'text-slate-600'}`}>{f.val}</div>
-                <div className="text-[9px] text-slate-500 uppercase tracking-wider">{f.label}</div>
+                <div className="text-[11px] text-slate-500 uppercase tracking-wider">{f.label}</div>
               </div>
             ))}
           </div>
 
           {diEvidence.sources_verifiees.length > 0 && (
             <div>
-              <div className="text-[9px] text-slate-500 uppercase font-bold tracking-widest mb-1.5">
+              <div className="text-[11px] text-slate-500 uppercase font-bold tracking-widest mb-1.5">
                 Sources vérifiées ({diEvidence.sources_verifiees.length})
               </div>
               <div className="flex flex-wrap gap-1">
@@ -1037,7 +1037,7 @@ export const DashboardView: React.FC = () => {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[9px] rounded font-bold hover:bg-indigo-500/20 transition-colors"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[11px] rounded font-bold hover:bg-indigo-500/20 transition-colors"
                   >
                     {url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
                     <ExternalLink size={8} />
@@ -1047,7 +1047,7 @@ export const DashboardView: React.FC = () => {
             </div>
           )}
 
-          <div className="mt-3 text-[9px] text-slate-600 italic border-t border-slate-800 pt-2">
+          <div className="mt-3 text-[11px] text-slate-600 italic border-t border-slate-800 pt-2">
             Qualité de recherche : {diEvidence.research_quality}% · {diEvidence.loading_steps.length} étapes · {new Date(diEvidence.timestamp).toLocaleString('fr-FR')}
           </div>
         </div>
@@ -1056,7 +1056,7 @@ export const DashboardView: React.FC = () => {
       {!diEvidence && (
         <div className="bg-slate-900/50 rounded-xl p-4 border border-dashed border-indigo-500/20 text-center">
           <Cpu size={20} className="text-indigo-800 mx-auto mb-2" />
-          <p className="text-[10px] text-slate-600 italic">
+          <p className="text-[12px] text-slate-600 italic">
             Cliquez sur <strong className="text-indigo-400">DI Research</strong> dans la barre d'outils pour lancer la recherche web structurée et consolider le score DI avec des preuves factuelles.
           </p>
         </div>

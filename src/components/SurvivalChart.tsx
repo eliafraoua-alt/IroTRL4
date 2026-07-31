@@ -79,7 +79,7 @@ export function SurvivalChart({ startupName, mainCurve, coxOnlyCurve, rsf_availa
         <div className="text-[10px] text-slate-500 font-bold tracking-widest uppercase">
           {rsf_available ? 'PROBABILITÉ DE SURVIE (COX + RSF v6 — Ensemble 60/40)' : 'PROBABILITÉ DE SURVIE (COX IRO v6)'}
         </div>
-        <div className="text-[9px] text-slate-600 font-mono italic">
+        <div className="text-[11px] text-slate-600 font-mono italic">
           Cohorte FR n=130
         </div>
       </div>
@@ -95,7 +95,7 @@ export function SurvivalChart({ startupName, mainCurve, coxOnlyCurve, rsf_availa
             tick={{ fill: 'rgba(255,255,255,0.4)' }}
             ticks={[0, 6, 12, 18, 24, 30, 36]}
             domain={[0, 36]}
-            label={{ value: 'Mois', position: 'insideBottomRight', offset: -5, fontSize: 9, fill: 'rgba(255,255,255,0.2)' }}
+            label={{ value: 'Mois', position: 'insideBottomRight', offset: -5, fontSize: 11, fill: 'rgba(255,255,255,0.2)' }}
           />
           <YAxis 
             stroke="rgba(255,255,255,0.2)" 
@@ -158,7 +158,7 @@ export function SurvivalChart({ startupName, mainCurve, coxOnlyCurve, rsf_availa
             content={({ payload }) => (
               <div className="flex justify-center gap-4 mt-4">
                 {payload?.map((entry: any, index: number) => (
-                  <div key={`lg-surv-${index}`} className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-wider">
+                  <div key={`lg-surv-${index}`} className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider">
                     <div 
                       className="w-2 h-2 rounded-full" 
                       style={{ backgroundColor: entry.color }} 
@@ -182,7 +182,7 @@ export function ICMethodBadge({ ci_method, ci_note }: { ci_method?: string; ci_n
   if (!ci_method) return null;
   const isConformal = ci_method === 'conformal_sesia2025';
   return (
-    <div className={`mt-1 text-[9px] px-2 py-0.5 rounded inline-flex items-center gap-1 ${
+    <div className={`mt-1 text-[11px] px-2 py-0.5 rounded inline-flex items-center gap-1 ${
       isConformal ? 'bg-emerald-900/30 text-emerald-400' : 'bg-slate-700 text-slate-400'
     }`}>
       <span>{isConformal ? '✓ IC Conformal (Sesia 2025)' : 'IC Delta-method'}</span>

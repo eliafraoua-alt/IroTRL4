@@ -162,19 +162,19 @@ export const CohortValidationPanel: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
                 <span className="text-2xl font-black font-mono text-slate-100">{stats.total}</span>
-                <p className="text-[9px] text-slate-500 uppercase font-bold mt-1">Startups Auditées</p>
+                <p className="text-[11px] text-slate-500 uppercase font-bold mt-1">Startups Auditées</p>
               </div>
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
                 <span className="text-2xl font-black font-mono text-emerald-400">{stats.verified}</span>
-                <p className="text-[9px] text-slate-500 uppercase font-bold mt-1">Vérifiées (SIREN)</p>
+                <p className="text-[11px] text-slate-500 uppercase font-bold mt-1">Vérifiées (SIREN)</p>
               </div>
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
                 <span className="text-2xl font-black font-mono text-indigo-400">{stats.acquiredCount}</span>
-                <p className="text-[9px] text-slate-500 uppercase font-bold mt-1">Acquisitions (11.2%)</p>
+                <p className="text-[11px] text-slate-500 uppercase font-bold mt-1">Acquisitions (11.2%)</p>
               </div>
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
                 <span className="text-2xl font-black font-mono text-rose-400">{stats.failedCount}</span>
-                <p className="text-[9px] text-slate-500 uppercase font-bold mt-1">Défaillances (5.0%)</p>
+                <p className="text-[11px] text-slate-500 uppercase font-bold mt-1">Défaillances (5.0%)</p>
               </div>
               <div className="bg-slate-900 border border-indigo-950 rounded-lg p-3 text-center col-span-2 md:col-span-1 bg-indigo-950/20">
                 <span className="text-xs font-black text-indigo-400 uppercase tracking-widest block">Statut TRL 4</span>
@@ -250,7 +250,7 @@ export const CohortValidationPanel: React.FC = () => {
                   <h4 className="text-xs font-black text-slate-300 uppercase tracking-wider font-mono">
                     1. Séparation des Issues par le Score IRO (0 - 100)
                   </h4>
-                  <span className="text-[9px] text-slate-500 font-mono">Vérifiées n=401</span>
+                  <span className="text-[11px] text-slate-500 font-mono">Vérifiées n=401</span>
                 </div>
 
                 <div className="space-y-4 pt-1">
@@ -306,7 +306,7 @@ export const CohortValidationPanel: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-[10px] text-slate-500 leading-relaxed font-sans pt-2">
+                <p className="text-[12px] text-slate-500 leading-relaxed font-sans pt-2">
                   Le score moyen IRO des défaillances ({stats.avgIroFailed.toFixed(1)}) se situe <strong className="text-slate-400">{(stats.avgIroActive - stats.avgIroFailed).toFixed(1)} points</strong> sous celui des actives, confirmant le très fort gradient de séparation linéaire.
                 </p>
               </div>
@@ -317,7 +317,7 @@ export const CohortValidationPanel: React.FC = () => {
                   <h4 className="text-xs font-black text-slate-300 uppercase tracking-wider font-mono">
                     2. Distribution du Modèle de Risque Simple LU (0 - 4)
                   </h4>
-                  <span className="text-[9px] text-slate-500 font-mono">Indice Kaplan-Meier</span>
+                  <span className="text-[11px] text-slate-500 font-mono">Indice Kaplan-Meier</span>
                 </div>
 
                 <div className="space-y-4 pt-1">
@@ -373,7 +373,7 @@ export const CohortValidationPanel: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-[10px] text-slate-500 leading-relaxed font-sans pt-2">
+                <p className="text-[12px] text-slate-500 leading-relaxed font-sans pt-2">
                   Le seuil de protection réglementaire <strong className="text-red-400">LU ≥ 2.0</strong> est pleinement légitimé : les startups actives et acquises se maintiennent au-delà (moyenne ~{stats.avgLuActive.toFixed(1)}), tandis que les défaillances coulent sous le seuil (moyenne ~{stats.avgLuFailed.toFixed(1)}).
                 </p>
               </div>
@@ -384,7 +384,7 @@ export const CohortValidationPanel: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
                 <div>
-                  <span className="text-[9px] text-slate-500 uppercase font-black font-mono tracking-widest block mb-1">
+                  <span className="text-[11px] text-slate-500 uppercase font-black font-mono tracking-widest block mb-1">
                     Calibrage EPV = 2.9 (Exploratoire)
                   </span>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -398,7 +398,7 @@ export const CohortValidationPanel: React.FC = () => {
 
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
                 <div>
-                  <span className="text-[9px] text-slate-500 uppercase font-black font-mono tracking-widest block mb-1">
+                  <span className="text-[11px] text-slate-500 uppercase font-black font-mono tracking-widest block mb-1">
                     Exclusions de Traçabilité
                   </span>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -412,7 +412,7 @@ export const CohortValidationPanel: React.FC = () => {
 
               <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
                 <div>
-                  <span className="text-[9px] text-indigo-400 uppercase font-black font-mono tracking-widest block mb-1">
+                  <span className="text-[11px] text-indigo-400 uppercase font-black font-mono tracking-widest block mb-1">
                     Objectif de Certification TRL 5
                   </span>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
@@ -544,7 +544,7 @@ export const CohortValidationPanel: React.FC = () => {
                             </span>
                           </td>
                           <td className="px-4 py-2.5">
-                            <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-extrabold uppercase ${
+                            <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11px] font-extrabold uppercase ${
                               row.status === 'active' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' :
                               row.status === 'acquired' ? 'bg-indigo-500/15 text-indigo-400 border border-indigo-500/25' :
                               'bg-rose-500/15 text-rose-400 border border-rose-500/25 animate-pulse'
@@ -553,7 +553,7 @@ export const CohortValidationPanel: React.FC = () => {
                             </span>
                           </td>
                           <td className="px-4 py-2.5">
-                            <span className={`inline-flex items-center gap-1 text-[9px] font-bold ${
+                            <span className={`inline-flex items-center gap-1 text-[11px] font-bold ${
                               row.audit === 'AUDITE_CORRECT' ? 'text-emerald-500' :
                               row.audit === 'AUDITE_CORRIGE' ? 'text-amber-500' :
                               row.audit === 'ZONE_GRISE' ? 'text-yellow-500' :

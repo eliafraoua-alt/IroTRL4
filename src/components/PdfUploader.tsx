@@ -208,7 +208,7 @@ const PdfUploader: React.FC<PdfUploaderProps> = ({
           <CheckCircle size={16} className="text-emerald-400 shrink-0" />
           <div>
             <p className="text-xs font-bold text-emerald-400">{status.fileName}</p>
-            <p className="text-[10px] text-slate-500 font-mono mt-0.5">
+            <p className="text-[12px] text-slate-500 font-mono mt-0.5">
               {status.charCount.toLocaleString()} car. extraits · {status.method}
             </p>
           </div>
@@ -231,7 +231,7 @@ const PdfUploader: React.FC<PdfUploaderProps> = ({
         <Loader2 size={16} className="text-indigo-400 shrink-0 animate-spin" />
         <div>
           <p className="text-xs font-bold text-indigo-400">{status.fileName}</p>
-          <p className="text-[10px] text-slate-500 font-mono mt-0.5">{status.progress}</p>
+          <p className="text-[12px] text-slate-500 font-mono mt-0.5">{status.progress}</p>
         </div>
       </div>
     );
@@ -245,7 +245,7 @@ const PdfUploader: React.FC<PdfUploaderProps> = ({
           <AlertCircle size={16} className="text-red-400 shrink-0 mt-0.5" />
           <div className="flex-1 min-w-0">
             <p className="text-xs font-bold text-red-400">Extraction échouée</p>
-            <p className="text-[10px] text-slate-500 mt-0.5 break-words">{status.message}</p>
+            <p className="text-[12px] text-slate-500 mt-0.5 break-words">{status.message}</p>
           </div>
           <button
             onClick={() => setStatus({ state: 'idle' })}
@@ -298,7 +298,7 @@ const PdfUploader: React.FC<PdfUploaderProps> = ({
           <p className="text-xs font-bold text-slate-300 truncate">
             {dragActive ? 'Déposez le fichier ici' : 'Déposer ou cliquer pour uploader un PDF/pitch deck'}
           </p>
-          <p className="text-[10px] text-slate-600 font-mono mt-0.5">
+          <p className="text-[12px] text-slate-600 font-mono mt-0.5">
             PDF · TXT · MD — max {MAX_SIZE_MB} Mo — extraction via Gemini
           </p>
         </div>

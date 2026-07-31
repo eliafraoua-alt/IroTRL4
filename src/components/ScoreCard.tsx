@@ -59,7 +59,7 @@ export default function ScoreCard({
           <span style={{ fontSize: 22, fontWeight: 900, color, lineHeight: 1 }}>
             {Number(score || 0).toFixed(0)}
           </span>
-          <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.32)' }}>/100</span>
+          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.32)' }}>/100</span>
         </div>
       </div>
 
@@ -92,7 +92,7 @@ export default function ScoreCard({
             { l: 'Pessimiste', v: score_pessimiste, c: '#ef4444' },
           ].map(x => (
             <div key={x.l}>
-              <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', marginBottom: 2 }}>{x.l}</div>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', marginBottom: 2 }}>{x.l}</div>
               <div style={{ fontSize: 15, fontWeight: 800, color: x.c }}>{Number(x.v || 0).toFixed(0)}</div>
             </div>
           ))}
@@ -100,7 +100,7 @@ export default function ScoreCard({
 
         {/* Barre confiance */}
         <div>
-          <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', marginBottom: 3 }}>
+          <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', marginBottom: 3 }}>
             CONFIANCE — {Math.round((confiance_globale || 0.7) * 100)}%
           </div>
           <div style={{ height: 3, background: 'rgba(255,255,255,0.07)', borderRadius: 2, overflow: 'hidden', width: 140 }}>

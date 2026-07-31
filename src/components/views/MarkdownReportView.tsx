@@ -35,7 +35,7 @@ export const MarkdownReportView: React.FC = () => {
                 </div>
               </div>
               <div className="space-y-1">
-                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-indigo-950/50 border border-indigo-500/20 text-indigo-400 text-[9px] font-bold tracking-widest uppercase">
+                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-indigo-950/50 border border-indigo-500/20 text-indigo-400 text-[11px] font-bold tracking-widest uppercase">
                   Calculateur Actif
                 </div>
                 <h3 className="text-sm font-black text-slate-200">
@@ -47,8 +47,8 @@ export const MarkdownReportView: React.FC = () => {
             <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/40 text-[10px] text-slate-400 max-w-sm mx-auto flex items-center justify-center gap-3">
               <span className="w-2 h-2 rounded-full bg-indigo-400 animate-ping shrink-0" />
               <div className="text-left font-mono">
-                <div className="font-extrabold text-slate-200 uppercase text-[9px]">Étape : {loadingStep}</div>
-                <div className="text-slate-500 text-[8px] mt-0.5">
+                <div className="font-extrabold text-slate-200 uppercase text-[11px]">Étape : {loadingStep}</div>
+                <div className="text-slate-500 text-[11px] mt-0.5">
                   {loadingStep === 'collecting' && 'Extraction API Pappers / INPI / GitHub...'}
                   {loadingStep === 'analyzing' && 'Concertation multi-LLM (3 passes REV20)...'}
                   {loadingStep === 'calculating' && 'Evaluation des trajectoires de survie Cox...'}
@@ -73,7 +73,7 @@ export const MarkdownReportView: React.FC = () => {
                     <p className="leading-relaxed font-mono">
                       {error}
                     </p>
-                    <p className="text-slate-500 text-[10px] mt-2 italic">
+                    <p className="text-slate-500 text-[12px] mt-2 italic">
                      Veuillez vous assurer que votre clé GEMINI_API_KEY est bien renseignée dans l'onglet des Secrets du projet.
                     </p>
                   </div>

@@ -35,7 +35,7 @@ function ScoreBadge({ score, max = 4, label }: { score: number; max?: number; la
       <div className="text-3xl font-black font-mono leading-none" style={{ color }}>
         {score}/{max}
       </div>
-      <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">{label}</div>
+      <div className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">{label}</div>
     </div>
   );
 }
@@ -64,7 +64,7 @@ function SourceChip({ url }: { url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[9px] rounded font-bold hover:bg-indigo-500/20 transition-colors"
+      className="inline-flex items-center gap-1 px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[11px] rounded font-bold hover:bg-indigo-500/20 transition-colors"
     >
       {label}
       <ExternalLink size={8} />
@@ -177,7 +177,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                 DI Research Engine v7.0
               </span>
             </div>
-            <p className="text-[10px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-500 leading-relaxed">
               Consolidation de l'axe Dépendance Infra par recherche web multi-sources
               (GitHub · Grounding Search · Brevets · Stack technique)
             </p>
@@ -185,14 +185,14 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
           {currentDIScore !== undefined && (
             <div className="text-center bg-slate-800/50 rounded-lg px-4 py-2 border border-slate-700/50">
               <div className="text-2xl font-black text-slate-300 font-mono">{currentDIScore}/4</div>
-              <div className="text-[9px] text-slate-500 uppercase">DI Actuel</div>
+              <div className="text-[11px] text-slate-500 uppercase">DI Actuel</div>
             </div>
           )}
         </div>
 
         <div className="flex gap-2">
           <div className="flex-1">
-            <label className="text-[9px] text-slate-500 uppercase tracking-widest font-bold mb-1 block">
+            <label className="text-[11px] text-slate-500 uppercase tracking-widest font-bold mb-1 block">
               Organisation GitHub (optionnel)
             </label>
             <input
@@ -249,7 +249,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
               <div className="text-[10px] text-slate-500 font-black tracking-widest uppercase">
                 📊 Résultat DI Consolidé
               </div>
-              <div className="text-[9px] text-slate-600 font-mono">
+              <div className="text-[11px] text-slate-600 font-mono">
                 {new Date(report.timestamp).toLocaleTimeString('fr-FR')}
               </div>
             </div>
@@ -264,7 +264,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                 }`}>
                   {diDelta === null ? '—' : diDelta > 0 ? `+${diDelta}` : diDelta}
                 </div>
-                <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">
+                <div className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">
                   Δ vs score actuel
                 </div>
               </div>
@@ -276,7 +276,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                 }`}>
                   {report.di_confiance}
                 </div>
-                <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">
+                <div className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">
                   Confiance
                 </div>
               </div>
@@ -285,25 +285,25 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
             {/* Justification */}
             <div className="bg-slate-950/80 rounded-lg p-3 border border-slate-800 mb-3">
               <div className="flex items-center justify-between mb-1.5">
-                <span className="text-[9px] text-slate-500 uppercase font-bold tracking-widest">
+                <span className="text-[11px] text-slate-500 uppercase font-bold tracking-widest">
                   Justification enrichie
                 </span>
                 <button
                   onClick={handleCopyJustification}
-                  className="flex items-center gap-1 text-[9px] text-slate-500 hover:text-indigo-400 transition-colors"
+                  className="flex items-center gap-1 text-[11px] text-slate-500 hover:text-indigo-400 transition-colors"
                 >
                   {copied ? <Check size={9} className="text-emerald-400" /> : <Copy size={9} />}
                   {copied ? 'Copié !' : 'Copier'}
                 </button>
               </div>
-              <p className="text-[10px] text-slate-300 leading-relaxed max-h-40 overflow-y-auto">
+              <p className="text-[12px] text-slate-300 leading-relaxed max-h-40 overflow-y-auto">
                 {report.di_justification_enrichie}
               </p>
             </div>
 
             {/* Research quality */}
             <div>
-              <div className="text-[9px] text-slate-500 uppercase font-bold tracking-widest mb-1.5">
+              <div className="text-[11px] text-slate-500 uppercase font-bold tracking-widest mb-1.5">
                 Qualité de la recherche
               </div>
               <QualityMeter quality={report.research_quality} />
@@ -385,7 +385,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                     ].map(m => (
                       <div key={m.label} className="bg-slate-950 rounded-lg p-2 text-center border border-slate-800">
                         <div className="text-base font-black font-mono" style={{ color: m.color }}>{m.value}</div>
-                        <div className="text-[9px] text-slate-500 uppercase tracking-wider">{m.label}</div>
+                        <div className="text-[11px] text-slate-500 uppercase tracking-wider">{m.label}</div>
                       </div>
                     ))}
                   </div>
@@ -396,7 +396,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                       { label: 'Fine-tuning', active: report.github.has_fine_tuning },
                       { label: 'Modèle propre', active: report.github.has_own_model },
                     ].map(f => (
-                      <div key={f.label} className={`flex items-center justify-between px-2 py-1.5 rounded text-[9px] font-bold border ${
+                      <div key={f.label} className={`flex items-center justify-between px-2 py-1.5 rounded text-[11px] font-bold border ${
                         f.active ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400' : 'bg-slate-800 border-slate-700 text-slate-600'
                       }`}>
                         {f.label}
@@ -407,10 +407,10 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
 
                   {report.github.topics.length > 0 && (
                     <div>
-                      <div className="text-[9px] text-slate-600 uppercase font-bold mb-1">Topics GitHub</div>
+                      <div className="text-[11px] text-slate-600 uppercase font-bold mb-1">Topics GitHub</div>
                       <div className="flex flex-wrap gap-1">
                         {report.github.topics.slice(0, 15).map(t => (
-                          <span key={t} className="px-1.5 py-0.5 bg-slate-800 text-slate-400 text-[9px] rounded font-mono">{t}</span>
+                          <span key={t} className="px-1.5 py-0.5 bg-slate-800 text-slate-400 text-[11px] rounded font-mono">{t}</span>
                         ))}
                       </div>
                     </div>
@@ -420,7 +420,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                     href={report.github.source_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-[9px] text-indigo-400 hover:text-indigo-300"
+                    className="flex items-center gap-1 text-[11px] text-indigo-400 hover:text-indigo-300"
                   >
                     <ExternalLink size={9} />
                     {report.github.source_url}
@@ -458,10 +458,10 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
 
                   {report.llm_stack.modeles_detectes.length > 0 && (
                     <div>
-                      <div className="text-[9px] text-slate-600 uppercase font-bold mb-1">Modèles LLM détectés</div>
+                      <div className="text-[11px] text-slate-600 uppercase font-bold mb-1">Modèles LLM détectés</div>
                       <div className="flex flex-wrap gap-1">
                         {report.llm_stack.modeles_detectes.map(m => (
-                          <span key={m} className="px-2 py-0.5 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[9px] rounded font-bold">{m}</span>
+                          <span key={m} className="px-2 py-0.5 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[11px] rounded font-bold">{m}</span>
                         ))}
                       </div>
                     </div>
@@ -469,10 +469,10 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
 
                   {report.llm_stack.frameworks_ia.length > 0 && (
                     <div>
-                      <div className="text-[9px] text-slate-600 uppercase font-bold mb-1">Frameworks IA</div>
+                      <div className="text-[11px] text-slate-600 uppercase font-bold mb-1">Frameworks IA</div>
                       <div className="flex flex-wrap gap-1">
                         {report.llm_stack.frameworks_ia.map(f => (
-                          <span key={f} className="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[9px] rounded font-bold">{f}</span>
+                          <span key={f} className="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] rounded font-bold">{f}</span>
                         ))}
                       </div>
                     </div>
@@ -480,8 +480,8 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
 
                   {report.llm_stack.raw_evidence && (
                     <div className="bg-slate-950 rounded-lg p-3 border border-slate-800">
-                      <div className="text-[9px] text-slate-600 uppercase font-bold mb-1">Preuves collectées</div>
-                      <p className="text-[10px] text-slate-400 leading-relaxed italic">
+                      <div className="text-[11px] text-slate-600 uppercase font-bold mb-1">Preuves collectées</div>
+                      <p className="text-[12px] text-slate-400 leading-relaxed italic">
                         {report.llm_stack.raw_evidence}
                       </p>
                     </div>
@@ -489,7 +489,7 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
 
                   {report.llm_stack.sources?.length > 0 && (
                     <div>
-                      <div className="text-[9px] text-slate-600 uppercase font-bold mb-1.5">Sources</div>
+                      <div className="text-[11px] text-slate-600 uppercase font-bold mb-1.5">Sources</div>
                       <div className="flex flex-wrap gap-1">
                         {report.llm_stack.sources.map(url => (
                           <SourceChip key={url} url={url} />
@@ -525,14 +525,14 @@ export const DIResearchPanel: React.FC<DIResearchPanelProps> = ({
                     ].map(m => (
                       <div key={m.label} className="bg-slate-950 rounded-lg p-2 text-center border border-slate-800">
                         <div className="text-lg font-black font-mono" style={{ color: m.color }}>{m.value}</div>
-                        <div className="text-[9px] text-slate-500 uppercase tracking-wider">{m.label}</div>
+                        <div className="text-[11px] text-slate-500 uppercase tracking-wider">{m.label}</div>
                       </div>
                     ))}
                   </div>
 
                   {report.patents.titres_representatifs.length > 0 && (
                     <div>
-                      <div className="text-[9px] text-slate-600 uppercase font-bold mb-1">Titres représentatifs</div>
+                      <div className="text-[11px] text-slate-600 uppercase font-bold mb-1">Titres représentatifs</div>
                       <div className="space-y-1">
                         {report.patents.titres_representatifs.slice(0, 5).map((t, i) => (
                           <div key={i} className="flex items-start gap-2 text-[10px] text-slate-400">

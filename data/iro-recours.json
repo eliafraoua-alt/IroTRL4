@@ -342,7 +342,7 @@
   {
     "id": "CONTEST-20260731--096",
     "startup_id": "gs-096",
-    "submission_date": "2026-07-31T21:03:58.208Z",
+    "submission_date": "2026-07-31T22:39:01.185Z",
     "score_contested": {
       "iro": 52,
       "iro_cr": 44,
@@ -354,12 +354,12 @@
     "reviewer": null,
     "review_date": null,
     "outcome_note": null,
-    "sla_due_date": "2026-08-30T21:03:58.208Z"
+    "sla_due_date": "2026-08-30T22:39:01.185Z"
   },
   {
     "id": "CONTEST-20260731--001",
     "startup_id": "gs-001",
-    "submission_date": "2026-07-31T21:03:58.221Z",
+    "submission_date": "2026-07-31T22:39:01.198Z",
     "score_contested": {
       "iro": 62,
       "iro_cr": 54,
@@ -369,8 +369,8 @@
     "evidence_urls": [],
     "status": "resolved_modified",
     "reviewer": "Reviewer-1",
-    "review_date": "2026-07-31T21:03:58.223Z",
+    "review_date": "2026-07-31T22:39:01.199Z",
     "outcome_note": "Recours légitime, score réévalué.",
-    "sla_due_date": "2026-08-30T21:03:58.221Z"
+    "sla_due_date": "2026-08-30T22:39:01.198Z"
   }
 ]

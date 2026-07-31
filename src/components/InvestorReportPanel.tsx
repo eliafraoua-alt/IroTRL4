@@ -74,7 +74,7 @@ const ConfidenceBadge: React.FC<{ label: string; value: number }> = ({ label, va
               : value >= 0.60 ? 'text-amber-400 border-amber-500/30 bg-amber-950/20'
               : 'text-slate-400 border-slate-500/30 bg-slate-950/20';
   return (
-    <span className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${color}`}>
+    <span className={`text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${color}`}>
       {Math.round(value * 100)}% · {label}
     </span>
   );
@@ -262,8 +262,8 @@ export const InvestorReportPanel: React.FC<InvestorReportPanelProps> = ({
                   {report.survival_18m != null && (
                     <div className="bg-slate-800/50 border border-slate-800 rounded-xl px-4 py-3 text-center">
                       <div className="text-2xl font-black text-blue-400">{report.survival_18m}%</div>
-                      <div className="text-[9px] text-slate-500 mt-0.5">S(18m) opérationnel</div>
-                      <div className="text-[9px] text-slate-500">FSF = {report.fsf_score?.toFixed(1) ?? '—'}/4</div>
+                      <div className="text-[11px] text-slate-500 mt-0.5">S(18m) opérationnel</div>
+                      <div className="text-[11px] text-slate-500">FSF = {report.fsf_score?.toFixed(1) ?? '—'}/4</div>
                     </div>
                   )}
                   <div className="bg-slate-800/50 border border-slate-800 rounded-xl px-4 py-3 text-center">
@@ -271,14 +271,14 @@ export const InvestorReportPanel: React.FC<InvestorReportPanelProps> = ({
                       (report.survival_36m ?? 0) >= 50 ? 'text-emerald-400'
                         : (report.survival_36m ?? 0) >= 30 ? 'text-amber-400' : 'text-red-400'
                     }`}>{report.survival_36m}%</div>
-                    <div className="text-[9px] text-slate-500 mt-0.5">S(36m) structurel</div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">S(36m) structurel</div>
                     {report.survival_36m_lo != null && (
-                      <div className="text-[9px] text-slate-600">[{report.survival_36m_lo}% ; {report.survival_36m_hi}%]</div>
+                      <div className="text-[11px] text-slate-600">[{report.survival_36m_lo}% ; {report.survival_36m_hi}%]</div>
                     )}
                   </div>
                   <div className="bg-slate-800/50 border border-slate-800 rounded-xl px-4 py-3 text-center">
                     <div className="text-sm font-black text-slate-300 uppercase">{report.risk_profile}</div>
-                    <div className="text-[9px] text-slate-500 mt-0.5">Profil de risque</div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">Profil de risque</div>
                   </div>
                 </div>
               </div>
@@ -315,7 +315,7 @@ export const InvestorReportPanel: React.FC<InvestorReportPanelProps> = ({
                       <ScoreBar score={d.score} color={DIM_COLORS[dim]} />
                       <ConfidenceBadge label={d.confidence_label} value={d.confidence} />
                     </div>
-                    <p className="text-[10px] text-slate-400 mt-1 italic truncate">{d.qualificatif}</p>
+                    <p className="text-[12px] text-slate-400 mt-1 italic truncate">{d.qualificatif}</p>
                   </div>
                   {isOpen ? <ChevronUp className="w-4 h-4 text-slate-500 shrink-0" /> : <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />}
                 </button>
@@ -323,25 +323,25 @@ export const InvestorReportPanel: React.FC<InvestorReportPanelProps> = ({
                 {isOpen && (
                   <div className="px-4 pb-4 space-y-3 border-t border-slate-800 animate-in slide-in-from-top-2 duration-200">
                     <div className="mt-3">
-                      <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Grille v4.4.1</p>
-                      <p className="text-[10px] text-slate-400 italic">{d.grille_label}</p>
+                      <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-1">Grille v4.4.1</p>
+                      <p className="text-[12px] text-slate-400 italic">{d.grille_label}</p>
                     </div>
                     <div>
-                      <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider mb-1">Analyse</p>
+                      <p className="text-[11px] text-slate-500 font-bold uppercase tracking-wider mb-1">Analyse</p>
                       <p className="text-xs text-slate-300 leading-relaxed whitespace-pre-line">{d.justification}</p>
                     </div>
                     {d.integration_level && (
-                      <p className="text-[9px] text-indigo-400 font-mono">[IPC REV3] integration_level = {d.integration_level}</p>
+                      <p className="text-[11px] text-indigo-400 font-mono">[IPC REV3] integration_level = {d.integration_level}</p>
                     )}
                     {d.pivot_type && (
-                      <p className="text-[9px] text-indigo-400 font-mono">[CA REV2] pivot_type = {d.pivot_type}</p>
+                      <p className="text-[11px] text-indigo-400 font-mono">[CA REV2] pivot_type = {d.pivot_type}</p>
                     )}
                     {d.missing_data.length > 0 && (
                       <div className="bg-amber-950/20 border border-amber-500/20 rounded-lg p-3">
-                        <p className="text-[9px] text-amber-400 font-bold uppercase tracking-wider mb-1">Données manquantes</p>
+                        <p className="text-[11px] text-amber-400 font-bold uppercase tracking-wider mb-1">Données manquantes</p>
                         <div className="flex flex-wrap gap-1">
                           {d.missing_data.map((m, i) => (
-                            <span key={i} className="text-[9px] bg-amber-950/40 border border-amber-500/20 text-amber-300 px-2 py-0.5 rounded">
+                            <span key={i} className="text-[11px] bg-amber-950/40 border border-amber-500/20 text-amber-300 px-2 py-0.5 rounded">
                               {m}
                             </span>
                           ))}
@@ -416,11 +416,11 @@ export const InvestorReportPanel: React.FC<InvestorReportPanelProps> = ({
                 <div className="flex-1">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-sm font-black text-white">{rec.titre}</span>
-                    <span className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${HORIZON_COLORS[rec.horizon] || 'text-slate-400 border-slate-800 bg-slate-950'}`}>
+                    <span className={`text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${HORIZON_COLORS[rec.horizon] || 'text-slate-400 border-slate-800 bg-slate-950'}`}>
                       {rec.horizon_label}
                     </span>
                   </div>
-                  <p className="text-[10px] text-slate-500 mt-0.5">
+                  <p className="text-[12px] text-slate-500 mt-0.5">
                     → {rec.dim} → Cible : {rec.target_score}/4
                   </p>
                 </div>
@@ -444,7 +444,7 @@ export const InvestorReportPanel: React.FC<InvestorReportPanelProps> = ({
       )}
 
       {/* Footer */}
-      <div className="text-[9px] text-slate-600 text-center pt-2 border-t border-slate-800">
+      <div className="text-[11px] text-slate-600 text-center pt-2 border-t border-slate-800">
         {report.protocol_version} · Prompt registry {report.prompt_registry} · Poids DI 18% · ADC 22% · IPC 22% · AR 13% · CA 13% · GCH 12% · Ce rapport ne constitue pas un conseil en investissement.
       </div>
     </div>

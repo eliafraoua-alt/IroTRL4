@@ -94,7 +94,7 @@ const GoodhartAlertPanel: React.FC<GoodhartAlertPanelProps> = ({ alert }) => {
                     >
                       <div className="flex items-center justify-between gap-4 mb-2 flex-wrap">
                         <div className="flex items-center gap-2">
-                          <span className={`px-2 py-0.5 rounded text-[9px] font-extrabold tracking-wider uppercase border ${
+                          <span className={`px-2 py-0.5 rounded text-[11px] font-extrabold tracking-wider uppercase border ${
                             t.severity === 'critical' ? 'bg-rose-500/20 text-rose-300 border-rose-500/30' : 
                             t.severity === 'warning' ? 'bg-amber-500/20 text-amber-300 border-amber-500/30' : 
                             'bg-slate-800 text-slate-400 border-slate-700'
@@ -115,7 +115,7 @@ const GoodhartAlertPanel: React.FC<GoodhartAlertPanelProps> = ({ alert }) => {
                         {t.arc.description}
                       </p>
                       <div className="rounded-lg bg-slate-950/60 p-3 border border-slate-800">
-                        <span className="font-bold text-[9px] tracking-wider uppercase text-slate-400 block mb-1">Recommandation :</span>
+                        <span className="font-bold text-[11px] tracking-wider uppercase text-slate-400 block mb-1">Recommandation :</span>
                         <p className="text-slate-100 text-xs italic leading-relaxed">{t.recommendation}</p>
                       </div>
                     </div>

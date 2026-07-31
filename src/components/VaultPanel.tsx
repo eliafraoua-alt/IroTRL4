@@ -98,7 +98,7 @@ export default function VaultPanel({ open, onClose, onSelect }: VaultPanelProps)
             <div className="flex flex-col items-center justify-center h-64 text-slate-500 gap-2 p-8 text-center">
               <Database size={48} className="opacity-10 mb-4" />
               <span className="text-xs font-bold uppercase text-slate-600">Aucun résultat trouvé pour "{search}"</span>
-              <p className="text-[10px] text-slate-700 mt-2 lowercase">Vérifiez l'orthographe ou essayez un secteur d'activité.</p>
+              <p className="text-[12px] text-slate-700 mt-2 lowercase">Vérifiez l'orthographe ou essayez un secteur d'activité.</p>
             </div>
           ) : (
             <div className="divide-y divide-slate-800/30">

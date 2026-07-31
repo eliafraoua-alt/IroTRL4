@@ -57,7 +57,7 @@ const GoldStandardTable: React.FC<GoldStandardTableProps> = ({ data }) => {
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-2">
                     <ShieldCheck size={12} className="text-emerald-500" />
-                    <span className="text-[9px] font-bold text-emerald-500/80 uppercase">Vérifié</span>
+                    <span className="text-[11px] font-bold text-emerald-500/80 uppercase">Vérifié</span>
                   </div>
                 </td>
               </tr>
@@ -66,7 +66,7 @@ const GoldStandardTable: React.FC<GoldStandardTableProps> = ({ data }) => {
         </table>
       </div>
       <div className="px-4 py-2 bg-slate-950/30 border-t border-slate-800 flex justify-between items-center">
-        <span className="text-[9px] text-slate-600 font-bold uppercase tracking-tighter">
+        <span className="text-[11px] text-slate-600 font-bold uppercase tracking-tighter">
           Calibrage rétrospectif — v4.5-S46
         </span>
         <span className="text-[10px] font-mono text-slate-500">

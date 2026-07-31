@@ -112,14 +112,14 @@ const GoldStandardAuditPanel: React.FC<GoldStandardAuditPanelProps> = ({ audit }
               <div className={`text-lg font-black font-mono ${audit.sceRange >= 3 ? 'text-emerald-400' : 'text-amber-400'}`}>
                 {audit.sceRange.toFixed(1)}
               </div>
-              <div className="text-[8px] text-slate-600 mt-1">Cible: ≥ 3.0</div>
+              <div className="text-[11px] text-slate-600 mt-1">Cible: ≥ 3.0</div>
             </div>
             <div className="text-center p-3 bg-slate-900/50 rounded border border-slate-800">
               <div className="text-[10px] text-slate-500 uppercase mb-1">ICC Moyen</div>
               <div className={`text-lg font-black font-mono ${audit.meanICC >= 0.7 ? 'text-emerald-400' : 'text-amber-400'}`}>
                 {audit.meanICC.toFixed(2)}
               </div>
-              <div className="text-[8px] text-slate-600 mt-1">Cible: ≥ 0.70</div>
+              <div className="text-[11px] text-slate-600 mt-1">Cible: ≥ 0.70</div>
             </div>
           </div>
 

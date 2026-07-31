@@ -144,7 +144,7 @@ Control+ propose une solution de cybersécurité en temps réel avec un taux d�
                     raise_amount_eur: 3000000
                   });
                 }}
-                className="inline-flex items-center gap-1.5 bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-[9px] font-bold uppercase tracking-wider cursor-pointer transform active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-1.5 bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider cursor-pointer transform active:scale-[0.98] transition-all"
               >
                 <Sparkles size={11} className="text-amber-400 animate-pulse shrink-0" />
                 Charger l'exemple (Pitch Deck Control+)

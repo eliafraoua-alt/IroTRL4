@@ -126,11 +126,11 @@ const ReportContent: React.FC<ReportContentProps> = ({
                       <div className="grid grid-cols-2 gap-2">
                         <div className="p-2 border border-slate-800 rounded text-center">
                           <div className="text-lg font-black text-indigo-400">P{bm.pct}</div>
-                          <div className="text-[9px] text-slate-500 uppercase">Percentile</div>
+                          <div className="text-[11px] text-slate-500 uppercase">Percentile</div>
                         </div>
                         <div className="p-2 border border-slate-800 rounded text-center">
                           <div className="text-lg font-black text-emerald-400">{bm.pos}</div>
-                          <div className="text-[9px] text-slate-500 uppercase">Région</div>
+                          <div className="text-[11px] text-slate-500 uppercase">Région</div>
                         </div>
                       </div>
                    </div>
@@ -189,7 +189,7 @@ const ReportContent: React.FC<ReportContentProps> = ({
                     <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Niveau TRL</span>
                     <span className="text-sm font-black text-indigo-400">TRL {r.trl.niveau}</span>
                   </div>
-                  <p className="text-[10px] text-slate-500 italic">{r.trl.description}</p>
+                  <p className="text-[12px] text-slate-500 italic">{r.trl.description}</p>
                 </div>
               )}
               
@@ -207,7 +207,7 @@ const ReportContent: React.FC<ReportContentProps> = ({
 
               <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
                 <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-2">Paramètres Modèle</div>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[9px]">
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[11px]">
                   <div className="flex justify-between">
                     <span className="text-slate-500">Vertical</span>
                     <span className="text-slate-300">{r.vertical}</span>
@@ -241,14 +241,14 @@ const ReportContent: React.FC<ReportContentProps> = ({
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-0.5">
-                    <span className={`text-[9px] font-black uppercase ${
+                    <span className={`text-[11px] font-black uppercase ${
                       h.signal === 'favorable' ? 'text-green-400' :
                       h.signal === 'défavorable' ? 'text-red-400' : 'text-amber-400'
                     }`}>
                       {h.signal}
                     </span>
                   </div>
-                  <p className="text-[10px] text-slate-400 leading-tight">{h.observation}</p>
+                  <p className="text-[12px] text-slate-400 leading-tight">{h.observation}</p>
                 </div>
               </div>
             ))}
@@ -257,7 +257,7 @@ const ReportContent: React.FC<ReportContentProps> = ({
 
       {/* Footer Disclaimer */}
       <div className="mt-8 pt-6 border-t border-slate-800 text-center">
-        <p className="text-[9px] text-slate-600 italic max-w-2xl mx-auto leading-relaxed">
+        <p className="text-[11px] text-slate-600 italic max-w-2xl mx-auto leading-relaxed">
           <b>Disclaimer :</b> Ce rapport constitue un outil d'aide à la décision basé sur le framework normatif IRO v5.0. 
           Les scores et probabilités calculés ne sauraient constituer une garantie de performance future ou une recommandation d'investissement ferme. 
           Antigravity Intelligence Platform décline toute responsabilité quant aux décisions prises sur la base de ce rapport.

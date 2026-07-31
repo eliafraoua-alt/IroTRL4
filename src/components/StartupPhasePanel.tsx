@@ -506,7 +506,7 @@ function PhaseNode({ phase, active, past }: { phase: Phase; active: boolean; pas
             className="absolute inset-0 rounded-full border" style={{ borderColor: phase.color + '35' }} />
         )}
       </motion.div>
-      <span className="text-[9px] font-black uppercase tracking-widest text-center leading-tight"
+      <span className="text-[11px] font-black uppercase tracking-widest text-center leading-tight"
         style={{ color: active ? phase.color : past ? 'rgba(255,255,255,0.28)' : 'rgba(255,255,255,0.12)' }}>
         {phase.label}
       </span>
@@ -528,9 +528,9 @@ function RoundChip({ round, current, next, vertical }: { round: FinancingRound; 
           style={{ background: round.color, color: '#06080e' }}>Cible</div>
       )}
       <div className="text-base mb-0.5">{round.icon}</div>
-      <div className="text-[8px] font-black uppercase tracking-wider" style={{ color: round.color }}>{round.label}</div>
+      <div className="text-[11px] font-black uppercase tracking-wider" style={{ color: round.color }}>{round.label}</div>
       <div className="text-[7px] text-slate-600 mt-0.5">{round.fourchette}</div>
-      {current && <div className="text-[8px] font-mono mt-1" style={{ color: round.color + 'bb' }}>{multiple}</div>}
+      {current && <div className="text-[11px] font-mono mt-1" style={{ color: round.color + 'bb' }}>{multiple}</div>}
     </div>
   );
 }
@@ -561,7 +561,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
           <div className="text-[10px] text-slate-500 mt-0.5">{entityInfo.desc}</div>
         </div>
         <div className="text-right">
-          <div className="text-[9px] text-slate-600 uppercase tracking-widest">Âge</div>
+          <div className="text-[11px] text-slate-600 uppercase tracking-widest">Âge</div>
           <div className="font-mono font-black text-slate-400 text-sm">
             {input.age_mois >= 120
               ? `${Math.round(input.age_mois / 12)} ans`
@@ -573,7 +573,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
       {/* Avertissement contextuel */}
       <div className="flex items-start gap-2.5 px-3 py-2.5 rounded-lg bg-slate-900 border border-amber-500/20">
         <AlertTriangle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />
-        <p className="text-[10px] text-slate-400 leading-relaxed">
+        <p className="text-[12px] text-slate-400 leading-relaxed">
           Cette entité est analysée en mode <strong className="text-amber-400">Transformation IA</strong>, non en mode Startup.
           Les mécanismes de financement VC (Seed, Série A…) ne s'appliquent pas.
           L'analyse porte sur la stratégie d'investissement IA et les instruments adaptés à son stade.
@@ -583,7 +583,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
       {/* Urgence transformation */}
       <div className="bg-slate-900 rounded-xl p-4 border border-slate-800">
         <div className="flex items-center justify-between mb-3">
-          <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">
+          <div className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">
             Urgence Transformation IA
           </div>
           <div className="px-2.5 py-1 rounded-lg text-xs font-black uppercase tracking-widest"
@@ -597,7 +597,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
           <Bar label="Autonomie DI" val={input.di} max={4} color={input.di >= 3 ? '#00c896' : input.di >= 2 ? '#fbbf24' : '#ef4444'} unit="/4" />
           <Bar label="Actif Données" val={input.adc} max={4} color={input.adc >= 3 ? '#00c896' : '#fbbf24'} unit="/4" />
         </div>
-        <div className="mt-3 text-[9px] text-slate-600 italic">
+        <div className="mt-3 text-[11px] text-slate-600 italic">
           DI actuel : {transformation.di_gap}
         </div>
       </div>
@@ -606,7 +606,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
       <div className="bg-slate-900 rounded-xl border overflow-hidden"
         style={{ borderColor: rec.color + '30' }}>
         <div className="p-4 border-b border-slate-800">
-          <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold mb-2">
+          <div className="text-[11px] text-slate-500 uppercase tracking-widest font-bold mb-2">
             Mécanisme recommandé
           </div>
           <div className="flex items-center gap-3 mb-3">
@@ -616,16 +616,16 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
               <div className="text-[10px] text-slate-500 mt-0.5">{rec.montants}</div>
             </div>
           </div>
-          <p className="text-[10px] text-slate-400 leading-relaxed mb-3">{rec.description}</p>
+          <p className="text-[12px] text-slate-400 leading-relaxed mb-3">{rec.description}</p>
           <div className="flex flex-wrap gap-1.5 mb-2">
             {rec.instruments.map((inst, i) => (
-              <span key={i} className="px-2 py-0.5 rounded text-[9px] font-bold"
+              <span key={i} className="px-2 py-0.5 rounded text-[11px] font-bold"
                 style={{ background: rec.color + '12', color: rec.color }}>{inst}</span>
             ))}
           </div>
         </div>
         <div className="p-4">
-          <div className="text-[9px] text-slate-600 uppercase tracking-widest font-bold mb-1.5">Conditions favorables</div>
+          <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-1.5">Conditions favorables</div>
           <div className="space-y-1">
             {rec.conditions_favorables.map((c, i) => (
               <div key={i} className="flex items-start gap-1.5 text-[10px] text-slate-400">
@@ -652,10 +652,10 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
             <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }} className="overflow-hidden border-t border-slate-800">
               <div className="p-4">
-                <p className="text-[10px] text-slate-400 leading-relaxed mb-2">{alt.description}</p>
+                <p className="text-[12px] text-slate-400 leading-relaxed mb-2">{alt.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {alt.instruments.map((inst, i) => (
-                    <span key={i} className="px-2 py-0.5 rounded text-[9px] font-bold"
+                    <span key={i} className="px-2 py-0.5 rounded text-[11px] font-bold"
                       style={{ background: alt.color + '12', color: alt.color }}>{inst}</span>
                   ))}
                 </div>
@@ -669,7 +669,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
       <div className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden">
         <button onClick={() => setExpandActions(v => !v)}
           className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-slate-800/30 transition-colors">
-          <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold flex items-center gap-2">
+          <span className="text-[11px] text-slate-500 uppercase tracking-widest font-bold flex items-center gap-2">
             <Zap size={10} className="text-amber-400" />
             Actions prioritaires ({transformation.actions_prioritaires.length})
           </span>
@@ -693,7 +693,7 @@ function EstablishedPanel({ input, entityInfo, transformation }: {
       </div>
 
       {/* Note méthodologique */}
-      <p className="text-[9px] text-slate-700 leading-relaxed px-1">
+      <p className="text-[11px] text-slate-700 leading-relaxed px-1">
         Analyse IRO v7.0 · Mode Entité Établie · {input.age_mois >= 120 ? `${Math.round(input.age_mois / 12)} ans d'existence` : `${input.age_mois}m`}
         · Stade déclaré : {input.stade_financement}
       </p>
@@ -730,17 +730,17 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span style={{ color: phase.color }}>{phase.icon}</span>
-                <span className="text-[9px] font-black uppercase tracking-[0.16em] text-slate-500">Phase de développement</span>
+                <span className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-500">Phase de développement</span>
               </div>
               <div className="font-black text-xl leading-none" style={{ color: phase.color }}>
                 {substade.icon} {substade.label}
               </div>
-              <div className="text-[10px] text-slate-500 mt-1 max-w-xs leading-relaxed">{substade.description}</div>
+              <div className="text-[12px] text-slate-500 mt-1 max-w-xs leading-relaxed">{substade.description}</div>
             </div>
             <div className="flex-shrink-0 flex flex-col items-center gap-1 px-3 py-2 rounded-lg border"
               style={{ borderColor: type.color + '40', background: type.color + '10' }}>
               <span className="text-xl">{type.emoji}</span>
-              <span className="text-[8px] font-black uppercase tracking-widest" style={{ color: type.color }}>{type.label}</span>
+              <span className="text-[11px] font-black uppercase tracking-widest" style={{ color: type.color }}>{type.label}</span>
             </div>
           </div>
           {/* Timeline phases */}
@@ -759,7 +759,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
         <div className="p-4 border-b border-slate-800">
           <div className="flex items-center justify-between mb-3">
             <div>
-              <div className="text-[9px] text-slate-500 font-bold uppercase tracking-widest mb-1.5 font-mono">
+              <div className="text-[11px] text-slate-500 font-bold uppercase tracking-widest mb-1.5 font-mono">
                 Financement recommandé · Cohorte FR n=130
               </div>
               <div className="flex items-center gap-2.5 font-sans">
@@ -804,7 +804,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
 
         {/* Barres conditions */}
         <div className="p-4 space-y-2 border-b border-slate-800">
-          <div className="text-[9px] text-slate-600 uppercase tracking-widest font-bold mb-1.5">Conditions IRO pour ce tour</div>
+          <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-1.5">Conditions IRO pour ce tour</div>
           {[
             { label: 'Score IRO global', val: input.iro_score, req: rc.minIRO, unit: '/100' },
             { label: 'Infra LLM (DI)',   val: input.di,        req: rc.minDI,  unit: '/4'   },
@@ -832,7 +832,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
         {/* Blockers */}
         {blockers.length > 0 && (
           <div className="px-4 py-3 border-b border-slate-800 space-y-1.5">
-            <div className="text-[9px] text-red-400 uppercase tracking-widest font-bold">Facteurs bloquants</div>
+            <div className="text-[11px] text-red-400 uppercase tracking-widest font-bold">Facteurs bloquants</div>
             {blockers.map(b => (
               <div key={b.dim} className="flex items-center gap-2 text-[10px]">
                 <AlertTriangle size={9} className="text-red-400 flex-shrink-0" />
@@ -845,10 +845,10 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
 
         {/* Use of funds */}
         <div className="px-4 py-3 border-b border-slate-800">
-          <div className="text-[9px] text-slate-600 uppercase tracking-widest font-bold mb-2">Use of funds typique</div>
+          <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-2">Use of funds typique</div>
           <div className="flex flex-wrap gap-1.5">
             {recommendedRound.use_of_funds.map((u, i) => (
-              <span key={i} className="px-2 py-0.5 rounded text-[9px] font-bold"
+              <span key={i} className="px-2 py-0.5 rounded text-[11px] font-bold"
                 style={{ background: recommendedRound.color + '12', color: recommendedRound.color }}>{u}</span>
             ))}
           </div>
@@ -857,7 +857,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
         {/* Investisseurs */}
         <button onClick={() => setShowInvestors(v => !v)}
           className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-slate-800/30 transition-colors">
-          <div className="flex items-center gap-2 text-[9px] text-slate-500 uppercase tracking-widest font-bold">
+          <div className="flex items-center gap-2 text-[11px] text-slate-500 uppercase tracking-widest font-bold">
             <Landmark size={9} />
             Investisseurs types ({recommendedRound.investors.length})
           </div>
@@ -869,7 +869,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
               exit={{ height: 0, opacity: 0 }} className="overflow-hidden border-t border-slate-800">
               <div className="px-4 py-3 flex flex-wrap gap-1.5">
                 {recommendedRound.investors.map((inv, i) => (
-                  <span key={i} className="px-2 py-0.5 rounded text-[9px] bg-slate-800 text-slate-400 font-bold">{inv}</span>
+                  <span key={i} className="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-400 font-bold">{inv}</span>
                 ))}
               </div>
             </motion.div>
@@ -879,7 +879,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
 
       {/* Timeline tours */}
       <div className="bg-slate-900 rounded-xl border border-slate-800 p-4 font-mono">
-        <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold mb-3">
+        <div className="text-[11px] text-slate-500 uppercase tracking-widest font-bold mb-3">
           Trajectoire financement · Millésime 2026
         </div>
         <div className="flex gap-1">
@@ -901,7 +901,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
       <div className="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden font-mono">
         <button onClick={() => setShowDetails(v => !v)}
           className="w-full flex items-center justify-between px-4 py-2.5 hover:bg-slate-800/30 transition-colors">
-          <span className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">
+          <span className="text-[11px] text-slate-500 uppercase tracking-widest font-bold">
             Risques & Leviers — {substade.label}
           </span>
           {showDetails ? <ChevronUp size={11} className="text-slate-600" /> : <ChevronDown size={11} className="text-slate-600" />}
@@ -912,7 +912,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
               exit={{ height: 0, opacity: 0 }} className="overflow-hidden border-t border-slate-800">
               <div className="grid grid-cols-2 gap-0 divide-x divide-slate-800 p-4">
                 <div className="pr-4">
-                  <div className="text-[9px] text-red-400 uppercase tracking-widest font-bold mb-2">⚠ Risques</div>
+                  <div className="text-[11px] text-red-400 uppercase tracking-widest font-bold mb-2">⚠ Risques</div>
                   {substade.risques.map((r, i) => (
                     <div key={i} className="flex items-start gap-1.5 text-[10px] text-slate-400 mb-1.5">
                       <XCircle size={9} className="text-red-400 mt-0.5 flex-shrink-0" />{r}
@@ -920,7 +920,7 @@ function StartupPanel({ input, phase, substade, type, recommendedRound, nextRoun
                   ))}
                 </div>
                 <div className="pl-4">
-                  <div className="text-[9px] text-emerald-400 uppercase tracking-widest font-bold mb-2">✦ Leviers</div>
+                  <div className="text-[11px] text-emerald-400 uppercase tracking-widest font-bold mb-2">✦ Leviers</div>
                   {substade.leviers.map((l, i) => (
                     <div key={i} className="flex items-start gap-1.5 text-[10px] text-slate-400 mb-1.5">
                       <CheckCircle2 size={9} className="text-emerald-400 mt-0.5 flex-shrink-0" />{l}

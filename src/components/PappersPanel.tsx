@@ -208,7 +208,7 @@ export const PappersPanel: React.FC<PappersPanelProps> = ({
               <Users size={14} /> 
               Dirigeants
               {iroContext.single_founder_proxy && (
-                <span style={{ fontSize: 9, background: '#312E81', color: '#818CF8', padding: '2px 6px', borderRadius: 10, marginLeft: 8 }}>REV11 Candidate</span>
+                <span style={{ fontSize: 11, background: '#312E81', color: '#818CF8', padding: '2px 6px', borderRadius: 10, marginLeft: 8 }}>REV11 Candidate</span>
               )}
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
@@ -258,9 +258,9 @@ const styles = {
   alertCritique: { background: 'rgba(239,68,68,0.15)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 10, padding: '12px', marginBottom: 12, fontSize: 12, color: '#FCA5A5', display: 'flex', alignItems: 'center', gap: 12 } as React.CSSProperties,
   placeholder:{ textAlign: 'center' as const, padding: '40px 20px', color: '#64748B', fontSize: 13, background: '#0F172A', borderRadius: 12, border: '2px dashed #1E293B' },
   kpi:        { background: '#0F172A', border: '1px solid #1E293B', borderRadius: 10, padding: '10px' } as React.CSSProperties,
-  kpiLabel:   { fontSize: 9, color: '#64748B', textTransform: 'uppercase' as const, fontWeight: 700, letterSpacing: '.05em', marginBottom: 6 },
+  kpiLabel:   { fontSize: 11, color: '#64748B', textTransform: 'uppercase' as const, fontWeight: 700, letterSpacing: '.05em', marginBottom: 6 },
   kpiVal:     { fontSize: 14, fontWeight: 800, color: '#F1F5F9' } as React.CSSProperties,
-  kpiSub:     { fontSize: 9, color: '#475569', marginTop: 3 } as React.CSSProperties,
+  kpiSub:     { fontSize: 11, color: '#475569', marginTop: 3 } as React.CSSProperties,
   card:       { background: 'rgba(15,23,42,0.5)', border: '1px solid #1E293B', borderRadius: 12, padding: 14 } as React.CSSProperties,
   cardTitle:  { fontSize: 11, fontWeight: 700, color: '#64748B', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8, textTransform: 'uppercase', letterSpacing: '0.05em' } as React.CSSProperties,
 };

@@ -102,19 +102,19 @@ const CompanyCard: React.FC<{
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
         {ageMois !== null && (
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 9, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Âge</div>
+            <div style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Âge</div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8' }}>{ageLabel}</div>
           </div>
         )}
         {data.effectifs !== null && (
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 9, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Effectifs</div>
+            <div style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Effectifs</div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8' }}>{data.effectifs}</div>
           </div>
         )}
         {data.capital_social_eur !== null && (
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 9, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Capital</div>
+            <div style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Capital</div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8' }}>
               {data.capital_social_eur.toLocaleString('fr-FR')} €
             </div>
@@ -122,7 +122,7 @@ const CompanyCard: React.FC<{
         )}
         {(data as any).chiffre_affaires != null && (
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 9, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>CA</div>
+            <div style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>CA</div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8' }}>
               {((data as any).chiffre_affaires as number).toLocaleString('fr-FR')} €
             </div>
@@ -130,7 +130,7 @@ const CompanyCard: React.FC<{
         )}
         {data.brevets_count > 0 && (
           <div style={{ textAlign: 'center' }}>
-            <div style={{ fontSize: 9, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Brevets</div>
+            <div style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Brevets</div>
             <div style={{ fontSize: 11, fontWeight: 700, color: '#6366f1' }}>
               {data.brevets_count} ({data.brevets_ia} IA)
             </div>
@@ -307,7 +307,7 @@ const UniversalSearchBar: React.FC = () => {
           {searchType && (
             <span style={{
               position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
-              fontSize: 9, fontWeight: 800, color: '#6366f1',
+              fontSize: 11, fontWeight: 800, color: '#6366f1',
               background: 'rgba(99,102,241,0.12)',
               border: '1px solid rgba(99,102,241,0.25)',
               borderRadius: 4, padding: '2px 6px',
@@ -479,156 +479,177 @@ export const Header: React.FC = () => {
   return (
     <header className="border-b border-slate-800 bg-slate-900/40" style={{ flexShrink: 0 }}>
 
-      {/* ── Row 1 : Boutons de contrôle + identité IRO ── */}
-      <div className="px-6 py-3 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/60">
-        <div className="flex flex-wrap items-center gap-3">
+      {/* ── Row 1 : identité + entreprise active + outils regroupés par catégorie ── */}
+      <div className="px-6 py-3 flex flex-wrap items-center justify-between gap-4 border-b border-slate-800/60">
+        <div className="flex flex-wrap items-center gap-4">
 
-          <button
-            onClick={() => setModelPanelOpen(true)}
-            title="Renseigner le modèle de fonctionnement de la startup"
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all cursor-pointer bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100"
-            style={{
-              background: startupModel.secteur || startupModel.texte_libre
-                ? 'rgba(99,102,241,0.1)' : 'rgba(15,23,42,0.6)',
-              borderColor: startupModel.secteur || startupModel.texte_libre
-                ? 'rgba(99,102,241,0.4)' : 'rgba(51,65,85,0.4)',
-            }}
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-            </svg>
-            {(() => {
-              const n = Object.entries(startupModel)
-                .filter(([k]) => k !== 'texte_libre')
-                .filter(([, v]) => v !== '' && v !== false).length;
-              return n > 0 ? `Modèle (${n})` : 'Modèle';
-            })()}
-          </button>
-
-          <button
-            onClick={() => setAhpPanelOpen(true)}
-            title="Expert Calibration AHP"
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all cursor-pointer bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100"
-          >
-            <RotateCcw size={12} className="text-slate-400" />
-            Calibration AHP
-          </button>
-
-          <button
-            onClick={() => setVaultPanelOpen(true)}
-            title="IRO Vault"
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all cursor-pointer bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100"
-          >
-            <Database size={12} className="text-slate-400" />
-            IRO Vault
-          </button>
-
-          <button
-            onClick={() => { setPitchMode(p => !p); setNlpMode(false); setAgentMode(false); }}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
-              pitchMode
-                ? 'bg-amber-500/20 border-amber-500 text-amber-400 font-extrabold shadow-[0_0_12px_rgba(245,158,11,0.2)]'
-                : 'bg-slate-900 border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 text-slate-100 hover:shadow-[0_0_10px_rgba(245,158,11,0.1)]'
-            }`}
-          >
-            <span className="animate-pulse">✨</span> Immersive Pitch Analyzer
-          </button>
-
-          <button
-            onClick={() => { setNlpMode(n => !n); setPitchMode(false); setAgentMode(false); }}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
-              nlpMode
-                ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400 font-extrabold'
-                : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
-            }`}
-          >
-            <span>🧬</span> Multimodalité NLP
-          </button>
-
-          <button
-            onClick={() => { setAgentMode(a => !a); setPitchMode(false); setNlpMode(false); }}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
-              agentMode
-                ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400 font-extrabold'
-                : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
-            }`}
-          >
-            <span>◈</span> Agent Mode
-          </button>
-
-          <button
-            onClick={() => setFounderPanelOpen(o => !o)}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
-              founderPanelOpen
-                ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400'
-                : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
-            }`}
-          >
-            <Users size={12} className="text-slate-400" />
-            Fondateurs
-            {startupModel.gch_founders && startupModel.gch_founders.length > 0 && (
-              <span className="ml-1 bg-indigo-600 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold">
-                {startupModel.gch_founders.length}
-              </span>
-            )}
-          </button>
-
-          <button
-            onClick={() => setPappersPanelOpen(o => !o)}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
-              pappersPanelOpen
-                ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400'
-                : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
-            }`}
-          >
-            <Landmark size={12} className="text-slate-400" />
-            Pappers / INPI
-            {startupModel.external_pappers && (
-              <Check size={10} className="text-emerald-400 ml-1 font-bold" />
-            )}
-          </button>
-
-          <button
-            onClick={() => setDiPanelOpen(o => !o)}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
-              diPanelOpen
-                ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400'
-                : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
-            }`}
-          >
-            <Cpu size={12} className="text-slate-400" />
-            DI Research
-            {diEvidence && (
-              <span className="ml-1 bg-indigo-600 text-white text-[9px] px-1.5 py-0.5 rounded-full font-black">
-                {diEvidence.di_score_recommande}/4
-              </span>
-            )}
-          </button>
-
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-orange-500 flex items-center justify-center text-white font-black text-sm">
-            IRO
-          </div>
-          <div>
-            <div className="font-black text-sm tracking-wider text-indigo-400">IRO EVALUATOR</div>
-            <div className="text-[10px] text-slate-400 font-bold tracking-widest leading-none mt-0.5">
-              v{VERSION} · {MILLESIME} · 6 AXES · SRD
+          {/* Identité IRO — en premier, c'est la marque de l'outil */}
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-orange-500 flex items-center justify-center text-white font-black text-sm">
+              IRO
+            </div>
+            <div>
+              <div className="font-black text-sm tracking-wider text-indigo-400">IRO EVALUATOR</div>
+              <div className="text-[11px] text-slate-400 font-bold tracking-widest leading-none mt-0.5">
+                v{VERSION} · {MILLESIME} · 6 AXES · SRD
+              </div>
             </div>
           </div>
 
           <div className="h-8 w-px bg-slate-800 hidden sm:block" />
-          <div className="flex flex-col">
-            <span className="text-[8px] text-indigo-400/80 font-black uppercase tracking-[0.1em] leading-none">Entreprise Active</span>
+
+          {/* Entreprise active */}
+          <div className="flex flex-col shrink-0">
+            <span className="text-[11px] text-indigo-400/80 font-black uppercase tracking-[0.1em] leading-none">Entreprise Active</span>
             <div className="flex items-center gap-2 mt-1">
               <span className="font-black text-xs text-slate-100">{companyName || 'Non configurée'}</span>
               <button
                 onClick={resetCompany}
-                className="cursor-pointer text-[9px] text-amber-400 hover:text-amber-300 bg-amber-950/45 border border-amber-900/60 hover:border-amber-500/60 px-2 py-0.5 rounded font-extrabold transition-all"
+                className="cursor-pointer text-[11px] text-amber-400 hover:text-amber-300 bg-amber-950/45 border border-amber-900/60 hover:border-amber-500/60 px-2 py-0.5 rounded font-extrabold transition-all"
               >
                 Changer d'entreprise
+              </button>
+            </div>
+          </div>
+
+          <div className="h-8 w-px bg-slate-800 hidden lg:block" />
+
+          {/* Groupe : modes d'analyse alternatifs (changent la vue principale) */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-[11px] text-slate-500 font-bold uppercase tracking-[0.1em] leading-none">Modes d'analyse</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => { setPitchMode(p => !p); setNlpMode(false); setAgentMode(false); }}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
+                  pitchMode
+                    ? 'bg-amber-500/20 border-amber-500 text-amber-400 font-extrabold shadow-[0_0_12px_rgba(245,158,11,0.2)]'
+                    : 'bg-slate-900 border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 text-slate-100 hover:shadow-[0_0_10px_rgba(245,158,11,0.1)]'
+                }`}
+              >
+                <span className="animate-pulse">✨</span> Immersive Pitch Analyzer
+              </button>
+
+              <button
+                onClick={() => { setNlpMode(n => !n); setPitchMode(false); setAgentMode(false); }}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
+                  nlpMode
+                    ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400 font-extrabold'
+                    : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
+                }`}
+              >
+                <span>🧬</span> Multimodalité NLP
+              </button>
+
+              <button
+                onClick={() => { setAgentMode(a => !a); setPitchMode(false); setNlpMode(false); }}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
+                  agentMode
+                    ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400 font-extrabold'
+                    : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
+                }`}
+              >
+                <span>◈</span> Agent Mode
+              </button>
+            </div>
+          </div>
+
+          <div className="h-8 w-px bg-slate-800 hidden lg:block" />
+
+          {/* Groupe : données & sources (config / enrichissement du dossier) */}
+          <div className="flex flex-col gap-1.5">
+            <span className="text-[11px] text-slate-500 font-bold uppercase tracking-[0.1em] leading-none">Données &amp; sources</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => setModelPanelOpen(true)}
+                title="Renseigner le modèle de fonctionnement de la startup"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all cursor-pointer bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100"
+                style={{
+                  background: startupModel.secteur || startupModel.texte_libre
+                    ? 'rgba(99,102,241,0.1)' : 'rgba(15,23,42,0.6)',
+                  borderColor: startupModel.secteur || startupModel.texte_libre
+                    ? 'rgba(99,102,241,0.4)' : 'rgba(51,65,85,0.4)',
+                }}
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                {(() => {
+                  const n = Object.entries(startupModel)
+                    .filter(([k]) => k !== 'texte_libre')
+                    .filter(([, v]) => v !== '' && v !== false).length;
+                  return n > 0 ? `Modèle (${n})` : 'Modèle';
+                })()}
+              </button>
+
+              <button
+                onClick={() => setAhpPanelOpen(true)}
+                title="Expert Calibration AHP"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all cursor-pointer bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100"
+              >
+                <RotateCcw size={12} className="text-slate-400" />
+                Calibration AHP
+              </button>
+
+              <button
+                onClick={() => setVaultPanelOpen(true)}
+                title="IRO Vault"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all cursor-pointer bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100"
+              >
+                <Database size={12} className="text-slate-400" />
+                IRO Vault
+              </button>
+
+              <button
+                onClick={() => setFounderPanelOpen(o => !o)}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
+                  founderPanelOpen
+                    ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400'
+                    : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
+                }`}
+              >
+                <Users size={12} className="text-slate-400" />
+                Fondateurs
+                {startupModel.gch_founders && startupModel.gch_founders.length > 0 && (
+                  <span className="ml-1 bg-indigo-600 text-white text-[11px] px-1.5 py-0.5 rounded-full font-bold">
+                    {startupModel.gch_founders.length}
+                  </span>
+                )}
+              </button>
+
+              <button
+                onClick={() => setPappersPanelOpen(o => !o)}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
+                  pappersPanelOpen
+                    ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400'
+                    : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
+                }`}
+              >
+                <Landmark size={12} className="text-slate-400" />
+                Pappers / INPI
+                {startupModel.external_pappers && (
+                  <Check size={10} className="text-emerald-400 ml-1 font-bold" />
+                )}
+              </button>
+
+              <button
+                onClick={() => setDiPanelOpen(o => !o)}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
+                  diPanelOpen
+                    ? 'bg-indigo-500/20 border-indigo-500 text-indigo-400'
+                    : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-slate-100'
+                }`}
+              >
+                <Cpu size={12} className="text-slate-400" />
+                DI Research
+                {diEvidence && (
+                  <span className="ml-1 bg-indigo-600 text-white text-[11px] px-1.5 py-0.5 rounded-full font-black">
+                    {diEvidence.di_score_recommande}/4
+                  </span>
+                )}
               </button>
             </div>
           </div>
@@ -681,10 +702,10 @@ export const Header: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, flexShrink: 0, paddingTop: 9 }}>
           <Building2 size={14} style={{ color: '#6366f1' }} />
           <div>
-            <div style={{ fontSize: 9, fontWeight: 800, color: '#6366f1', textTransform: 'uppercase', letterSpacing: '0.1em', lineHeight: 1 }}>
+            <div style={{ fontSize: 11, fontWeight: 800, color: '#6366f1', textTransform: 'uppercase', letterSpacing: '0.1em', lineHeight: 1 }}>
               Recherche directe
             </div>
-            <div style={{ fontSize: 8, color: '#475569', fontWeight: 600, marginTop: 2 }}>
+            <div style={{ fontSize: 11, color: '#64748b', fontWeight: 600, marginTop: 2 }}>
               SIRET · INPI · Bodacc
             </div>
           </div>

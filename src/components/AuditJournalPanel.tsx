@@ -163,7 +163,7 @@ const StatCard: React.FC<{
   subValue?: string;
 }> = ({ label, value, icon, color, unit, subValue }) => (
   <div className="bg-slate-800/40 border border-slate-700/50 rounded-xl p-3 flex flex-col gap-1">
-    <div className="flex items-center gap-1.5 text-[9px] font-bold text-slate-500 uppercase tracking-tight">
+    <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-500 uppercase tracking-tight">
       {icon}
       {label}
     </div>
@@ -171,7 +171,7 @@ const StatCard: React.FC<{
       <span className={`text-xl font-black font-mono tracking-tighter ${color}`}>{value}</span>
       {unit && <span className="text-[10px] text-slate-600 font-bold uppercase">{unit}</span>}
     </div>
-    {subValue && <div className="text-[9px] text-slate-500 font-medium italic">{subValue}</div>}
+    {subValue && <div className="text-[11px] text-slate-500 font-medium italic">{subValue}</div>}
   </div>
 );
 
